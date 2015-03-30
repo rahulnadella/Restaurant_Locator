@@ -22,20 +22,19 @@
  THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "Contact.h"
+#import "Location.h"
+#import "Stats.h"
 /*
- The Location object holds the specific data associated to a Venue.
+ The VenueDetailsViewController provides specific details associated with each Venue. For example, the Contact info, the number of people visted, etc.
  */
-@interface Location : NSObject
+@interface VenueDetailsViewController : UIViewController
 
-@property (nonatomic, strong) NSString *address;
-@property (nonatomic, strong) NSString *city;
-@property (nonatomic, strong) NSString *country;
-@property (nonatomic, strong) NSString *crossStreet;
-@property (nonatomic, strong) NSString *postalCode;
-@property (nonatomic, strong) NSString *state;
-@property (nonatomic, strong) NSNumber *distance;
-@property (nonatomic, strong) NSNumber *lat;
-@property (nonatomic, strong) NSNumber *lng;
+@property (nonatomic, strong) NSString *nameOfVenue;
+@property (nonatomic, strong) NSString *urlOfVenue;
+@property (nonatomic, strong) Contact *currentContact;
+@property (nonatomic, strong) Location *currentLocation;
+@property (nonatomic, strong) Stats *currentStats;
 
 @end

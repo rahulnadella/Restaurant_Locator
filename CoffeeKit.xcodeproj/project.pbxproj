@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FCB350BC1AC9D0720068DB28 /* VenueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */; };
+		FCB350BF1AC9F0B00068DB28 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350BE1AC9F0B00068DB28 /* Contact.m */; };
 		FCCEB3021AC84E8800634876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3011AC84E8800634876 /* main.m */; };
 		FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30C1AC84E8800634876 /* Main.storyboard */; };
 		FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30F1AC84E8800634876 /* Images.xcassets */; };
@@ -17,7 +19,7 @@
 		FCCEB39E1AC88BE800634876 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3991AC88BE800634876 /* Location.m */; };
 		FCCEB39F1AC88BE800634876 /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB39B1AC88BE800634876 /* Stats.m */; };
 		FCCEB3A01AC88BE800634876 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB39D1AC88BE800634876 /* Venue.m */; };
-		FCCEB3A31AC88BF300634876 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3A21AC88BF300634876 /* MasterViewController.m */; };
+		FCCEB3A31AC88BF300634876 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3A21AC88BF300634876 /* VenueViewController.m */; };
 		FCCEB3B51AC88CCA00634876 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3AC1AC88CB600634876 /* libRestKit.a */; };
 		FCCEB3BA1AC88CE800634876 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3B61AC88CE800634876 /* CFNetwork.framework */; };
 		FCCEB3BC1AC88CE800634876 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3B81AC88CE800634876 /* Security.framework */; };
@@ -72,6 +74,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FCB350BA1AC9D0720068DB28 /* VenueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueDetailsViewController.h; sourceTree = "<group>"; };
+		FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailsViewController.m; sourceTree = "<group>"; };
+		FCB350BD1AC9F0B00068DB28 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		FCB350BE1AC9F0B00068DB28 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3001AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB3011AC84E8800634876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,8 +97,8 @@
 		FCCEB39B1AC88BE800634876 /* Stats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stats.m; sourceTree = "<group>"; };
 		FCCEB39C1AC88BE800634876 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		FCCEB39D1AC88BE800634876 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
-		FCCEB3A11AC88BF300634876 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		FCCEB3A21AC88BF300634876 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		FCCEB3A11AC88BF300634876 /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueViewController.h; sourceTree = "<group>"; };
+		FCCEB3A21AC88BF300634876 /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
 		FCCEB3A41AC88CB600634876 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		FCCEB3B61AC88CE800634876 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FCCEB3B81AC88CE800634876 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -154,8 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				FCCEB3931AC88BB400634876 /* Controllers */,
-				FCCEB3941AC88BC200634876 /* Custom_UITableViewCell */,
 				FCCEB3921AC88BAD00634876 /* Core */,
+				FCCEB3941AC88BC200634876 /* Custom_UITableViewCell */,
 				FCCEB30C1AC84E8800634876 /* Main.storyboard */,
 				FCCEB30F1AC84E8800634876 /* Images.xcassets */,
 				FCCEB3111AC84E8800634876 /* LaunchScreen.xib */,
@@ -196,6 +202,8 @@
 		FCCEB3921AC88BAD00634876 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FCB350BD1AC9F0B00068DB28 /* Contact.h */,
+				FCB350BE1AC9F0B00068DB28 /* Contact.m */,
 				FCCEB3981AC88BE800634876 /* Location.h */,
 				FCCEB3991AC88BE800634876 /* Location.m */,
 				FCCEB39A1AC88BE800634876 /* Stats.h */,
@@ -209,8 +217,10 @@
 		FCCEB3931AC88BB400634876 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCCEB3A11AC88BF300634876 /* MasterViewController.h */,
-				FCCEB3A21AC88BF300634876 /* MasterViewController.m */,
+				FCCEB3A11AC88BF300634876 /* VenueViewController.h */,
+				FCCEB3A21AC88BF300634876 /* VenueViewController.m */,
+				FCB350BA1AC9D0720068DB28 /* VenueDetailsViewController.h */,
+				FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -379,7 +389,9 @@
 				FCCEB3A01AC88BE800634876 /* Venue.m in Sources */,
 				FCCEB39E1AC88BE800634876 /* Location.m in Sources */,
 				FCCEB3021AC84E8800634876 /* main.m in Sources */,
-				FCCEB3A31AC88BF300634876 /* MasterViewController.m in Sources */,
+				FCCEB3A31AC88BF300634876 /* VenueViewController.m in Sources */,
+				FCB350BF1AC9F0B00068DB28 /* Contact.m in Sources */,
+				FCB350BC1AC9D0720068DB28 /* VenueDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

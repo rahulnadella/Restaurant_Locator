@@ -22,20 +22,12 @@
  THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 /*
- The Location object holds the specific data associated to a Venue.
+ The VenueViewController provides a view of retrieve venues from Foursquare via their JSON api to display the venues registered with Foursquare. Currently the data is being retrieved via RestKit.
  */
-@interface Location : NSObject
+@interface VenueViewController : UITableViewController
 
-@property (nonatomic, strong) NSString *address;
-@property (nonatomic, strong) NSString *city;
-@property (nonatomic, strong) NSString *country;
-@property (nonatomic, strong) NSString *crossStreet;
-@property (nonatomic, strong) NSString *postalCode;
-@property (nonatomic, strong) NSString *state;
-@property (nonatomic, strong) NSNumber *distance;
-@property (nonatomic, strong) NSNumber *lat;
-@property (nonatomic, strong) NSNumber *lng;
+@property (nonatomic, strong) Venue *currentVenue;
 
 @end

@@ -24,18 +24,12 @@
 
 #import <Foundation/Foundation.h>
 /*
- The Location object holds the specific data associated to a Venue.
+ The Contact object currently holds the specific phone number and twitter handle.
  */
-@interface Location : NSObject
+@interface Contact : NSObject
 
-@property (nonatomic, strong) NSString *address;
-@property (nonatomic, strong) NSString *city;
-@property (nonatomic, strong) NSString *country;
-@property (nonatomic, strong) NSString *crossStreet;
-@property (nonatomic, strong) NSString *postalCode;
-@property (nonatomic, strong) NSString *state;
-@property (nonatomic, strong) NSNumber *distance;
-@property (nonatomic, strong) NSNumber *lat;
-@property (nonatomic, strong) NSNumber *lng;
+@property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSString *formattedPhone;
+@property (nonatomic, strong) NSString *twitter;
 
 @end
