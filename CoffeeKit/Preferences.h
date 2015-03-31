@@ -30,6 +30,7 @@
 
 extern NSString * const RETURN_TO_VENUE_INFORMATION;
 extern NSString * const COFFEE_KIT_IDENTIFIER;
+/* This value should always be retrieved from a server (this only for demo purposes) */
 extern NSString * const COFFEE_KIT_SECRET;
 
 @end
