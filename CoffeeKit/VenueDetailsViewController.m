@@ -21,7 +21,9 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  */
+
 #import "VenueDetailsViewController.h"
+#import "WebPageViewController.h"
 
 @interface VenueDetailsViewController ()
 
@@ -47,7 +49,7 @@
 @synthesize currentLocation = _currentLocation;
 @synthesize currentStats = _currentStats;
 
-#pragma mark - Memory Management
+#pragma mark - Memory Allocation
 
 - (void)didReceiveMemoryWarning
 {
@@ -75,6 +77,18 @@
     /* Retrieve the url address of the specific Venue (if Available) */
     self.urlLabel.text = @"Web Address:";
     [self.urlButton setTitle:self.urlOfVenue forState:UIControlStateNormal];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Show Web Page"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[WebPageViewController class]])
+        {
+            WebPageViewController *wpvc = segue.destinationViewController;
+            [wpvc setUrlAddress:self.urlOfVenue];
+        }
+    }
 }
 
 @end

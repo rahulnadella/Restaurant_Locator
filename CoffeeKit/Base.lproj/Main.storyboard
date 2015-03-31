@@ -151,6 +151,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2Pe-QV-6D8" kind="show" identifier="Show Web Page" id="cEv-MG-9Wi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -177,6 +180,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1440" y="156"/>
+        </scene>
+        <!--Web Page View Controller-->
+        <scene sceneID="nJz-n8-GbM">
+            <objects>
+                <viewController id="2Pe-QV-6D8" customClass="WebPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M4Z-V7-Mo3"/>
+                        <viewControllerLayoutGuide type="bottom" id="5OR-Pn-gWe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lo0-4H-j28">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2b-7V-Kb7">
+                                <rect key="frame" x="0.0" y="110" width="600" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="g81-YA-oyt">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf8-mA-abH">
+                                <rect key="frame" x="16" y="72" width="42" height="30"/>
+                                <color key="backgroundColor" red="0.13147874209999999" green="0.203184213" blue="0.62579719389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="2Pe-QV-6D8" eventType="touchUpInside" id="Yfv-9c-w8i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOY-2i-gni">
+                                <rect key="frame" x="66" y="72" width="76" height="30"/>
+                                <color key="backgroundColor" red="0.13147874209999999" green="0.203184213" blue="0.62579719389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="FORWARD">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forward:" destination="2Pe-QV-6D8" eventType="touchUpInside" id="pBa-2b-Zjy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGa-rP-eci">
+                                <rect key="frame" x="150" y="72" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.13147874209999999" green="0.203184213" blue="0.62579719389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="REFRESH">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refresh:" destination="2Pe-QV-6D8" eventType="touchUpInside" id="i8F-M3-Mo8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sOY-2i-gni" firstAttribute="leading" secondItem="bf8-mA-abH" secondAttribute="trailing" constant="8" symbolic="YES" id="0mK-3r-Rrj"/>
+                            <constraint firstAttribute="trailing" secondItem="f2b-7V-Kb7" secondAttribute="trailing" id="4t0-q5-dPG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="f2b-7V-Kb7" secondAttribute="bottom" constant="-64" id="5QH-TG-gJZ"/>
+                            <constraint firstItem="sOY-2i-gni" firstAttribute="baseline" secondItem="RGa-rP-eci" secondAttribute="baseline" id="5hV-hd-Ves"/>
+                            <constraint firstItem="g81-YA-oyt" firstAttribute="centerX" secondItem="f2b-7V-Kb7" secondAttribute="centerX" id="790-MI-w76"/>
+                            <constraint firstItem="g81-YA-oyt" firstAttribute="centerY" secondItem="Lo0-4H-j28" secondAttribute="centerY" id="Lg5-l5-WdX"/>
+                            <constraint firstItem="f2b-7V-Kb7" firstAttribute="top" secondItem="bf8-mA-abH" secondAttribute="bottom" constant="8" symbolic="YES" id="VJN-o8-SW8"/>
+                            <constraint firstItem="bf8-mA-abH" firstAttribute="top" secondItem="M4Z-V7-Mo3" secondAttribute="bottom" constant="8" symbolic="YES" id="Zpa-Ua-9Sp"/>
+                            <constraint firstItem="bf8-mA-abH" firstAttribute="leading" secondItem="Lo0-4H-j28" secondAttribute="leadingMargin" id="jDF-Qq-UA3"/>
+                            <constraint firstItem="f2b-7V-Kb7" firstAttribute="leading" secondItem="Lo0-4H-j28" secondAttribute="leading" id="qy4-YA-ICR"/>
+                            <constraint firstItem="bf8-mA-abH" firstAttribute="baseline" secondItem="sOY-2i-gni" secondAttribute="baseline" id="v4T-jw-nOM"/>
+                            <constraint firstItem="RGa-rP-eci" firstAttribute="leading" secondItem="sOY-2i-gni" secondAttribute="trailing" constant="8" symbolic="YES" id="xNe-Nd-INe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="g81-YA-oyt" id="Zb1-Si-Asj"/>
+                        <outlet property="webView" destination="f2b-7V-Kb7" id="JR0-HU-18b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qWq-Q1-T9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="156"/>
         </scene>
     </scenes>
 </document>

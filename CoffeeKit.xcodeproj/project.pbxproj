@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FCB350BC1AC9D0720068DB28 /* VenueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */; };
 		FCB350BF1AC9F0B00068DB28 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350BE1AC9F0B00068DB28 /* Contact.m */; };
+		FCB350C21ACAE02A0068DB28 /* WebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */; };
 		FCCEB3021AC84E8800634876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3011AC84E8800634876 /* main.m */; };
 		FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30C1AC84E8800634876 /* Main.storyboard */; };
 		FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30F1AC84E8800634876 /* Images.xcassets */; };
@@ -78,6 +79,8 @@
 		FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailsViewController.m; sourceTree = "<group>"; };
 		FCB350BD1AC9F0B00068DB28 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		FCB350BE1AC9F0B00068DB28 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		FCB350C01ACAE02A0068DB28 /* WebPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPageViewController.h; sourceTree = "<group>"; };
+		FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPageViewController.m; sourceTree = "<group>"; };
 		FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3001AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB3011AC84E8800634876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				FCCEB3A21AC88BF300634876 /* VenueViewController.m */,
 				FCB350BA1AC9D0720068DB28 /* VenueDetailsViewController.h */,
 				FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */,
+				FCB350C01ACAE02A0068DB28 /* WebPageViewController.h */,
+				FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB350C21ACAE02A0068DB28 /* WebPageViewController.m in Sources */,
 				FCCEB39F1AC88BE800634876 /* Stats.m in Sources */,
 				FCCEB3911AC88B9B00634876 /* AppDelegate.m in Sources */,
 				FCCEB3971AC88BDA00634876 /* VenueCell.m in Sources */,

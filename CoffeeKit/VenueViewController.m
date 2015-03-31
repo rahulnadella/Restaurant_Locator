@@ -43,7 +43,7 @@
 
 @synthesize currentVenue = _currentVenue;
 
-#pragma mark - Memory Management
+#pragma mark - Memory Allocation
 
 - (void)didReceiveMemoryWarning
 {
@@ -104,9 +104,9 @@
     
     if ([segue.identifier isEqualToString:@"Show Current Venue"])
     {
-        VenueDetailsViewController *vdvc = segue.destinationViewController;
-        if ([vdvc isKindOfClass:[VenueDetailsViewController class]])
+        if ([segue.destinationViewController isKindOfClass:[VenueDetailsViewController class]])
         {
+            VenueDetailsViewController *vdvc = segue.destinationViewController;
             if (self.currentVenue)
             {
                 [vdvc setTitle:self.currentVenue.name];
