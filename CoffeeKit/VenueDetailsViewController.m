@@ -85,26 +85,13 @@
     [self.urlButton setTitle:self.urlOfVenue forState:UIControlStateNormal];
 }
 
+#pragma mark - Active Web Address
 
 - (IBAction)activeWebAddress:(id)sender
 {
     if (self.urlOfVenue)
     {
         [self performSegueWithIdentifier:@"Show Web Page" sender:self];
-    }
-}
-
-#pragma mark - Segue
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"Show Web Page"])
-    {
-        if ([segue.destinationViewController isKindOfClass:[WebPageViewController class]])
-        {
-            WebPageViewController *wpvc = segue.destinationViewController;
-            [wpvc setUrlAddress:self.urlOfVenue];
-        }
     }
 }
 
@@ -123,5 +110,20 @@
         }
     }
 }
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Show Web Page"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[WebPageViewController class]])
+        {
+            WebPageViewController *wpvc = segue.destinationViewController;
+            [wpvc setUrlAddress:self.urlOfVenue];
+        }
+    }
+}
+
 
 @end
