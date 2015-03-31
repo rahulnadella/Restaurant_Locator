@@ -11,6 +11,7 @@
 		FCB350BF1AC9F0B00068DB28 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350BE1AC9F0B00068DB28 /* Contact.m */; };
 		FCB350C21ACAE02A0068DB28 /* WebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */; };
 		FCB350C41ACAFDA30068DB28 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB350C31ACAFDA30068DB28 /* Social.framework */; };
+		FCB350C71ACB0BEC0068DB28 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350C61ACB0BEC0068DB28 /* Preferences.m */; };
 		FCCEB3021AC84E8800634876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3011AC84E8800634876 /* main.m */; };
 		FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30C1AC84E8800634876 /* Main.storyboard */; };
 		FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30F1AC84E8800634876 /* Images.xcassets */; };
@@ -83,6 +84,8 @@
 		FCB350C01ACAE02A0068DB28 /* WebPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPageViewController.h; sourceTree = "<group>"; };
 		FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPageViewController.m; sourceTree = "<group>"; };
 		FCB350C31ACAFDA30068DB28 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FCB350C51ACB0BEC0068DB28 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		FCB350C61ACB0BEC0068DB28 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
 		FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3001AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB3011AC84E8800634876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				FCCEB3901AC88B9B00634876 /* AppDelegate.m */,
 				FCCEB3001AC84E8800634876 /* Info.plist */,
 				FCCEB3011AC84E8800634876 /* main.m */,
+				FCB350C51ACB0BEC0068DB28 /* Preferences.h */,
+				FCB350C61ACB0BEC0068DB28 /* Preferences.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				FCCEB3A31AC88BF300634876 /* VenueViewController.m in Sources */,
 				FCB350BF1AC9F0B00068DB28 /* Contact.m in Sources */,
 				FCB350BC1AC9D0720068DB28 /* VenueDetailsViewController.m in Sources */,
+				FCB350C71ACB0BEC0068DB28 /* Preferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

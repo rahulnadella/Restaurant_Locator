@@ -78,11 +78,20 @@
     self.phoneLabel.text = [NSString stringWithFormat:@"Contact Number: %@", self.currentContact.formattedPhone];
     self.twitterLabel.text = @"Twitter:";
     /* Store the Venue Twitter handle */
-    self.twitterHandle = self.currentContact.twitter ? [NSString stringWithFormat:@"@%@", self.currentContact.twitter] : @"";
+    self.twitterHandle = self.currentContact.twitter ? [NSString stringWithFormat:@"@%@", self.currentContact.twitter] : nil;
     [self.twitterButton setTitle:self.twitterHandle forState:UIControlStateNormal];
     /* Retrieve the url address of the specific Venue (if Available) */
     self.urlLabel.text = @"Web Address:";
     [self.urlButton setTitle:self.urlOfVenue forState:UIControlStateNormal];
+}
+
+
+- (IBAction)activeWebAddress:(id)sender
+{
+    if (self.urlOfVenue)
+    {
+        [self performSegueWithIdentifier:@"Show Web Page" sender:self];
+    }
 }
 
 #pragma mark - Segue

@@ -164,7 +164,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2Pe-QV-6D8" kind="show" identifier="Show Web Page" id="cEv-MG-9Wi"/>
+                                    <action selector="activeWebAddress:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="o5Y-ph-BUA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -188,6 +188,7 @@
                         <outlet property="twitterLabel" destination="MPp-fk-Jqz" id="Ccu-7p-o21"/>
                         <outlet property="urlButton" destination="jKa-VY-cfi" id="17V-Bc-V0O"/>
                         <outlet property="urlLabel" destination="Vjp-c1-MVt" id="bsf-t5-Z2m"/>
+                        <segue destination="2Pe-QV-6D8" kind="show" identifier="Show Web Page" id="09n-og-gb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
