@@ -144,7 +144,7 @@
     
     /* Define Stats Object Mapping */
     RKObjectMapping *statsMapping = [RKObjectMapping mappingForClass:[Stats class]];
-    [statsMapping addAttributeMappingsFromDictionary:@{@"checkinsCount": @"checkins", @"tipsCount": @"tips", @"usersCount": @"users"}];
+    [statsMapping addAttributeMappingsFromDictionary:@{@"checkinsCount": @"checkins", @"tipCount": @"tips", @"usersCount": @"users"}];
     
     /* Define Relationship Mapping - Contact, Location, Stats */
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"contact" toKeyPath:@"contact" withMapping:contactMapping]];
@@ -170,11 +170,10 @@
     NSDictionary *queryParams;
     queryParams = [NSDictionary dictionaryWithObjectsAndKeys:latLon, @"ll", clientID, @"client_id", clientSecret, @"client_secret", @"4bf58dd8d48988d1e0931735", @"categoryId", @"20140118", @"v", nil];
     /* Retrieve the venues from Foursquare using predefined settings */
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"/v2/venues/search" parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"/v2/venues/search" parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
+    {
         _venues = mappingResult.array;
         [self.tableView reloadData];
-        
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"What do you mean by 'there is no coffee?': %@", error);
     }];
