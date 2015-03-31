@@ -33,6 +33,7 @@
 
 @property (nonatomic, strong) NSString *nameOfVenue;
 @property (nonatomic, strong) NSString *urlOfVenue;
+@property (nonatomic, strong) NSString *twitterHandle;
 @property (nonatomic, strong) Contact *currentContact;
 @property (nonatomic, strong) Location *currentLocation;
 @property (nonatomic, strong) Stats *currentStats;

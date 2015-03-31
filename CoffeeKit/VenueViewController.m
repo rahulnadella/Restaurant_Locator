@@ -63,6 +63,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[self navigationItem] setTitle:@"Available Venues"];
+    
     /* Configure RestKit to connect to Foursquare API */
     [self configureRestKit];
     /* Retrieve the venues specified by the mapping */

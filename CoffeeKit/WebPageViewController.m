@@ -50,7 +50,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [[self navigationItem] setTitle:@"Venue Webpage"];
     
     UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBack:)];
     swipeGesture.direction = UISwipeGestureRecognizerDirectionRight;

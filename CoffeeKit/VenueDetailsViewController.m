@@ -22,6 +22,7 @@
  THE SOFTWARE.
  */
 
+#import <Social/Social.h>
 #import "VenueDetailsViewController.h"
 #import "WebPageViewController.h"
 
@@ -34,6 +35,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tipsLeft;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *twitterLabel;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 @property (weak, nonatomic) IBOutlet UILabel *urlLabel;
 @property (weak, nonatomic) IBOutlet UIButton *urlButton;
 
@@ -45,6 +47,7 @@
 
 @synthesize nameOfVenue = _nameOfVenue;
 @synthesize urlOfVenue = _urlOfVenue;
+@synthesize twitterHandle = _twitterHandle;
 @synthesize currentContact = _currentContact;
 @synthesize currentLocation = _currentLocation;
 @synthesize currentStats = _currentStats;
@@ -73,11 +76,16 @@
     self.tipsLeft.text = self.currentStats.tips ? [NSString stringWithFormat:@"%@ %@", @"Tips Left: ", self.currentStats.tips] : @"Tips Left: 0";
     /* Retrieve the contact info (phone number, twitter handle, etc) for specific Venue */
     self.phoneLabel.text = [NSString stringWithFormat:@"Contact Number: %@", self.currentContact.formattedPhone];
-    self.twitterLabel.text = self.currentContact.twitter ? [NSString stringWithFormat:@"Twitter ID: @%@", self.currentContact.twitter] : @"Twitter ID:" ;
+    self.twitterLabel.text = @"Twitter:";
+    /* Store the Venue Twitter handle */
+    self.twitterHandle = self.currentContact.twitter ? [NSString stringWithFormat:@"@%@", self.currentContact.twitter] : @"";
+    [self.twitterButton setTitle:self.twitterHandle forState:UIControlStateNormal];
     /* Retrieve the url address of the specific Venue (if Available) */
     self.urlLabel.text = @"Web Address:";
     [self.urlButton setTitle:self.urlOfVenue forState:UIControlStateNormal];
 }
+
+#pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -87,6 +95,22 @@
         {
             WebPageViewController *wpvc = segue.destinationViewController;
             [wpvc setUrlAddress:self.urlOfVenue];
+        }
+    }
+}
+
+#pragma mark - Tweet
+
+- (IBAction)tweet:(id)sender
+{
+    if (self.twitterHandle)
+    {
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+        {
+            SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [tweetSheet setInitialText:self.twitterHandle];
+            [self presentViewController:tweetSheet animated:YES completion:nil];
         }
     }
 }
