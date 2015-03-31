@@ -28,9 +28,6 @@
 #import "VenueViewController.h"
 #import "VenueDetailsViewController.h"
 
-#define kCLIENTID "WUMOMXQOV1OJJW5EKAKL4GNV5J42IA5UFO4FOAHBSK4V5HZT"
-#define kCLIENTSECRET "D5EWTP3B10GHAC0T4FUHE4MSYE55LDVZQXGGXZSJDRHO5SLZ"
-
 @interface VenueViewController ()
 
 @property (nonatomic, strong) NSArray *venues;
@@ -167,8 +164,8 @@
 - (void)loadVenues
 {
     NSString *latLon = @"37.33,-122.03"; // approximate latLon of The Mothership
-    NSString *clientID = [NSString stringWithUTF8String:kCLIENTID];
-    NSString *clientSecret = [NSString stringWithUTF8String:kCLIENTSECRET];
+    NSString *clientID = COFFEE_KIT_IDENTIFIER;
+    NSString *clientSecret = COFFEE_KIT_SECRET;
     
     NSDictionary *queryParams;
     queryParams = [NSDictionary dictionaryWithObjectsAndKeys:latLon, @"ll", clientID, @"client_id", clientSecret, @"client_secret", @"4bf58dd8d48988d1e0931735", @"categoryId", @"20140118", @"v", nil];
