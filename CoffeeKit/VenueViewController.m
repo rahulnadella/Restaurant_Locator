@@ -23,7 +23,6 @@
  */
 
 #import <RestKit/RestKit.h>
-#import "Venue.h"
 #import "VenueCell.h"
 #import "VenueViewController.h"
 #import "VenueDetailsViewController.h"
@@ -39,6 +38,7 @@
 #pragma mark - Properties
 
 @synthesize currentVenue = _currentVenue;
+@synthesize currentCategoryId = _currentCategoryId;
 
 #pragma mark - Memory Allocation
 
@@ -168,7 +168,7 @@
     NSString *clientSecret = COFFEE_KIT_SECRET;
     
     NSDictionary *queryParams;
-    queryParams = [NSDictionary dictionaryWithObjectsAndKeys:latLon, @"ll", clientID, @"client_id", clientSecret, @"client_secret", @"4bf58dd8d48988d1e0931735", @"categoryId", @"20140118", @"v", nil];
+    queryParams = [NSDictionary dictionaryWithObjectsAndKeys:latLon, @"ll", clientID, @"client_id", clientSecret, @"client_secret", self.currentCategoryId, @"categoryId", @"20120609", @"v", nil];
     /* Retrieve the venues from Foursquare using predefined settings */
     [[RKObjectManager sharedManager] getObjectsAtPath:@"/v2/venues/search" parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
     {

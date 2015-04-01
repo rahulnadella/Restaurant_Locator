@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+        <key>categoryName</key>
+        <string>Afghan Restaurant</string>
+        <key>categoryId</key>
+        <string>503288ae91d4c4b30a586d67</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>African Restaurant</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d1c8941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>American Restaurant</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d14e941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Arepa Restaurant</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d152941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Argentinian Restaurant</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d107941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Asian Restaurant</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d142941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Australian Restaurant</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d169941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Austrian Restaurant</string>
+        <key>categoryId</key>
+        <string>52e81612bcbc57f1066b7a01</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>BBQ Joint</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d1df931735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Bagel Shop</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d179941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Bakery</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d16a941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Belgian Restaurant</string>
+        <key>categoryId</key>
+        <string>52e81612bcbc57f1066b7a02</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Bistro</string>
+        <key>categoryId</key>
+        <string>52e81612bcbc57f1066b79f1</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Brazilian Restaurant</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d16b941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Breakfast Spot</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d143941735</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Bubble Tea Shop</string>
+        <key>categoryId</key>
+        <string>52e81612bcbc57f1066b7a0c</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Buffet</string>
+        <key>categoryId</key>
+        <string>52e81612bcbc57f1066b79f4</string>
+    </dict>
+    <dict>
+        <key>categoryName</key>
+        <string>Burger Joint</string>
+        <key>categoryId</key>
+        <string>4bf58dd8d48988d16c941735</string>
+    </dict>
+</array>
+</plist>

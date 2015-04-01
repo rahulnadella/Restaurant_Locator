@@ -23,13 +23,10 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "Venue.h"
 /*
- The VenueViewController provides a view of retrieve venues from Foursquare via their JSON api to display the venues registered with Foursquare. Currently the data is being retrieved via RestKit.
+ The CategoryTableViewController display the current categories (i.e. based on food) 
+ from the Foursquare category api.
  */
-@interface VenueViewController : UITableViewController
-
-@property (nonatomic, strong) Venue *currentVenue;
-@property (nonatomic, strong) NSString *currentCategoryId;
+@interface CategoryTableViewController : UITableViewController
 
 @end

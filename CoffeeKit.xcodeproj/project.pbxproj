@@ -12,6 +12,8 @@
 		FCB350C21ACAE02A0068DB28 /* WebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */; };
 		FCB350C41ACAFDA30068DB28 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB350C31ACAFDA30068DB28 /* Social.framework */; };
 		FCB350C71ACB0BEC0068DB28 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350C61ACB0BEC0068DB28 /* Preferences.m */; };
+		FCB350CE1ACC6CF40068DB28 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350CD1ACC6CF40068DB28 /* CategoryTableViewController.m */; };
+		FCB350D31ACC6EC70068DB28 /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCB350D21ACC6EC70068DB28 /* Categories.plist */; };
 		FCCEB3021AC84E8800634876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3011AC84E8800634876 /* main.m */; };
 		FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30C1AC84E8800634876 /* Main.storyboard */; };
 		FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30F1AC84E8800634876 /* Images.xcassets */; };
@@ -86,6 +88,9 @@
 		FCB350C31ACAFDA30068DB28 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FCB350C51ACB0BEC0068DB28 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		FCB350C61ACB0BEC0068DB28 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		FCB350CC1ACC6CF40068DB28 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		FCB350CD1ACC6CF40068DB28 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		FCB350D21ACC6EC70068DB28 /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
 		FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3001AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB3011AC84E8800634876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -190,6 +195,7 @@
 				FCCEB3011AC84E8800634876 /* main.m */,
 				FCB350C51ACB0BEC0068DB28 /* Preferences.h */,
 				FCB350C61ACB0BEC0068DB28 /* Preferences.m */,
+				FCB350D21ACC6EC70068DB28 /* Categories.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -229,6 +235,8 @@
 		FCCEB3931AC88BB400634876 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCB350CC1ACC6CF40068DB28 /* CategoryTableViewController.h */,
+				FCB350CD1ACC6CF40068DB28 /* CategoryTableViewController.m */,
 				FCCEB3A11AC88BF300634876 /* VenueViewController.h */,
 				FCCEB3A21AC88BF300634876 /* VenueViewController.m */,
 				FCB350BA1AC9D0720068DB28 /* VenueDetailsViewController.h */,
@@ -377,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB350D31ACC6EC70068DB28 /* Categories.plist in Resources */,
 				FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */,
 				FCCEB3131AC84E8800634876 /* LaunchScreen.xib in Resources */,
 				FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */,
@@ -398,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCB350C21ACAE02A0068DB28 /* WebPageViewController.m in Sources */,
+				FCB350CE1ACC6CF40068DB28 /* CategoryTableViewController.m in Sources */,
 				FCCEB39F1AC88BE800634876 /* Stats.m in Sources */,
 				FCCEB3911AC88B9B00634876 /* AppDelegate.m in Sources */,
 				FCCEB3971AC88BDA00634876 /* VenueCell.m in Sources */,
