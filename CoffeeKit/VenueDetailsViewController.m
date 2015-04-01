@@ -75,7 +75,7 @@
     /* Initialize the tips left at specific Venue */
     self.tipsLeft.text = self.currentStats.tips ? [NSString stringWithFormat:@"%@ %@", @"Tips Left: ", self.currentStats.tips] : @"Tips Left: 0";
     /* Retrieve the contact info (phone number, twitter handle, etc) for specific Venue */
-    self.phoneLabel.text = [NSString stringWithFormat:@"Contact Number: %@", self.currentContact.formattedPhone];
+    self.phoneLabel.text = self.currentContact.formattedPhone ? [NSString stringWithFormat:@"Contact Number: %@", self.currentContact.formattedPhone] : @"Contact Number: N/A";
     self.twitterLabel.text = @"Twitter:";
     /* Store the Venue Twitter handle */
     self.twitterHandle = self.currentContact.twitter ? [NSString stringWithFormat:@"@%@", self.currentContact.twitter] : nil;
