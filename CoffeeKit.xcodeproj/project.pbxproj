@@ -214,15 +214,15 @@
 		FCCEB2FF1AC84E8800634876 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FCB350DD1ACDEB560068DB28 /* images */,
+				FCB350D21ACC6EC70068DB28 /* Categories.plist */,
 				FCCEB3C21AC88E3D00634876 /* CoffeeKit-Prefix.pch */,
 				FCCEB38F1AC88B9B00634876 /* CoffeeKitAppDelegate.h */,
 				FCCEB3901AC88B9B00634876 /* CoffeeKitAppDelegate.m */,
+				FCB350DD1ACDEB560068DB28 /* images */,
 				FCCEB3001AC84E8800634876 /* Info.plist */,
 				FCCEB3011AC84E8800634876 /* main.m */,
 				FCB350C51ACB0BEC0068DB28 /* Preferences.h */,
 				FCB350C61ACB0BEC0068DB28 /* Preferences.m */,
-				FCB350D21ACC6EC70068DB28 /* Categories.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

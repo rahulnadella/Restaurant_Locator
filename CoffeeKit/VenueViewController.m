@@ -158,7 +158,7 @@
     
     /* Define Categories Object Model */
     RKObjectMapping *venueCategoryMapping = [RKObjectMapping mappingForClass:[Categories class]];
-    [venueCategoryMapping addAttributeMappingsFromArray:@[@"id", @"name", @"icon"]];
+    [venueCategoryMapping addAttributeMappingsFromArray:@[@"id", @"name", @"icon", @"primary"]];
     
     /* Define Relationship Mapping - Contact, Location, Stats */
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"contact" toKeyPath:@"contact" withMapping:contactMapping]];

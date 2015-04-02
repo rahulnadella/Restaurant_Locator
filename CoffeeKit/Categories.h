@@ -33,5 +33,6 @@
 @property (nonatomic, strong) NSString *name;
 /* Retrieve the icon of the specific category */
 @property (nonatomic, strong) NSDictionary *icon;
+@property (nonatomic) BOOL primary;
 
 @end
