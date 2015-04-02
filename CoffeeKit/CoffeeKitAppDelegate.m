@@ -6,13 +6,18 @@
 //  Copyright (c) 2014 4 Arrows Media, LLC. All rights reserved.
 //
 
-#import "AppDelegate.h"
 #import <RestKit/RestKit.h>
+#import "Appearance.h"
+#import "CoffeeKitAppDelegate.h"
 
-@implementation AppDelegate
+
+@implementation CoffeeKitAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    /* Change the font, color and style of the Application */
+    [Appearance customizeNavigationAppearance];
+    
     // Override point for customization after application launch.
     return YES;
 }

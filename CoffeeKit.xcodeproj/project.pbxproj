@@ -15,12 +15,14 @@
 		FCB350CE1ACC6CF40068DB28 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350CD1ACC6CF40068DB28 /* CategoryTableViewController.m */; };
 		FCB350D31ACC6EC70068DB28 /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCB350D21ACC6EC70068DB28 /* Categories.plist */; };
 		FCB350D61ACD96ED0068DB28 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350D51ACD96ED0068DB28 /* Categories.m */; };
+		FCB350DC1ACDEA250068DB28 /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350DB1ACDEA250068DB28 /* Appearance.m */; };
+		FCB350DF1ACDEB6B0068DB28 /* surf_gradient_textured_44.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB350DE1ACDEB6B0068DB28 /* surf_gradient_textured_44.png */; };
 		FCCEB3021AC84E8800634876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3011AC84E8800634876 /* main.m */; };
 		FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30C1AC84E8800634876 /* Main.storyboard */; };
 		FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30F1AC84E8800634876 /* Images.xcassets */; };
 		FCCEB3131AC84E8800634876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB3111AC84E8800634876 /* LaunchScreen.xib */; };
 		FCCEB31F1AC84E8800634876 /* CoffeeKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB31E1AC84E8800634876 /* CoffeeKitTests.m */; };
-		FCCEB3911AC88B9B00634876 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3901AC88B9B00634876 /* AppDelegate.m */; };
+		FCCEB3911AC88B9B00634876 /* CoffeeKitAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3901AC88B9B00634876 /* CoffeeKitAppDelegate.m */; };
 		FCCEB3971AC88BDA00634876 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3961AC88BDA00634876 /* VenueCell.m */; };
 		FCCEB39E1AC88BE800634876 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3991AC88BE800634876 /* Location.m */; };
 		FCCEB39F1AC88BE800634876 /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB39B1AC88BE800634876 /* Stats.m */; };
@@ -94,6 +96,9 @@
 		FCB350D21ACC6EC70068DB28 /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
 		FCB350D41ACD96ED0068DB28 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		FCB350D51ACD96ED0068DB28 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		FCB350DA1ACDEA250068DB28 /* Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appearance.h; sourceTree = "<group>"; };
+		FCB350DB1ACDEA250068DB28 /* Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appearance.m; sourceTree = "<group>"; };
+		FCB350DE1ACDEB6B0068DB28 /* surf_gradient_textured_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surf_gradient_textured_44.png; sourceTree = "<group>"; };
 		FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3001AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB3011AC84E8800634876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,8 +108,8 @@
 		FCCEB3181AC84E8800634876 /* CoffeeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB31D1AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB31E1AC84E8800634876 /* CoffeeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeKitTests.m; sourceTree = "<group>"; };
-		FCCEB38F1AC88B9B00634876 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FCCEB3901AC88B9B00634876 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FCCEB38F1AC88B9B00634876 /* CoffeeKitAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeKitAppDelegate.h; sourceTree = "<group>"; };
+		FCCEB3901AC88B9B00634876 /* CoffeeKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeKitAppDelegate.m; sourceTree = "<group>"; };
 		FCCEB3951AC88BDA00634876 /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		FCCEB3961AC88BDA00634876 /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		FCCEB3981AC88BE800634876 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
@@ -152,8 +157,18 @@
 		FCB350D91ACDD43F0068DB28 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				FCB350DA1ACDEA250068DB28 /* Appearance.h */,
+				FCB350DB1ACDEA250068DB28 /* Appearance.m */,
 			);
 			name = Style;
+			sourceTree = "<group>";
+		};
+		FCB350DD1ACDEB560068DB28 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FCB350DE1ACDEB6B0068DB28 /* surf_gradient_textured_44.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		FCCEB2F31AC84E8800634876 = {
@@ -199,9 +214,10 @@
 		FCCEB2FF1AC84E8800634876 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FCB350DD1ACDEB560068DB28 /* images */,
 				FCCEB3C21AC88E3D00634876 /* CoffeeKit-Prefix.pch */,
-				FCCEB38F1AC88B9B00634876 /* AppDelegate.h */,
-				FCCEB3901AC88B9B00634876 /* AppDelegate.m */,
+				FCCEB38F1AC88B9B00634876 /* CoffeeKitAppDelegate.h */,
+				FCCEB3901AC88B9B00634876 /* CoffeeKitAppDelegate.m */,
 				FCCEB3001AC84E8800634876 /* Info.plist */,
 				FCCEB3011AC84E8800634876 /* main.m */,
 				FCB350C51ACB0BEC0068DB28 /* Preferences.h */,
@@ -402,6 +418,7 @@
 				FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */,
 				FCCEB3131AC84E8800634876 /* LaunchScreen.xib in Resources */,
 				FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */,
+				FCB350DF1ACDEB6B0068DB28 /* surf_gradient_textured_44.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +439,7 @@
 				FCB350C21ACAE02A0068DB28 /* WebPageViewController.m in Sources */,
 				FCB350CE1ACC6CF40068DB28 /* CategoryTableViewController.m in Sources */,
 				FCCEB39F1AC88BE800634876 /* Stats.m in Sources */,
-				FCCEB3911AC88B9B00634876 /* AppDelegate.m in Sources */,
+				FCCEB3911AC88B9B00634876 /* CoffeeKitAppDelegate.m in Sources */,
 				FCCEB3971AC88BDA00634876 /* VenueCell.m in Sources */,
 				FCCEB3A01AC88BE800634876 /* Venue.m in Sources */,
 				FCCEB39E1AC88BE800634876 /* Location.m in Sources */,
@@ -432,6 +449,7 @@
 				FCB350BC1AC9D0720068DB28 /* VenueDetailsViewController.m in Sources */,
 				FCB350D61ACD96ED0068DB28 /* Categories.m in Sources */,
 				FCB350C71ACB0BEC0068DB28 /* Preferences.m in Sources */,
+				FCB350DC1ACDEA250068DB28 /* Appearance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
