@@ -27,7 +27,7 @@
 #import "VenueViewController.h"
 #import "VenueDetailsViewController.h"
 
-@interface VenueViewController ()
+@interface VenueViewController () <UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSArray *venues;
 
@@ -189,8 +189,20 @@
         _venues = mappingResult.array;
         [self.tableView reloadData];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        NSLog(@"What do you mean by 'there is no coffee?': %@", error);
+        /* Alert the user that an error occured while retrieving Venue information */
+        UIAlertView *unableToRetrieveVenues = [[UIAlertView alloc] initWithTitle:@"ERROR: UNABLE TO RETRIEVE VENUES" message:@"Unable to retrieve Venues for specific Category" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+        [unableToRetrieveVenues show];
     }];
+}
+
+#pragma mark - UIAlertViewDelegate methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        exit(0);
+    }
 }
 
 @end
