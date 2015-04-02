@@ -22,18 +22,16 @@
  THE SOFTWARE.
  */
 
-#import "Venue.h"
+#import <Foundation/Foundation.h>
+/*
+ The Categories object represent a specific type a list of Venue(s) will be 
+ grouped into (for example a bakery, coffee shop, indian restaurant, etc.)
+ */
+@interface Categories : NSObject
 
-@implementation Venue
-
-#pragma mark - Properties
-
-@synthesize id = _id;
-@synthesize name = _name;
-@synthesize url = _url;
-@synthesize contact = _contact;
-@synthesize location = _location;
-@synthesize stats = _stats;
-@synthesize categories = _categories;
+@property (nonatomic, strong) NSString *id;
+@property (nonatomic, strong) NSString *name;
+/* Retrieve the icon of the specific category */
+@property (nonatomic, strong) NSDictionary *icon;
 
 @end

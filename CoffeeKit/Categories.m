@@ -22,18 +22,12 @@
  THE SOFTWARE.
  */
 
-#import "Venue.h"
+#import "Categories.h"
 
-@implementation Venue
-
-#pragma mark - Properties
+@implementation Categories
 
 @synthesize id = _id;
 @synthesize name = _name;
-@synthesize url = _url;
-@synthesize contact = _contact;
-@synthesize location = _location;
-@synthesize stats = _stats;
-@synthesize categories = _categories;
+@synthesize icon = _icon;
 
 @end

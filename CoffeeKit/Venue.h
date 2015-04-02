@@ -26,6 +26,7 @@
 #import "Contact.h"
 #import "Location.h"
 #import "Stats.h"
+#import "Categories.h"
 /*
  The Venue object contains the relationship a specific Venue with the Foursquare api.
  */
@@ -37,5 +38,6 @@
 @property (nonatomic, strong) Contact *contact;
 @property (nonatomic, strong) Location *location;
 @property (nonatomic, strong) Stats *stats;
+@property (nonatomic, strong) NSArray *categories;
 
 @end

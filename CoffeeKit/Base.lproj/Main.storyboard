@@ -26,32 +26,39 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyj-ag-fi5">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l8r-7E-jsZ">
+                                            <rect key="frame" x="8" y="13" width="40" height="38"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxu-Iu-B48">
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4C-6B-a1Q">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDf-xr-23B">
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Lyj-ag-fi5" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" id="9tV-tL-6sU"/>
-                                        <constraint firstItem="Lyj-ag-fi5" firstAttribute="trailing" secondItem="d3P-M7-ByW" secondAttribute="trailingMargin" id="EAc-mP-kvC"/>
-                                        <constraint firstItem="R4C-6B-a1Q" firstAttribute="trailing" secondItem="d3P-M7-ByW" secondAttribute="trailingMargin" id="GMs-iA-Id2"/>
-                                        <constraint firstItem="0yV-W1-zwb" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" id="LO3-sk-NS4"/>
-                                        <constraint firstItem="R4C-6B-a1Q" firstAttribute="bottom" secondItem="d3P-M7-ByW" secondAttribute="bottomMargin" id="Qwa-ZX-SW8"/>
-                                        <constraint firstItem="0yV-W1-zwb" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="13" id="ekb-3t-Lol"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="0yV-W1-zwb" secondAttribute="bottom" constant="14" id="rot-3z-3Il"/>
+                                        <constraint firstItem="UDf-xr-23B" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="top" id="1Vb-jv-RzE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="l8r-7E-jsZ" secondAttribute="bottom" constant="4.5" id="GRs-Hd-8qG"/>
+                                        <constraint firstItem="l8r-7E-jsZ" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" id="HcJ-Tb-czL"/>
+                                        <constraint firstItem="l8r-7E-jsZ" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="5" id="OEO-Oy-brT"/>
+                                        <constraint firstItem="Cxu-Iu-B48" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="35" id="Ol5-Oy-m6X"/>
+                                        <constraint firstItem="0yV-W1-zwb" firstAttribute="leading" secondItem="d3P-M7-ByW" secondAttribute="leadingMargin" constant="48" id="Ulm-LE-Ipj"/>
+                                        <constraint firstItem="0yV-W1-zwb" firstAttribute="leading" secondItem="l8r-7E-jsZ" secondAttribute="trailing" constant="8" symbolic="YES" id="jRc-Pg-Aqq"/>
+                                        <constraint firstItem="Cxu-Iu-B48" firstAttribute="leading" secondItem="UDf-xr-23B" secondAttribute="leading" id="tgR-MI-xcr"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="UDf-xr-23B" secondAttribute="trailing" constant="42" id="wXU-4S-NqO"/>
+                                        <constraint firstItem="0yV-W1-zwb" firstAttribute="top" secondItem="d3P-M7-ByW" secondAttribute="topMargin" constant="15" id="wyK-Xp-Gf5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="checkinsLabel" destination="R4C-6B-a1Q" id="fo1-2u-nhJ"/>
-                                    <outlet property="distanceLabel" destination="Lyj-ag-fi5" id="3zg-f3-0Qc"/>
+                                    <outlet property="checkinsLabel" destination="Cxu-Iu-B48" id="TCe-FH-CFL"/>
+                                    <outlet property="distanceLabel" destination="UDf-xr-23B" id="Efc-ZC-8hA"/>
                                     <outlet property="nameLabel" destination="0yV-W1-zwb" id="n4j-T4-qLh"/>
+                                    <outlet property="venueCategoryImage" destination="l8r-7E-jsZ" id="PbT-Ff-SCN"/>
                                     <segue destination="Ah7-4n-0Wa" kind="show" identifier="Show Current Venue" id="jUr-3t-vfg"/>
                                 </connections>
                             </tableViewCell>
@@ -66,7 +73,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417" y="64"/>
+            <point key="canvasLocation" x="1415" y="64"/>
         </scene>
         <!--Category Table View Controller-->
         <scene sceneID="g0s-tT-pYd">

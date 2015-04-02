@@ -84,11 +84,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VenueCell" forIndexPath:indexPath];
-
+    
     Venue *venue = _venues[indexPath.row];
     cell.nameLabel.text = venue.name;
     cell.distanceLabel.text = [NSString stringWithFormat:@"%.0fm", venue.location.distance.floatValue];
     cell.checkinsLabel.text = [NSString stringWithFormat:@"%d checkins", venue.stats.checkins.intValue];
+    
+    /* Retrieve the icon from the categories array */
+    NSDictionary *icon = [[venue.categories objectAtIndex:0] icon];
+    NSString *prefix = [icon objectForKey:@"prefix"];
+    NSString *suffix = [icon objectForKey:@"suffix"];
+    /* Create the desired path based on the prefix and suffix of the specific Category */
+    NSString *imageUrl = [NSString stringWithFormat:@"%@bg_32%@", prefix, suffix];
+    /* Retrieve the Category image */
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
+    cell.imageView.image = [UIImage imageWithData:imageData];
     
     return cell;
 }
@@ -146,17 +156,21 @@
     RKObjectMapping *statsMapping = [RKObjectMapping mappingForClass:[Stats class]];
     [statsMapping addAttributeMappingsFromDictionary:@{@"checkinsCount": @"checkins", @"tipCount": @"tips", @"usersCount": @"users"}];
     
+    /* Define Categories Object Model */
+    RKObjectMapping *venueCategoryMapping = [RKObjectMapping mappingForClass:[Categories class]];
+    [venueCategoryMapping addAttributeMappingsFromArray:@[@"id", @"name", @"icon"]];
+    
     /* Define Relationship Mapping - Contact, Location, Stats */
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"contact" toKeyPath:@"contact" withMapping:contactMapping]];
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"location" toKeyPath:@"location" withMapping:locationMapping]];
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"stats" toKeyPath:@"stats" withMapping:statsMapping]];
+    [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"categories" toKeyPath:@"categories" withMapping:venueCategoryMapping]];
 
 
     /* Register mappings with the provider using a response descriptor */
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:venueMapping method:RKRequestMethodGET pathPattern:@"/v2/venues/search" keyPath:@"response.venues" statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
     [objectManager addResponseDescriptor:responseDescriptor];
-
 }
 
 #pragma mark - Load Venues

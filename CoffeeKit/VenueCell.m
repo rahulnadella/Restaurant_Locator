@@ -26,4 +26,32 @@
 
 @implementation VenueCell
 
+@synthesize nameLabel = _nameLabel;
+@synthesize distanceLabel = _distanceLabel;
+@synthesize checkinsLabel = _checkinsLabel;
+@synthesize venueCategoryImage = _venueCategoryImage;
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self)
+    {
+        // Initialization code
+    }
+    return self;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+}
+
+- (void)dealloc
+{
+    _nameLabel = nil;
+    _distanceLabel = nil;
+    _checkinsLabel = nil;
+    _venueCategoryImage = nil;
+}
+
 @end
