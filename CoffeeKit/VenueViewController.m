@@ -134,7 +134,7 @@
 - (void)configureRestKit
 {
     /* Initialize AFNetworking HTTPClient */
-    NSURL *baseURL = [NSURL URLWithString:@"https://api.foursquare.com"];
+    NSURL *baseURL = [NSURL URLWithString:FOURSQUARE_API];
     AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     
     /* Initialize RestKit */
@@ -168,7 +168,7 @@
 
 
     /* Register mappings with the provider using a response descriptor */
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:venueMapping method:RKRequestMethodGET pathPattern:@"/v2/venues/search" keyPath:@"response.venues" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:venueMapping method:RKRequestMethodGET pathPattern:VENUE_SEARCH keyPath:RESPONSE_VENUE statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
     [objectManager addResponseDescriptor:responseDescriptor];
 }
@@ -182,9 +182,9 @@
     NSString *clientSecret = COFFEE_KIT_SECRET;
     
     NSDictionary *queryParams;
-    queryParams = [NSDictionary dictionaryWithObjectsAndKeys:latLon, @"ll", clientID, @"client_id", clientSecret, @"client_secret", self.currentCategoryId, @"categoryId", @"20120609", @"v", nil];
+    queryParams = [NSDictionary dictionaryWithObjectsAndKeys:latLon, LATITUDE_LONGITUDE, clientID, CLIENT_ID, clientSecret, CLIENT_SECRET, self.currentCategoryId, CATEGORY_ID, VERSION_NUMBER, VERSION, nil];
     /* Retrieve the venues from Foursquare using predefined settings */
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"/v2/venues/search" parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
+    [[RKObjectManager sharedManager] getObjectsAtPath:VENUE_SEARCH parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
     {
         _venues = mappingResult.array;
         [self.tableView reloadData];

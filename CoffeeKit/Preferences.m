@@ -26,8 +26,20 @@
 
 @implementation Preferences
 
-NSString * const RETURN_TO_VENUE_INFORMATION = @"Return to Venue Information";
+NSString * const CATEGORIES = @"Categories";
+NSString * const CLIENT_ID = @"client_id";
+NSString * const CLIENT_SECRET = @"client_secret";
 NSString * const COFFEE_KIT_IDENTIFIER = @"WUMOMXQOV1OJJW5EKAKL4GNV5J42IA5UFO4FOAHBSK4V5HZT";
 NSString * const COFFEE_KIT_SECRET = @"D5EWTP3B10GHAC0T4FUHE4MSYE55LDVZQXGGXZSJDRHO5SLZ";
+NSString * const CATEGORY_ID = @"categoryId";
+NSString * const CATEGORY_NAME = @"categoryName";
+NSString * const FOURSQUARE_API = @"https://api.foursquare.com";
+NSString * const LATITUDE_LONGITUDE = @"ll";
+NSString * const PLIST = @"plist";
+NSString * const RESPONSE_VENUE = @"response.venues";
+NSString * const RETURN_TO_VENUE_INFORMATION = @"Return to Venue Information";
+NSString * const VENUE_SEARCH = @"/v2/venues/search";
+NSString * const VERSION = @"v";
+NSString * const VERSION_NUMBER = @"20120609";
 
 @end

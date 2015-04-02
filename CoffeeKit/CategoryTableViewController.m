@@ -42,7 +42,7 @@
     if (_categories)
     {
         /* Path to the plist (in the application bundle) */
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"Categories" ofType:@"plist"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:CATEGORIES ofType:PLIST];
         
         _categories = [[NSArray alloc] initWithContentsOfFile:path];
     }
@@ -65,9 +65,9 @@
 
     [[self navigationItem] setTitle:@"Food Categories"];
     
-    // Path to the plist (in the application bundle)
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Categories" ofType:@"plist"];
-    
+    /* Path to the plist (in the application bundle) */
+    NSString *path = [[NSBundle mainBundle] pathForResource:CATEGORIES ofType:PLIST];
+    /* Allocate/Initialize the plist file */
     self.categories = [[NSArray alloc] initWithContentsOfFile:path];
 }
 
@@ -89,8 +89,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Category Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [[self.categories objectAtIndex:indexPath.row] valueForKey:@"categoryName"];
-    cell.detailTextLabel.text = [[self.categories objectAtIndex:indexPath.row] valueForKey:@"categoryId"];
+    cell.textLabel.text = [[self.categories objectAtIndex:indexPath.row] valueForKey:CATEGORY_NAME];
+    cell.detailTextLabel.text = [[self.categories objectAtIndex:indexPath.row] valueForKey:CATEGORY_ID];
     
     return cell;
 }
@@ -101,7 +101,7 @@
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     NSDictionary *currentCategory = [self.categories objectAtIndex:indexPath.row];
-    NSString *categoryId = [currentCategory objectForKey:@"categoryId"];
+    NSString *categoryId = [currentCategory objectForKey:CATEGORY_ID];
     
     if ([segue.identifier isEqualToString:@"Show Current Venues"])
     {

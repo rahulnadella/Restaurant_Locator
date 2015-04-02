@@ -28,9 +28,21 @@
  */
 @interface Preferences : NSObject
 
-extern NSString * const RETURN_TO_VENUE_INFORMATION;
+extern NSString * const CATEGORIES;
+extern NSString * const CLIENT_ID;
+extern NSString * const CLIENT_SECRET;
 extern NSString * const COFFEE_KIT_IDENTIFIER;
 /* This value should always be retrieved from a server (this only for demo purposes) */
 extern NSString * const COFFEE_KIT_SECRET;
+extern NSString * const CATEGORY_ID;
+extern NSString * const CATEGORY_NAME;
+extern NSString * const FOURSQUARE_API;
+extern NSString * const LATITUDE_LONGITUDE;
+extern NSString * const PLIST;
+extern NSString * const RESPONSE_VENUE;
+extern NSString * const RETURN_TO_VENUE_INFORMATION;
+extern NSString * const VENUE_SEARCH;
+extern NSString * const VERSION;
+extern NSString * const VERSION_NUMBER;
 
 @end

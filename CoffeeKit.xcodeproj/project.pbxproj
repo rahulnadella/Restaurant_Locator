@@ -149,6 +149,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FCB350D91ACDD43F0068DB28 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Style;
+			sourceTree = "<group>";
+		};
 		FCCEB2F31AC84E8800634876 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +190,7 @@
 				FCCEB30C1AC84E8800634876 /* Main.storyboard */,
 				FCCEB30F1AC84E8800634876 /* Images.xcassets */,
 				FCCEB3111AC84E8800634876 /* LaunchScreen.xib */,
+				FCB350D91ACDD43F0068DB28 /* Style */,
 				FCCEB2FF1AC84E8800634876 /* Supporting Files */,
 			);
 			path = CoffeeKit;
