@@ -63,7 +63,7 @@
 {
     [super viewDidLoad];
 
-    [[self navigationController] setTitle:@"Food Categories"];
+    [[self navigationItem] setTitle:@"Food Categories"];
     
     // Path to the plist (in the application bundle)
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Categories" ofType:@"plist"];

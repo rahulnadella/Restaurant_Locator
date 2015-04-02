@@ -28,6 +28,7 @@
 
 #pragma mark - Properties
 
+@synthesize id = _id;
 @synthesize name = _name;
 @synthesize url = _url;
 @synthesize contact = _contact;

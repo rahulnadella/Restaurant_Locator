@@ -132,7 +132,7 @@
     
     /* Setup Object Mappings */
     RKObjectMapping *venueMapping = [RKObjectMapping mappingForClass:[Venue class]];
-    [venueMapping addAttributeMappingsFromArray:@[@"name", @"url"]];
+    [venueMapping addAttributeMappingsFromArray:@[@"id", @"name", @"url"]];
     
     /* Define the Contact Object Mapping */
     RKObjectMapping *contactMapping = [RKObjectMapping mappingForClass:[Contact class]];
