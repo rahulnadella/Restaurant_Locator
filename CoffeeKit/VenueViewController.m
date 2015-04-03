@@ -171,7 +171,8 @@
     RKObjectMapping *venueCategoryMapping = [RKObjectMapping mappingForClass:[Categories class]];
     [venueCategoryMapping addAttributeMappingsFromArray:@[@"id", @"name", @"icon", @"primary"]];
     
-    RKObjectMapping *statusMapping = [RKObjectMapping mappingForClass:[Status class]];
+    /* Define HereNow Object Model */
+    RKObjectMapping *statusMapping = [RKObjectMapping mappingForClass:[HereNow class]];
     [statusMapping addAttributeMappingsFromArray:@[@"count"]];
     
     /* Define Relationship Mapping - Contact, Location, Stats */
@@ -179,8 +180,7 @@
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"location" toKeyPath:@"location" withMapping:locationMapping]];
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"stats" toKeyPath:@"stats" withMapping:statsMapping]];
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"categories" toKeyPath:@"categories" withMapping:venueCategoryMapping]];
-    [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"status" toKeyPath:@"hereNow" withMapping:statusMapping]];
-
+    [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"hereNow" toKeyPath:@"hereNow" withMapping:statusMapping]];
 
     /* Register mappings with the provider using a response descriptor */
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:venueMapping method:RKRequestMethodGET pathPattern:VENUE_SEARCH keyPath:RESPONSE_VENUE statusCodes:[NSIndexSet indexSetWithIndex:200]];

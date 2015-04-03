@@ -26,8 +26,8 @@
 /*
  Retrieve the current Status of a particular Venue.
  */
-@interface Status : NSObject
+@interface HereNow : NSObject
 
-@property (nonatomic) NSNumber *count;
+@property (nonatomic, strong) NSNumber *count;
 
 @end

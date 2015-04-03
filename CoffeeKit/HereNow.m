@@ -22,9 +22,9 @@
  THE SOFTWARE.
  */
 
-#import "Status.h"
+#import "HereNow.h"
 
-@implementation Status
+@implementation HereNow
 
 @synthesize count = count;
 

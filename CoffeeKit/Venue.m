@@ -35,6 +35,6 @@
 @synthesize contact = _contact;
 @synthesize location = _location;
 @synthesize stats = _stats;
-@synthesize status = _status;
+@synthesize hereNow = _hereNow;
 
 @end

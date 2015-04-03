@@ -18,7 +18,7 @@
 		FCB350DC1ACDEA250068DB28 /* Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350DB1ACDEA250068DB28 /* Appearance.m */; };
 		FCB350DF1ACDEB6B0068DB28 /* surf_gradient_textured_44.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB350DE1ACDEB6B0068DB28 /* surf_gradient_textured_44.png */; };
 		FCB350E21ACF1DDD0068DB28 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350E11ACF1DDD0068DB28 /* CategoryCell.m */; };
-		FCB350E51ACF2BED0068DB28 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350E41ACF2BED0068DB28 /* Status.m */; };
+		FCB350E51ACF2BED0068DB28 /* HereNow.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350E41ACF2BED0068DB28 /* HereNow.m */; };
 		FCCEB3021AC84E8800634876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3011AC84E8800634876 /* main.m */; };
 		FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30C1AC84E8800634876 /* Main.storyboard */; };
 		FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30F1AC84E8800634876 /* Images.xcassets */; };
@@ -103,8 +103,8 @@
 		FCB350DE1ACDEB6B0068DB28 /* surf_gradient_textured_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surf_gradient_textured_44.png; sourceTree = "<group>"; };
 		FCB350E01ACF1DDD0068DB28 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
 		FCB350E11ACF1DDD0068DB28 /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
-		FCB350E31ACF2BED0068DB28 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
-		FCB350E41ACF2BED0068DB28 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		FCB350E31ACF2BED0068DB28 /* HereNow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HereNow.h; sourceTree = "<group>"; };
+		FCB350E41ACF2BED0068DB28 /* HereNow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HereNow.m; sourceTree = "<group>"; };
 		FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3001AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB3011AC84E8800634876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -263,8 +263,8 @@
 				FCCEB39D1AC88BE800634876 /* Venue.m */,
 				FCB350D41ACD96ED0068DB28 /* Categories.h */,
 				FCB350D51ACD96ED0068DB28 /* Categories.m */,
-				FCB350E31ACF2BED0068DB28 /* Status.h */,
-				FCB350E41ACF2BED0068DB28 /* Status.m */,
+				FCB350E31ACF2BED0068DB28 /* HereNow.h */,
+				FCB350E41ACF2BED0068DB28 /* HereNow.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -453,7 +453,7 @@
 				FCCEB3911AC88B9B00634876 /* CoffeeKitAppDelegate.m in Sources */,
 				FCCEB3971AC88BDA00634876 /* VenueCell.m in Sources */,
 				FCCEB3A01AC88BE800634876 /* Venue.m in Sources */,
-				FCB350E51ACF2BED0068DB28 /* Status.m in Sources */,
+				FCB350E51ACF2BED0068DB28 /* HereNow.m in Sources */,
 				FCCEB39E1AC88BE800634876 /* Location.m in Sources */,
 				FCCEB3021AC84E8800634876 /* main.m in Sources */,
 				FCCEB3A31AC88BF300634876 /* VenueViewController.m in Sources */,
