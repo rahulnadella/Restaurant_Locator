@@ -22,19 +22,12 @@
  THE SOFTWARE.
  */
 
-#import "Venue.h"
+#import <Foundation/Foundation.h>
+/*
+ Retrieve the current Status of a particular Venue.
+ */
+@interface Status : NSObject
 
-@implementation Venue
-
-#pragma mark - Properties
-
-@synthesize id = _id;
-@synthesize name = _name;
-@synthesize url = _url;
-@synthesize categories = _categories;
-@synthesize contact = _contact;
-@synthesize location = _location;
-@synthesize stats = _stats;
-@synthesize status = _status;
+@property (nonatomic) NSNumber *count;
 
 @end

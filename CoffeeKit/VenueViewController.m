@@ -100,6 +100,8 @@
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
     cell.imageView.image = [UIImage imageWithData:imageData];
     
+    NSLog(@"%d", venue.status.count.intValue);
+    
     return cell;
 }
 
@@ -160,11 +162,15 @@
     RKObjectMapping *venueCategoryMapping = [RKObjectMapping mappingForClass:[Categories class]];
     [venueCategoryMapping addAttributeMappingsFromArray:@[@"id", @"name", @"icon", @"primary"]];
     
+    RKObjectMapping *statusMapping = [RKObjectMapping mappingForClass:[Status class]];
+    [statusMapping addAttributeMappingsFromArray:@[@"count"]];
+    
     /* Define Relationship Mapping - Contact, Location, Stats */
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"contact" toKeyPath:@"contact" withMapping:contactMapping]];
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"location" toKeyPath:@"location" withMapping:locationMapping]];
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"stats" toKeyPath:@"stats" withMapping:statsMapping]];
     [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"categories" toKeyPath:@"categories" withMapping:venueCategoryMapping]];
+    [venueMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"status" toKeyPath:@"hereNow" withMapping:statusMapping]];
 
 
     /* Register mappings with the provider using a response descriptor */
