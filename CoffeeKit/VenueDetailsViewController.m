@@ -156,5 +156,14 @@
     }
 }
 
+#pragma mark - Swipe Back
+
+- (IBAction)swipeBack:(UISwipeGestureRecognizer *)sender
+{
+    if (sender.direction & UISwipeGestureRecognizerDirectionRight)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
 
 @end

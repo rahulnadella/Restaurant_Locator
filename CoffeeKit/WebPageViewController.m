@@ -53,11 +53,11 @@
 
     [[self navigationItem] setTitle:@"Venue Webpage"];
     
-    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBack:)];
-    swipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
-    swipeGesture.numberOfTouchesRequired = 2;
-    swipeGesture.delegate = self;
-    [self.view addGestureRecognizer:swipeGesture];
+//    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBack:)];
+//    swipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
+//    swipeGesture.numberOfTouchesRequired = 2;
+//    swipeGesture.delegate = self;
+//    [self.view addGestureRecognizer:swipeGesture];
     
     [self refresh:self];
 }
