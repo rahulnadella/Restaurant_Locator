@@ -63,6 +63,17 @@
     
     [[self navigationItem] setTitle:@"Available Venues"];
     
+    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:2];
+    
+    /* Add UIBarButtonItem SAVE */
+    UIBarButtonItem *bi = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ascending_arrow"] style:UIBarButtonItemStylePlain target:self action:@selector(ascendingOrderByDistance)];
+    [buttons addObject:bi];
+    /* Add UIBarButtonItem DELETE */
+    bi = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"descending_arrow"] style:UIBarButtonItemStylePlain target:self action:@selector(descendingOrderByCheckins)];
+    [buttons addObject:bi];
+
+    self.navigationItem.rightBarButtonItems = buttons;
+    
     /* Configure RestKit to connect to Foursquare API */
     [self configureRestKit];
     /* Retrieve the venues specified by the mapping */
@@ -100,35 +111,33 @@
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
     cell.imageView.image = [UIImage imageWithData:imageData];
     
-    NSLog(@"%d", venue.status.count.intValue);
-    
     return cell;
 }
 
-#pragma mark - Segue
+#pragma mark - Ascending Order by Distancer
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)ascendingOrderByDistance
 {
-    /* Retrieve the current Venue being selected by the user */
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    Venue *currentVenue = _venues[indexPath.row];
-    self.currentVenue = currentVenue;
+    _venues = [self.venues sortedArrayUsingComparator: ^(id a, id b) {
+        NSNumber *firstDistance = [[(Venue *)a location] distance];
+        NSNumber *secondDistance = [[(Venue *)b location] distance];
+        return [firstDistance compare:secondDistance];
+    }];
     
-    if ([segue.identifier isEqualToString:@"Show Current Venue"])
-    {
-        if ([segue.destinationViewController isKindOfClass:[VenueDetailsViewController class]])
-        {
-            VenueDetailsViewController *vdvc = segue.destinationViewController;
-            if (self.currentVenue)
-            {
-                [vdvc setTitle:self.currentVenue.name];
-                [vdvc setUrlOfVenue:self.currentVenue.url];
-                [vdvc setCurrentLocation:self.currentVenue.location];
-                [vdvc setCurrentStats:self.currentVenue.stats];
-                [vdvc setCurrentContact:self.currentVenue.contact];
-            }
-        }
-    }
+    [self.tableView reloadData];
+}
+
+#pragma mark - Descending Order by Checkins
+
+- (void)descendingOrderByCheckins
+{
+    _venues = [self.venues sortedArrayUsingComparator:^(id a, id b){
+        NSNumber *firstCheckIns = [[(Venue *)a stats] checkins];
+        NSNumber *secondCheckIns = [[(Venue *)b stats] checkins];
+        return [secondCheckIns compare:firstCheckIns];
+    }];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Configure RestKit
@@ -210,5 +219,32 @@
         exit(0);
     }
 }
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    /* Retrieve the current Venue being selected by the user */
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    Venue *currentVenue = _venues[indexPath.row];
+    self.currentVenue = currentVenue;
+    
+    if ([segue.identifier isEqualToString:@"Show Current Venue"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[VenueDetailsViewController class]])
+        {
+            VenueDetailsViewController *vdvc = segue.destinationViewController;
+            if (self.currentVenue)
+            {
+                [vdvc setTitle:self.currentVenue.name];
+                [vdvc setUrlOfVenue:self.currentVenue.url];
+                [vdvc setCurrentLocation:self.currentVenue.location];
+                [vdvc setCurrentStats:self.currentVenue.stats];
+                [vdvc setCurrentContact:self.currentVenue.contact];
+            }
+        }
+    }
+}
+
 
 @end
