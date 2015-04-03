@@ -38,6 +38,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 @property (weak, nonatomic) IBOutlet UILabel *urlLabel;
 @property (weak, nonatomic) IBOutlet UIButton *urlButton;
+@property (weak, nonatomic) IBOutlet UILabel *facebookLabel;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
 
 @end
 
@@ -47,6 +49,7 @@
 
 @synthesize nameOfVenue = _nameOfVenue;
 @synthesize urlOfVenue = _urlOfVenue;
+@synthesize facebookHandle = _facebookHandle;
 @synthesize twitterHandle = _twitterHandle;
 @synthesize currentContact = _currentContact;
 @synthesize currentLocation = _currentLocation;
@@ -64,25 +67,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     /* Define the name of the View based on the specific Venue */
     self.locationNameLabel.text = @"Contact Info";
+    
     /* Create the street address of the specific Venue */
     self.streetAddressLabel.text = self.currentLocation.crossStreet ? [NSString stringWithFormat:@"%@ (%@)", self.currentLocation.address, self.currentLocation.crossStreet] : [NSString stringWithFormat:@"%@", self.currentLocation.address] ;
+    
     /* Create the city, state, zip code of the specific Venue */
     self.cityStateZipcodeLabel.text = [NSString stringWithFormat:@"%@, %@ %@", self.currentLocation.city, self.currentLocation.state, self.currentLocation.postalCode];
+    
     /* Initialize the total number of visits to specific Venue */
     self.totalCheckins.text = [NSString stringWithFormat:@"%@ %@", @"Total Checkins: ", self.currentStats.checkins];
+    
     /* Initialize the tips left at specific Venue */
     self.tipsLeft.text = self.currentStats.tips ? [NSString stringWithFormat:@"%@ %@", @"Tips Left: ", self.currentStats.tips] : @"Tips Left: 0";
+    
     /* Retrieve the contact info (phone number, twitter handle, etc) for specific Venue */
     self.phoneLabel.text = self.currentContact.formattedPhone ? [NSString stringWithFormat:@"Contact Number: %@", self.currentContact.formattedPhone] : @"Contact Number: N/A";
     self.twitterLabel.text = @"Twitter:";
+    
     /* Store the Venue Twitter handle */
-    self.twitterHandle = self.currentContact.twitter ? [NSString stringWithFormat:@"@%@", self.currentContact.twitter] : nil;
+    self.twitterHandle = self.currentContact.twitter ? [NSString stringWithFormat:@"@%@", self.currentContact.twitter] : @"N/A";
     [self.twitterButton setTitle:self.twitterHandle forState:UIControlStateNormal];
+    
     /* Retrieve the url address of the specific Venue (if Available) */
     self.urlLabel.text = @"Web Address:";
     [self.urlButton setTitle:self.urlOfVenue forState:UIControlStateNormal];
+    
+    /* Store the Venue Facebook handle */
+    self.facebookLabel.text = @"Facebook:";
+    self.facebookHandle = self.currentContact.facebookName ? [NSString stringWithFormat:@"@%@", self.currentContact.facebookName] : @"N/A";
+    [self.facebookButton setTitle:self.facebookHandle forState:UIControlStateNormal];
 }
 
 #pragma mark - Active Web Address
@@ -95,7 +111,22 @@
     }
 }
 
-#pragma mark - Tweet
+#pragma mark - Facebook
+
+- (IBAction)sendFacebookMessage:(id)sender
+{
+    if (self.facebookHandle)
+    {
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+        {
+            SLComposeViewController *facebookSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            [facebookSheet setInitialText:self.facebookHandle];
+            [self presentViewController:facebookSheet animated:YES completion:nil];
+        }
+    }
+}
+
+#pragma mark - Twitter
 
 - (IBAction)tweet:(id)sender
 {

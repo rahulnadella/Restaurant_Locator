@@ -40,6 +40,6 @@ NSString * const RESPONSE_VENUE = @"response.venues";
 NSString * const RETURN_TO_VENUE_INFORMATION = @"Return to Venue Information";
 NSString * const VENUE_SEARCH = @"/v2/venues/search";
 NSString * const VERSION = @"v";
-NSString * const VERSION_NUMBER = @"20120609";
+NSString * const VERSION_NUMBER = @"20140609";
 
 @end

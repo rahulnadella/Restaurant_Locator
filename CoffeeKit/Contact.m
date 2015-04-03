@@ -31,5 +31,8 @@
 @synthesize phone = _phone;
 @synthesize formattedPhone = _formattedPhone;
 @synthesize twitter = _twitter;
+@synthesize facebook = _facebook;
+@synthesize facebookUsername = _facebookUsername;
+@synthesize facebookName = _facebookName;
 
 @end

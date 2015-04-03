@@ -31,5 +31,8 @@
 @property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSString *formattedPhone;
 @property (nonatomic, strong) NSString *twitter;
+@property (nonatomic, strong) NSString *facebook;
+@property (nonatomic, strong) NSString *facebookUsername;
+@property (nonatomic, strong) NSString *facebookName;
 
 @end

@@ -146,7 +146,7 @@
     
     /* Define the Contact Object Mapping */
     RKObjectMapping *contactMapping = [RKObjectMapping mappingForClass:[Contact class]];
-    [contactMapping addAttributeMappingsFromArray:@[@"phone", @"formattedPhone", @"twitter"]];
+    [contactMapping addAttributeMappingsFromArray:@[@"phone", @"formattedPhone", @"twitter", @"facebook", @"facebookUsername", @"facebookName"]];
     
     /* Define Location Object Mapping */
     RKObjectMapping *locationMapping = [RKObjectMapping mappingForClass:[Location class]];
