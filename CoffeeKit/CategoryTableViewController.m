@@ -71,8 +71,15 @@
     /* Allocate/Initialize the plist file */
     self.categories = [[NSArray alloc] initWithContentsOfFile:path];
     /* Self-Sizing UITableViewCell */
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 
