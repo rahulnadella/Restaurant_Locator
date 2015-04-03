@@ -84,20 +84,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Category Cell" textLabel="G4E-mG-G3q" style="IBUITableViewCellStyleDefault" id="SqM-3y-xud">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryCell" id="SqM-3y-xud" customClass="CategoryCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SqM-3y-xud" id="uZw-ne-8Ae">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G4E-mG-G3q">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="15"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfr-yX-5r4">
+                                            <rect key="frame" x="8" y="11" width="59" height="21"/>
+                                            <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Wfr-yX-5r4" secondAttribute="bottom" constant="3.5" id="1th-wT-pr4"/>
+                                        <constraint firstItem="Wfr-yX-5r4" firstAttribute="leading" secondItem="uZw-ne-8Ae" secondAttribute="leadingMargin" id="MDt-iE-9Ky"/>
+                                        <constraint firstItem="Wfr-yX-5r4" firstAttribute="top" secondItem="uZw-ne-8Ae" secondAttribute="topMargin" constant="3" id="prb-aX-Me4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="title" destination="Wfr-yX-5r4" id="ab9-Vf-faO"/>
                                     <segue destination="pGg-6v-bdr" kind="show" identifier="Show Current Venues" id="2sE-ci-rzN"/>
                                 </connections>
                             </tableViewCell>

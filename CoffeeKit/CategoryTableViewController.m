@@ -23,6 +23,7 @@
  */
 
 #import "CategoryTableViewController.h"
+#import "CategoryCell.h"
 #import "VenueViewController.h"
 
 @interface CategoryTableViewController ()
@@ -69,6 +70,9 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:CATEGORIES ofType:PLIST];
     /* Allocate/Initialize the plist file */
     self.categories = [[NSArray alloc] initWithContentsOfFile:path];
+    /* Self-Sizing UITableViewCell */
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
 }
 
 
@@ -87,12 +91,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Category Cell" forIndexPath:indexPath];
+    CategoryCell *categoryCell = [tableView dequeueReusableCellWithIdentifier:@"CategoryCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [[self.categories objectAtIndex:indexPath.row] valueForKey:CATEGORY_NAME];
-    cell.detailTextLabel.text = [[self.categories objectAtIndex:indexPath.row] valueForKey:CATEGORY_ID];
+    categoryCell.title.text = [[self.categories objectAtIndex:indexPath.row] valueForKey:CATEGORY_NAME];
     
-    return cell;
+    return categoryCell;
 }
 
 #pragma mark - Segue
