@@ -24,7 +24,7 @@
 
 #import "WebPageViewController.h"
 
-@interface WebPageViewController () <UIAlertViewDelegate, UIGestureRecognizerDelegate, UIWebViewDelegate>
+@interface WebPageViewController () <UIGestureRecognizerDelegate, UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -99,20 +99,14 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    UIAlertView *noInternetConnectionAlert = [[UIAlertView alloc] initWithTitle:@"NO INTERNET CONNECTION AVAILABLE" message:@"You currently do not have access to an active internet connection" delegate:self cancelButtonTitle:RETURN_TO_VENUE_INFORMATION otherButtonTitles:nil, nil];
-    [noInternetConnectionAlert show];
-}
-
-#pragma mark - AlertViewDelegate methods
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    UIAlertController *connectionView = [UIAlertController alertControllerWithTitle:NO_INTERNET_CONNECTION_AVAILABLE message:NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION preferredStyle:UIAlertControllerStyleAlert];
     
-    if ([title isEqualToString:RETURN_TO_VENUE_INFORMATION])
-    {
+    UIAlertAction *previous = [UIAlertAction actionWithTitle:RETURN_TO_VENUE_INFORMATION style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         [self.navigationController popViewControllerAnimated:YES];
-    }
+    }];
+    
+    [connectionView addAction:previous];
+    [self presentViewController:connectionView animated:YES completion:nil];
 }
 
 #pragma mark - Swipe Back

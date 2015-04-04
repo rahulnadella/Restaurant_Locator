@@ -42,6 +42,8 @@ extern NSString * const DISTANCE_ASCENDING;
 extern NSString * const ERROR_DESCRIPTION;
 extern NSString * const ERROR_TITLE;
 extern NSString * const FOURSQUARE_API;
+extern NSString * const NO_INTERNET_CONNECTION_AVAILABLE;
+extern NSString * const NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION;
 extern NSString * const LATITUDE_LONGITUDE;
 extern NSString * const OKAY;
 extern NSString * const PLIST;
