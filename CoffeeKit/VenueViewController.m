@@ -27,7 +27,7 @@
 #import "VenueViewController.h"
 #import "VenueDetailsViewController.h"
 
-@interface VenueViewController () <UIAlertViewDelegate>
+@interface VenueViewController () <UIActionSheetDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSArray *venues;
 
@@ -67,7 +67,7 @@
     
     /* Add UIBarButtonItem SAVE */
     UIImage *sort = [[UIImage imageNamed:@"sort"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *bi = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(ascendingOrderByDistance)];
+    UIBarButtonItem *bi = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(showAlertSheet)];
     [buttons addObject:bi];
     
     self.navigationItem.rightBarButtonItems = buttons;
@@ -136,6 +136,30 @@
     }];
     
     [self.tableView reloadData];
+}
+
+- (void)showAlertSheet
+{
+    UIAlertController *sortView = [UIAlertController alertControllerWithTitle:@"Sort Venue(s)"
+                                                                      message:@"Sort Venue(s) by Distance or Checkins"
+                                                               preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *distance = [UIAlertAction actionWithTitle:@"Distance (Ascending)" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        [self ascendingOrderByDistance];
+    }];
+    
+    UIAlertAction *checkins = [UIAlertAction actionWithTitle:@"Checkins (Descending)" style:UIAlertActionStyleDefault handler:^(UIAlertAction *alert){
+        [self descendingOrderByCheckins];
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [sortView addAction:distance];
+    [sortView addAction:checkins];
+    [sortView addAction:cancel];
+    [self presentViewController:sortView animated:YES completion:nil];
 }
 
 #pragma mark - Configure RestKit
