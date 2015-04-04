@@ -29,5 +29,6 @@
 @interface WebPageViewController : UIViewController
 
 @property (nonatomic, strong) NSString *urlAddress;
+@property (nonatomic, strong) NSString *menuAddress;
 
 @end

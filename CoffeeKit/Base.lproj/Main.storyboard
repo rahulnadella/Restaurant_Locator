@@ -180,6 +180,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjp-c1-MVt">
+                                <rect key="frame" x="16" y="278" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7R-R3-96c">
                                 <rect key="frame" x="118" y="198" width="250" height="30"/>
                                 <color key="backgroundColor" red="0.2057880446" green="0.55092186239999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -192,9 +198,22 @@
                                     <action selector="tweet:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="KPp-lA-rag"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKa-VY-cfi">
+                                <rect key="frame" x="129" y="274" width="239" height="30"/>
+                                <color key="backgroundColor" red="0.20578804463466038" green="0.55092186242352992" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="activeWebAddress:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="o5Y-ph-BUA"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7t-dJ-PYP">
                                 <rect key="frame" x="118" y="236" width="250" height="30"/>
                                 <color key="backgroundColor" red="0.2057880446" green="0.55092186239999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -209,24 +228,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjp-c1-MVt">
-                                <rect key="frame" x="16" y="278" width="157" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKa-VY-cfi">
-                                <rect key="frame" x="168" y="274" width="200" height="30"/>
-                                <color key="backgroundColor" red="0.20578804463466038" green="0.55092186242352992" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9c-Mq-aGr">
+                                <rect key="frame" x="129" y="312" width="239" height="30"/>
+                                <color key="backgroundColor" red="0.2057880446" green="0.55092186239999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="activeWebAddress:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="o5Y-ph-BUA"/>
+                                    <segue destination="2Pe-QV-6D8" kind="show" identifier="Show Menu" id="Zvj-hG-tvg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sz-qL-7sG">
+                                <rect key="frame" x="16" y="316" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -246,6 +265,8 @@
                         <outlet property="facebookButton" destination="r7t-dJ-PYP" id="gug-Ct-bPb"/>
                         <outlet property="facebookLabel" destination="VGH-ua-gNX" id="a0Y-Wg-JEy"/>
                         <outlet property="locationNameLabel" destination="Pr7-0J-9Fx" id="a3H-Qz-2nx"/>
+                        <outlet property="menuButton" destination="N9c-Mq-aGr" id="Pjv-CD-ZBC"/>
+                        <outlet property="menuLabel" destination="3sz-qL-7sG" id="jUy-o6-5aY"/>
                         <outlet property="phoneLabel" destination="66t-as-eZF" id="gCc-k7-YQE"/>
                         <outlet property="streetAddressLabel" destination="EvW-Lh-ANn" id="VxU-jH-Vus"/>
                         <outlet property="tipsLeft" destination="pg2-Cj-jRU" id="CCE-RW-G2M"/>
@@ -372,4 +393,7 @@
             <point key="canvasLocation" x="-184" y="64"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zvj-hG-tvg"/>
+    </inferredMetricsTieBreakers>
 </document>

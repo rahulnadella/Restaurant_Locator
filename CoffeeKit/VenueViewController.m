@@ -245,6 +245,7 @@
                 [vdvc setCurrentLocation:self.currentVenue.location];
                 [vdvc setCurrentStats:self.currentVenue.stats];
                 [vdvc setCurrentContact:self.currentVenue.contact];
+                [vdvc setCurrentMenu:self.currentVenue.menu];
             }
         }
     }

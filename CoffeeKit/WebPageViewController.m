@@ -53,12 +53,6 @@
 
     [[self navigationItem] setTitle:@"Venue Webpage"];
     
-//    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeBack:)];
-//    swipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
-//    swipeGesture.numberOfTouchesRequired = 2;
-//    swipeGesture.delegate = self;
-//    [self.view addGestureRecognizer:swipeGesture];
-    
     [self refresh:self];
 }
 
@@ -81,8 +75,10 @@
 - (IBAction)refresh:(id)sender
 {
     self.webView.delegate = self;
+    /* Determine which address is active */
+    NSString *activeAddress = self.urlAddress ? self.urlAddress : self.menuAddress;
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlAddress]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:activeAddress]]];
 }
 
 #pragma mark - UIWebViewDelegate methods

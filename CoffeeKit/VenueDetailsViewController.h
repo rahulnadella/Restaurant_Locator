@@ -25,6 +25,7 @@
 #import <UIKit/UIKit.h>
 #import "Contact.h"
 #import "Location.h"
+#import "Menu.h"
 #import "Stats.h"
 /*
  The VenueDetailsViewController provides specific details associated with each Venue. For example, the Contact info, the number of people visted, etc.
@@ -35,8 +36,10 @@
 @property (nonatomic, strong) NSString *urlOfVenue;
 @property (nonatomic, strong) NSString *twitterHandle;
 @property (nonatomic, strong) NSString *facebookHandle;
+@property (nonatomic, strong) NSString *menuOfUrlVenu;
 @property (nonatomic, strong) Contact *currentContact;
 @property (nonatomic, strong) Location *currentLocation;
+@property (nonatomic, strong) Menu *currentMenu;
 @property (nonatomic, strong) Stats *currentStats;
 
 @end

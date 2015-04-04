@@ -40,6 +40,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *urlButton;
 @property (weak, nonatomic) IBOutlet UILabel *facebookLabel;
 @property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+@property (weak, nonatomic) IBOutlet UILabel *menuLabel;
+@property (weak, nonatomic) IBOutlet UIButton *menuButton;
 
 @end
 
@@ -49,10 +51,12 @@
 
 @synthesize nameOfVenue = _nameOfVenue;
 @synthesize urlOfVenue = _urlOfVenue;
+@synthesize menuOfUrlVenu = _menuOfUrlVenu;
 @synthesize facebookHandle = _facebookHandle;
 @synthesize twitterHandle = _twitterHandle;
 @synthesize currentContact = _currentContact;
 @synthesize currentLocation = _currentLocation;
+@synthesize currentMenu = _currentMenu;
 @synthesize currentStats = _currentStats;
 
 #pragma mark - Memory Allocation
@@ -99,6 +103,11 @@
     self.facebookLabel.text = @"Facebook:";
     self.facebookHandle = self.currentContact.facebookName ? [NSString stringWithFormat:@"@%@", self.currentContact.facebookName] : @"N/A";
     [self.facebookButton setTitle:self.facebookHandle forState:UIControlStateNormal];
+    
+    /* Store the Menu url address of the specifc Venue (if Available) */
+    self.menuLabel.text = @"Menu:";
+    self.menuOfUrlVenu = self.currentMenu.mobileUrl ? [NSString stringWithFormat:@"%@", self.currentMenu.mobileUrl] : @"N/A";
+    [self.menuButton setTitle:self.menuOfUrlVenu forState:UIControlStateNormal];
 }
 
 #pragma mark - Active Web Address
@@ -152,6 +161,14 @@
         {
             WebPageViewController *wpvc = segue.destinationViewController;
             [wpvc setUrlAddress:self.urlOfVenue];
+        }
+    }
+    else if ([segue.identifier isEqualToString:@"Show Menu"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[WebPageViewController class]])
+        {
+            WebPageViewController *wpvc = segue.destinationViewController;
+            [wpvc setMenuAddress:self.menuOfUrlVenu];
         }
     }
 }
