@@ -140,19 +140,19 @@
 
 - (void)showAlertSheet
 {
-    UIAlertController *sortView = [UIAlertController alertControllerWithTitle:@"Sort Venue(s)"
-                                                                      message:@"Sort Venue(s) by Distance or Checkins"
+    UIAlertController *sortView = [UIAlertController alertControllerWithTitle:SORT_TITLE
+                                                                      message:SORT_DESCRIPTION
                                                                preferredStyle:UIAlertControllerStyleActionSheet];
     
-    UIAlertAction *distance = [UIAlertAction actionWithTitle:@"Distance (Ascending)" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+    UIAlertAction *distance = [UIAlertAction actionWithTitle:DISTANCE_ASCENDING style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         [self ascendingOrderByDistance];
     }];
     
-    UIAlertAction *checkins = [UIAlertAction actionWithTitle:@"Checkins (Descending)" style:UIAlertActionStyleDefault handler:^(UIAlertAction *alert){
+    UIAlertAction *checkins = [UIAlertAction actionWithTitle:CHECKINS_DESCENDING style:UIAlertActionStyleDefault handler:^(UIAlertAction *alert){
         [self descendingOrderByCheckins];
     }];
     
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:CANCEL style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
