@@ -27,7 +27,7 @@
 #import "VenueViewController.h"
 #import "VenueDetailsViewController.h"
 
-@interface VenueViewController () <UIAlertViewDelegate>
+@interface VenueViewController ()
 
 @property (nonatomic, strong) NSArray *venues;
 
@@ -233,20 +233,21 @@
         _venues = mappingResult.array;
         [self.tableView reloadData];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        /* Alert the user that an error occured while retrieving Venue information */
-        UIAlertView *unableToRetrieveVenues = [[UIAlertView alloc] initWithTitle:@"ERROR: UNABLE TO RETRIEVE VENUES" message:@"Unable to retrieve Venues for specific Category" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-        [unableToRetrieveVenues show];
+        /* Use UIAlertController to create the Alert (UIAlertView is deprecated in iOS 8.0) */
+        UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:ERROR_TITLE message:ERROR_DESCRIPTION preferredStyle:UIAlertControllerStyleAlert];
+        /* Add the OK Alert */
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:OKAY style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            exit(0);
+        }];
+        /* Add the CANCEL Alert */
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:CANCEL style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+        /* Add the OK and CANCEL to the View */
+        [errorAlert addAction:ok];
+        [errorAlert addAction:cancel];
+        [self presentViewController:errorAlert animated:YES completion:nil];
     }];
-}
-
-#pragma mark - UIAlertViewDelegate methods
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1)
-    {
-        exit(0);
-    }
 }
 
 #pragma mark - Segue
