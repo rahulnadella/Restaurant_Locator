@@ -33,8 +33,9 @@
 @synthesize url = _url;
 @synthesize categories = _categories;
 @synthesize contact = _contact;
-@synthesize location = _location;
-@synthesize stats = _stats;
 @synthesize hereNow = _hereNow;
+@synthesize location = _location;
+@synthesize menu = _menu;
+@synthesize stats = _stats;
 
 @end

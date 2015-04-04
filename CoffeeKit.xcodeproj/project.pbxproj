@@ -19,6 +19,7 @@
 		FCB350DF1ACDEB6B0068DB28 /* surf_gradient_textured_44.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB350DE1ACDEB6B0068DB28 /* surf_gradient_textured_44.png */; };
 		FCB350E21ACF1DDD0068DB28 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350E11ACF1DDD0068DB28 /* CategoryCell.m */; };
 		FCB350E51ACF2BED0068DB28 /* HereNow.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350E41ACF2BED0068DB28 /* HereNow.m */; };
+		FCB350E81AD02DCC0068DB28 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350E71AD02DCC0068DB28 /* Menu.m */; };
 		FCCEB3021AC84E8800634876 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3011AC84E8800634876 /* main.m */; };
 		FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30C1AC84E8800634876 /* Main.storyboard */; };
 		FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30F1AC84E8800634876 /* Images.xcassets */; };
@@ -105,6 +106,8 @@
 		FCB350E11ACF1DDD0068DB28 /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
 		FCB350E31ACF2BED0068DB28 /* HereNow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HereNow.h; sourceTree = "<group>"; };
 		FCB350E41ACF2BED0068DB28 /* HereNow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HereNow.m; sourceTree = "<group>"; };
+		FCB350E61AD02DCC0068DB28 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		FCB350E71AD02DCC0068DB28 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3001AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB3011AC84E8800634876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -253,18 +256,20 @@
 		FCCEB3921AC88BAD00634876 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FCB350D41ACD96ED0068DB28 /* Categories.h */,
+				FCB350D51ACD96ED0068DB28 /* Categories.m */,
 				FCB350BD1AC9F0B00068DB28 /* Contact.h */,
 				FCB350BE1AC9F0B00068DB28 /* Contact.m */,
+				FCB350E31ACF2BED0068DB28 /* HereNow.h */,
+				FCB350E41ACF2BED0068DB28 /* HereNow.m */,
 				FCCEB3981AC88BE800634876 /* Location.h */,
 				FCCEB3991AC88BE800634876 /* Location.m */,
+				FCB350E61AD02DCC0068DB28 /* Menu.h */,
+				FCB350E71AD02DCC0068DB28 /* Menu.m */,
 				FCCEB39A1AC88BE800634876 /* Stats.h */,
 				FCCEB39B1AC88BE800634876 /* Stats.m */,
 				FCCEB39C1AC88BE800634876 /* Venue.h */,
 				FCCEB39D1AC88BE800634876 /* Venue.m */,
-				FCB350D41ACD96ED0068DB28 /* Categories.h */,
-				FCB350D51ACD96ED0068DB28 /* Categories.m */,
-				FCB350E31ACF2BED0068DB28 /* HereNow.h */,
-				FCB350E41ACF2BED0068DB28 /* HereNow.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 			files = (
 				FCB350C21ACAE02A0068DB28 /* WebPageViewController.m in Sources */,
 				FCB350E21ACF1DDD0068DB28 /* CategoryCell.m in Sources */,
+				FCB350E81AD02DCC0068DB28 /* Menu.m in Sources */,
 				FCB350CE1ACC6CF40068DB28 /* CategoryTableViewController.m in Sources */,
 				FCCEB39F1AC88BE800634876 /* Stats.m in Sources */,
 				FCCEB3911AC88B9B00634876 /* CoffeeKitAppDelegate.m in Sources */,
