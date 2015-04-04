@@ -109,9 +109,15 @@
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
     cell.venueCategoryImage.image = [UIImage imageWithData:imageData];
     
-    if (venue.hereNow.count > 0)
+    NSLog(@"%d", venue.hereNow.count.intValue);
+    
+    if (venue.hereNow.count.intValue > 0)
     {
         cell.statusImage.image = [UIImage imageNamed:@"openSign"];
+    }
+    else
+    {
+        cell.statusImage.image = [UIImage imageNamed:@"closedSign"];
     }
     
     return cell;
