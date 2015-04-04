@@ -30,6 +30,7 @@
 @synthesize distanceLabel = _distanceLabel;
 @synthesize checkinsLabel = _checkinsLabel;
 @synthesize venueCategoryImage = _venueCategoryImage;
+@synthesize statusImage = _statusImage;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -52,6 +53,7 @@
     _distanceLabel = nil;
     _checkinsLabel = nil;
     _venueCategoryImage = nil;
+    _statusImage = nil;
 }
 
 @end

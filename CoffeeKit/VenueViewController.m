@@ -107,7 +107,12 @@
     NSString *imageUrl = [NSString stringWithFormat:@"%@bg_32%@", prefix, suffix];
     /* Retrieve the Category image */
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
-    cell.imageView.image = [UIImage imageWithData:imageData];
+    cell.venueCategoryImage.image = [UIImage imageWithData:imageData];
+    
+    if (venue.hereNow.count > 0)
+    {
+        cell.statusImage.image = [UIImage imageNamed:@"openSign"];
+    }
     
     return cell;
 }

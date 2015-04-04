@@ -30,5 +30,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *checkinsLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *venueCategoryImage;
+@property (nonatomic, weak) IBOutlet UIImageView *statusImage;
 
 @end
