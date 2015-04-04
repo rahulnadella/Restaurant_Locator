@@ -27,7 +27,7 @@
 #import "VenueViewController.h"
 #import "VenueDetailsViewController.h"
 
-@interface VenueViewController () <UIActionSheetDelegate, UIAlertViewDelegate>
+@interface VenueViewController () <UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSArray *venues;
 
@@ -138,24 +138,27 @@
     [self.tableView reloadData];
 }
 
+#pragma mark - Show AlertSheet
+
 - (void)showAlertSheet
 {
+    /* Using the UIAlertController in iOS 8.0 (ActionSheetDelegate is deprecated) */
     UIAlertController *sortView = [UIAlertController alertControllerWithTitle:SORT_TITLE
                                                                       message:SORT_DESCRIPTION
                                                                preferredStyle:UIAlertControllerStyleActionSheet];
-    
+    /* Create the Distance Ascending action */
     UIAlertAction *distance = [UIAlertAction actionWithTitle:DISTANCE_ASCENDING style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         [self ascendingOrderByDistance];
     }];
-    
+    /* Create the Checkins Descending action */
     UIAlertAction *checkins = [UIAlertAction actionWithTitle:CHECKINS_DESCENDING style:UIAlertActionStyleDefault handler:^(UIAlertAction *alert){
         [self descendingOrderByCheckins];
     }];
-    
+    /* Create the Cancel Button */
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:CANCEL style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
-    
+    /* Add the Distance, Checkins, and Cancel to the View */
     [sortView addAction:distance];
     [sortView addAction:checkins];
     [sortView addAction:cancel];
