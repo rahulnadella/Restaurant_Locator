@@ -66,12 +66,10 @@
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:2];
     
     /* Add UIBarButtonItem SAVE */
-    UIBarButtonItem *bi = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ascending_arrow"] style:UIBarButtonItemStylePlain target:self action:@selector(ascendingOrderByDistance)];
+    UIImage *sort = [[UIImage imageNamed:@"sort"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *bi = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(ascendingOrderByDistance)];
     [buttons addObject:bi];
-    /* Add UIBarButtonItem DELETE */
-    bi = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"descending_arrow"] style:UIBarButtonItemStylePlain target:self action:@selector(descendingOrderByCheckins)];
-    [buttons addObject:bi];
-
+    
     self.navigationItem.rightBarButtonItems = buttons;
     
     /* Configure RestKit to connect to Foursquare API */
