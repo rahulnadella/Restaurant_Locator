@@ -174,6 +174,26 @@
     [self presentViewController:sortView animated:YES completion:nil];
 }
 
+#pragma mark - Show AlertView
+
+- (void)showAlertView
+{
+    /* Use UIAlertController to create the Alert (UIAlertView is deprecated in iOS 8.0) */
+    UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:ERROR_TITLE message:ERROR_DESCRIPTION preferredStyle:UIAlertControllerStyleAlert];
+    /* Add the OK Alert */
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:OKAY style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        exit(0);
+    }];
+    /* Add the CANCEL Alert */
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:CANCEL style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    /* Add the OK and CANCEL to the View */
+    [errorAlert addAction:ok];
+    [errorAlert addAction:cancel];
+    [self presentViewController:errorAlert animated:YES completion:nil];
+}
+
 #pragma mark - Configure RestKit
 
 - (void)configureRestKit
@@ -242,20 +262,7 @@
         _venues = mappingResult.array;
         [self.tableView reloadData];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        /* Use UIAlertController to create the Alert (UIAlertView is deprecated in iOS 8.0) */
-        UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:ERROR_TITLE message:ERROR_DESCRIPTION preferredStyle:UIAlertControllerStyleAlert];
-        /* Add the OK Alert */
-        UIAlertAction *ok = [UIAlertAction actionWithTitle:OKAY style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-            exit(0);
-        }];
-        /* Add the CANCEL Alert */
-        UIAlertAction *cancel = [UIAlertAction actionWithTitle:CANCEL style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }];
-        /* Add the OK and CANCEL to the View */
-        [errorAlert addAction:ok];
-        [errorAlert addAction:cancel];
-        [self presentViewController:errorAlert animated:YES completion:nil];
+        [self showAlertView];
     }];
 }
 
