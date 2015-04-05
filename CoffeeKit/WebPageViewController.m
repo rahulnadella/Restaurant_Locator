@@ -55,7 +55,7 @@
 {
     [super viewDidLoad];
 
-    [[self navigationItem] setTitle:@"Venue Webpage"];
+    [self.navigationItem setTitle:@"Venue Webpage"];
     
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
     
@@ -70,7 +70,7 @@
 
 - (void)retrieveMapView
 {
-    [self performSegueWithIdentifier:@"Show Venue Map View" sender:self];
+    [self performSegueWithIdentifier:VENUE_MAP_VIEW_IDENTIFIER sender:self];
 }
 
 #pragma mark - Back
@@ -140,7 +140,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"Show Venue Map View"])
+    if ([segue.identifier isEqualToString:VENUE_MAP_VIEW_IDENTIFIER])
     {
         if ([segue.destinationViewController isKindOfClass:[VenueMapViewController class]])
         {

@@ -42,6 +42,7 @@ extern NSString * const DISTANCE_ASCENDING;
 extern NSString * const ERROR_DESCRIPTION;
 extern NSString * const ERROR_TITLE;
 extern NSString * const FOURSQUARE_API;
+extern double const METERS_PER_MILE;
 extern NSString * const NO_INTERNET_CONNECTION_AVAILABLE;
 extern NSString * const NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION;
 extern NSString * const LATITUDE_LONGITUDE;
@@ -54,5 +55,6 @@ extern NSString * const SORT_TITLE;
 extern NSString * const VENUE_SEARCH;
 extern NSString * const VERSION;
 extern NSString * const VERSION_NUMBER;
+extern NSString * const VENUE_MAP_VIEW_IDENTIFIER;
 
 @end

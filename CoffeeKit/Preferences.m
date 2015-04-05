@@ -39,6 +39,7 @@ NSString * const DISTANCE_ASCENDING = @"Distance (Ascending)";
 NSString * const ERROR_DESCRIPTION = @"Unable to retrieve Venues for specific Category";
 NSString * const ERROR_TITLE = @"ERROR: UNABLE TO RETRIEVE VENUES";
 NSString * const FOURSQUARE_API = @"https://api.foursquare.com";
+double const METERS_PER_MILE = 1609.344;
 NSString * const NO_INTERNET_CONNECTION_AVAILABLE = @"NO INTERNET CONNECTION AVAILABLE";
 NSString * const NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION = @"You currently do not have access to an active internet connection";
 NSString * const LATITUDE_LONGITUDE = @"ll";
@@ -51,5 +52,6 @@ NSString * const SORT_TITLE = @"Sort Venue(s)";
 NSString * const VENUE_SEARCH = @"/v2/venues/search";
 NSString * const VERSION = @"v";
 NSString * const VERSION_NUMBER = @"20140609";
+NSString * const VENUE_MAP_VIEW_IDENTIFIER = @"Show Venue Map View";
 
 @end

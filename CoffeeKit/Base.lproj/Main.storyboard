@@ -319,11 +319,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ywZ-76-Whz">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ywZ-76-Whz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ywZ-76-Whz" firstAttribute="bottom" secondItem="Bdy-83-cCy" secondAttribute="top" id="8lm-LF-Ukl"/>
+                            <constraint firstItem="ywZ-76-Whz" firstAttribute="leading" secondItem="lHj-oe-nLu" secondAttribute="leading" id="bFk-hJ-sVI"/>
+                            <constraint firstAttribute="trailing" secondItem="ywZ-76-Whz" secondAttribute="trailing" id="g4Y-el-5TG"/>
+                            <constraint firstItem="ywZ-76-Whz" firstAttribute="top" secondItem="lHj-oe-nLu" secondAttribute="top" id="zXf-El-1lU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="ywZ-76-Whz" id="YkT-3J-69P"/>
