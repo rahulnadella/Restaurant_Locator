@@ -103,20 +103,15 @@
     NSDictionary *icon = [[venue.categories objectAtIndex:0] icon];
     NSString *prefix = [icon objectForKey:@"prefix"];
     NSString *suffix = [icon objectForKey:@"suffix"];
+    
     /* Create the desired path based on the prefix and suffix of the specific Category */
     NSString *imageUrl = [NSString stringWithFormat:@"%@bg_32%@", prefix, suffix];
     /* Retrieve the Category image */
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
     cell.venueCategoryImage.image = [UIImage imageWithData:imageData];
     
-    if (venue.hereNow.count.intValue > 0)
-    {
-        cell.statusImage.image = [UIImage imageNamed:@"openSign"];
-    }
-    else
-    {
-        cell.statusImage.image = [UIImage imageNamed:@"closedSign"];
-    }
+    /* Set the image based on the if there are any people at the Venue */
+    cell.statusImage.image = (venue.hereNow.count.intValue > 0) ? [UIImage imageNamed:@"openSign"] : [UIImage imageNamed:@"closedSign"];
     
     return cell;
 }
