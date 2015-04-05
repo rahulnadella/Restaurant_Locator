@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC2235811AD193B500D0E827 /* VenueMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2235801AD193B500D0E827 /* VenueMapViewController.m */; };
+		FC2235861AD1953E00D0E827 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2235851AD1953E00D0E827 /* MapKit.framework */; };
 		FCB350BC1AC9D0720068DB28 /* VenueDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */; };
 		FCB350BF1AC9F0B00068DB28 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350BE1AC9F0B00068DB28 /* Contact.m */; };
 		FCB350C21ACAE02A0068DB28 /* WebPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */; };
@@ -85,6 +87,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC22357F1AD193B500D0E827 /* VenueMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueMapViewController.h; sourceTree = "<group>"; };
+		FC2235801AD193B500D0E827 /* VenueMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueMapViewController.m; sourceTree = "<group>"; };
+		FC2235851AD1953E00D0E827 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FCB350BA1AC9D0720068DB28 /* VenueDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueDetailsViewController.h; sourceTree = "<group>"; };
 		FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetailsViewController.m; sourceTree = "<group>"; };
 		FCB350BD1AC9F0B00068DB28 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
@@ -143,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2235861AD1953E00D0E827 /* MapKit.framework in Frameworks */,
 				FCB350C41ACAFDA30068DB28 /* Social.framework in Frameworks */,
 				FCCEB3BA1AC88CE800634876 /* CFNetwork.framework in Frameworks */,
 				FCCEB3C01AC88D0900634876 /* CoreData.framework in Frameworks */,
@@ -185,6 +191,7 @@
 			children = (
 				FCCEB3B61AC88CE800634876 /* CFNetwork.framework */,
 				FCCEB3BE1AC88D0900634876 /* CoreData.framework */,
+				FC2235851AD1953E00D0E827 /* MapKit.framework */,
 				FCCEB3BF1AC88D0900634876 /* MobileCoreServices.framework */,
 				FCCEB3B81AC88CE800634876 /* Security.framework */,
 				FCB350C31ACAFDA30068DB28 /* Social.framework */,
@@ -285,6 +292,8 @@
 				FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */,
 				FCB350C01ACAE02A0068DB28 /* WebPageViewController.h */,
 				FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */,
+				FC22357F1AD193B500D0E827 /* VenueMapViewController.h */,
+				FC2235801AD193B500D0E827 /* VenueMapViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -458,6 +467,7 @@
 				FCCEB39F1AC88BE800634876 /* Stats.m in Sources */,
 				FCCEB3911AC88B9B00634876 /* CoffeeKitAppDelegate.m in Sources */,
 				FCCEB3971AC88BDA00634876 /* VenueCell.m in Sources */,
+				FC2235811AD193B500D0E827 /* VenueMapViewController.m in Sources */,
 				FCCEB3A01AC88BE800634876 /* Venue.m in Sources */,
 				FCB350E51ACF2BED0068DB28 /* HereNow.m in Sources */,
 				FCCEB39E1AC88BE800634876 /* Location.m in Sources */,

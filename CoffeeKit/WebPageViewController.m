@@ -23,6 +23,7 @@
  */
 
 #import "WebPageViewController.h"
+#import "VenueMapViewController.h"
 
 @interface WebPageViewController () <UIGestureRecognizerDelegate, UIWebViewDelegate>
 
@@ -35,6 +36,9 @@
 
 #pragma mark - Properties
 
+@synthesize currentLocation = _currentLocation;
+@synthesize menuAddress = _menuAddress;
+@synthesize nameOfVenue = _nameOfVenue;
 @synthesize urlAddress = _urlAddress;
 
 #pragma mark - Memory Allocation
@@ -53,7 +57,20 @@
 
     [[self navigationItem] setTitle:@"Venue Webpage"];
     
+    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    UIImage *mapImage = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithImage:mapImage style:UIBarButtonItemStylePlain target:self action:@selector(retrieveMapView)];
+    [buttons addObject:mapItem];
+    
+    self.navigationItem.rightBarButtonItems = buttons;
+    
     [self refresh:self];
+}
+
+- (void)retrieveMapView
+{
+    [self performSegueWithIdentifier:@"Show Venue Map View" sender:self];
 }
 
 #pragma mark - Back
@@ -116,6 +133,26 @@
     if (sender.direction & UISwipeGestureRecognizerDirectionRight)
     {
         [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Show Venue Map View"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[VenueMapViewController class]])
+        {
+            VenueMapViewController *vmvc = segue.destinationViewController;
+            
+            if (self.currentLocation)
+            {
+                [vmvc setCurrentLatitude:self.currentLocation.lat];
+                [vmvc setCurrentLongitude:self.currentLocation.lng];
+                [vmvc setTitleOfVenue:self.nameOfVenue];
+            }
+        }
     }
 }
 

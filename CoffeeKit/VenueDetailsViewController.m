@@ -161,6 +161,8 @@
         {
             WebPageViewController *wpvc = segue.destinationViewController;
             [wpvc setUrlAddress:self.urlOfVenue];
+            [wpvc setCurrentLocation:self.currentLocation];
+            [wpvc setNameOfVenue:self.nameOfVenue];
         }
     }
     else if ([segue.identifier isEqualToString:@"Show Menu"])
@@ -169,6 +171,8 @@
         {
             WebPageViewController *wpvc = segue.destinationViewController;
             [wpvc setMenuAddress:self.menuOfUrlVenu];
+            [wpvc setCurrentLocation:self.currentLocation];
+            [wpvc setNameOfVenue:self.nameOfVenue];
         }
     }
 }

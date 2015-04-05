@@ -35,7 +35,7 @@
 @property (nonatomic, strong) NSString *postalCode;
 @property (nonatomic, strong) NSString *state;
 @property (nonatomic, strong) NSNumber *distance;
-@property (nonatomic, strong) NSNumber *lat;
-@property (nonatomic, strong) NSNumber *lng;
+@property (nonatomic, strong) NSDecimalNumber *lat;
+@property (nonatomic, strong) NSDecimalNumber *lng;
 
 @end

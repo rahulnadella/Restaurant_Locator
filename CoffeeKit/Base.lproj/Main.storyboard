@@ -307,6 +307,32 @@
             </objects>
             <point key="canvasLocation" x="2252" y="156"/>
         </scene>
+        <!--Venue Map View Controller-->
+        <scene sceneID="3cD-ks-Eba">
+            <objects>
+                <viewController id="ocP-Gf-WZW" customClass="VenueMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XJH-AP-f2V"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bdy-83-cCy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lHj-oe-nLu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ywZ-76-Whz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ywZ-76-Whz" id="YkT-3J-69P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTs-A0-cz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2699" y="-629"/>
+        </scene>
         <!--Web Page View Controller-->
         <scene sceneID="nJz-n8-GbM">
             <objects>
@@ -383,6 +409,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="g81-YA-oyt" id="Zb1-Si-Asj"/>
                         <outlet property="webView" destination="f2b-7V-Kb7" id="JR0-HU-18b"/>
+                        <segue destination="ocP-Gf-WZW" kind="show" identifier="Show Venue Map View" id="TZu-8x-wg0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWq-Q1-T9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -414,6 +441,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zvj-hG-tvg"/>
+        <segue reference="09n-og-gb9"/>
     </inferredMetricsTieBreakers>
 </document>

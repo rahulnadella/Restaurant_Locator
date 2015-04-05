@@ -23,12 +23,16 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "Location.h"
 /*
  The WebPageViewController displays the web page of a specific Venue based on their web address
  */
 @interface WebPageViewController : UIViewController
 
-@property (nonatomic, strong) NSString *urlAddress;
+@property (nonatomic, strong) Location *currentLocation;
 @property (nonatomic, strong) NSString *menuAddress;
+@property (nonatomic, strong) NSString *nameOfVenue;
+@property (nonatomic, strong) NSString *urlAddress;
+
 
 @end
