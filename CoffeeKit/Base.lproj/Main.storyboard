@@ -296,6 +296,7 @@
                         <outlet property="urlButton" destination="jKa-VY-cfi" id="17V-Bc-V0O"/>
                         <outlet property="urlLabel" destination="Vjp-c1-MVt" id="bsf-t5-Z2m"/>
                         <segue destination="2Pe-QV-6D8" kind="show" identifier="Show Web Page" id="09n-og-gb9"/>
+                        <segue destination="ocP-Gf-WZW" kind="show" identifier="Show Map View" id="sMY-Xz-kPS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
@@ -453,6 +454,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="sMY-Xz-kPS"/>
         <segue reference="09n-og-gb9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -24,6 +24,7 @@
 
 #import <Social/Social.h>
 #import "VenueDetailsViewController.h"
+#import "VenueMapViewController.h"
 #import "WebPageViewController.h"
 
 @interface VenueDetailsViewController ()
@@ -71,6 +72,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    UIImage *mapImage = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithImage:mapImage style:UIBarButtonItemStylePlain target:self action:@selector(retrieveMapView)];
+    [buttons addObject:mapItem];
+    
+    self.navigationItem.rightBarButtonItems = buttons;
     
     /* Define the name of the View based on the specific Venue */
     self.locationNameLabel.text = @"Contact Info";
@@ -151,6 +160,16 @@
     }
 }
 
+#pragma mark - Venue Webpage MapView Action
+
+- (void)retrieveMapView
+{
+    if (self.currentLocation)
+    {
+        [self performSegueWithIdentifier:@"Show Map View" sender:self];
+    }
+}
+
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -173,6 +192,16 @@
             [wpvc setMenuAddress:self.menuOfUrlVenu];
             [wpvc setCurrentLocation:self.currentLocation];
             [wpvc setNameOfVenue:self.nameOfVenue];
+        }
+    }
+    else if ([segue.identifier isEqualToString:@"Show Map View"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[VenueMapViewController class]])
+        {
+            VenueMapViewController *vmvc = segue.destinationViewController;
+            [vmvc setCurrentLatitude:self.currentLocation.lat];
+            [vmvc setCurrentLongitude:self.currentLocation.lng];
+            [vmvc setTitleOfVenue:self.nameOfVenue];
         }
     }
 }

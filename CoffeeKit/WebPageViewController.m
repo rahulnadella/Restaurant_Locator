@@ -60,7 +60,7 @@
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
     
     UIImage *mapImage = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithImage:mapImage style:UIBarButtonItemStylePlain target:self action:@selector(retrieveMapView)];
+    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithImage:mapImage style:UIBarButtonItemStylePlain target:self action:@selector(retrieveMapViewFromWebpage)];
     [buttons addObject:mapItem];
     
     self.navigationItem.rightBarButtonItems = buttons;
@@ -131,11 +131,14 @@
     }
 }
 
-#pragma mark - Venue MapView Action
+#pragma mark - Venue Webpage MapView Action
 
-- (void)retrieveMapView
+- (void)retrieveMapViewFromWebpage
 {
-    [self performSegueWithIdentifier:VENUE_MAP_VIEW_IDENTIFIER sender:self];
+    if (self.currentLocation)
+    {
+        [self performSegueWithIdentifier:VENUE_MAP_VIEW_IDENTIFIER sender:self];
+    }
 }
 
 #pragma mark - Segue
@@ -147,13 +150,9 @@
         if ([segue.destinationViewController isKindOfClass:[VenueMapViewController class]])
         {
             VenueMapViewController *vmvc = segue.destinationViewController;
-            
-            if (self.currentLocation)
-            {
-                [vmvc setCurrentLatitude:self.currentLocation.lat];
-                [vmvc setCurrentLongitude:self.currentLocation.lng];
-                [vmvc setTitleOfVenue:self.nameOfVenue];
-            }
+            [vmvc setCurrentLatitude:self.currentLocation.lat];
+            [vmvc setCurrentLongitude:self.currentLocation.lng];
+            [vmvc setTitleOfVenue:self.nameOfVenue];
         }
     }
 }
