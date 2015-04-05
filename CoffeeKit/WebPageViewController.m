@@ -68,11 +68,6 @@
     [self refresh:self];
 }
 
-- (void)retrieveMapView
-{
-    [self performSegueWithIdentifier:VENUE_MAP_VIEW_IDENTIFIER sender:self];
-}
-
 #pragma mark - Back
 
 - (IBAction)back:(UIButton *)sender
@@ -134,6 +129,13 @@
     {
         [self.navigationController popViewControllerAnimated:YES];
     }
+}
+
+#pragma mark - Venue MapView Action
+
+- (void)retrieveMapView
+{
+    [self performSegueWithIdentifier:VENUE_MAP_VIEW_IDENTIFIER sender:self];
 }
 
 #pragma mark - Segue
