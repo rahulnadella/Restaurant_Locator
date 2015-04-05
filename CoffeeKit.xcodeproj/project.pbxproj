@@ -292,10 +292,10 @@
 		FCCEB3941AC88BC200634876 /* Custom_UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FCCEB3951AC88BDA00634876 /* VenueCell.h */,
-				FCCEB3961AC88BDA00634876 /* VenueCell.m */,
 				FCB350E01ACF1DDD0068DB28 /* CategoryCell.h */,
 				FCB350E11ACF1DDD0068DB28 /* CategoryCell.m */,
+				FCCEB3951AC88BDA00634876 /* VenueCell.h */,
+				FCCEB3961AC88BDA00634876 /* VenueCell.m */,
 			);
 			name = Custom_UITableViewCell;
 			sourceTree = "<group>";
