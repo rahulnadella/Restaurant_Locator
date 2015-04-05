@@ -22,6 +22,7 @@
  THE SOFTWARE.
  */
 
+#import <MapKit/MapKit.h>
 #import "WebPageViewController.h"
 #import "VenueMapViewController.h"
 

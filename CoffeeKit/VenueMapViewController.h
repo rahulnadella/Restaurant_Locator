@@ -22,6 +22,7 @@
  THE SOFTWARE.
  */
 
+#import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
 /*
  The VenueMapViewController displays the map view of the specific Venue's location.
@@ -31,5 +32,15 @@
 @property (nonatomic, strong) NSNumber *currentLatitude;
 @property (nonatomic, strong) NSNumber *currentLongitude;
 @property (nonatomic, strong) NSString *titleOfVenue;
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+- (MKPointAnnotation *)createMapViewAnnotationWith:(NSNumber *)latitude
+                                      andLongitude:(NSNumber *)longitude
+                                      andVenueName:(NSString *)nameOfVenue;
+
+- (MKCoordinateRegion)createMapRegionWith:(NSNumber *)latitude
+                             andLongitude:(NSNumber *)longitude
+                       andVisibleDistance:(CLLocationDistance)distance;
 
 @end

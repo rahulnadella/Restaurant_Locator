@@ -339,7 +339,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="yMM-Ig-Q9Q" id="Ows-eW-xMD"/>
-                        <outlet property="mapView" destination="ywZ-76-Whz" id="YkT-3J-69P"/>
+                        <outlet property="mapView" destination="ywZ-76-Whz" id="5XE-ZR-Uum"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTs-A0-cz9" userLabel="First Responder" sceneMemberID="firstResponder"/>

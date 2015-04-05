@@ -22,12 +22,10 @@
  THE SOFTWARE.
  */
 
-#import <MapKit/MapKit.h>
 #import "VenueMapViewController.h"
 
 @interface VenueMapViewController() <MKMapViewDelegate>
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
@@ -64,22 +62,13 @@
     [super viewDidAppear:animated];
     /* Set the delegate for MKMapView */
     self.mapView.delegate = self;
-    /* Create the Location of the current Venue */
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = [self.currentLatitude floatValue];
-    zoomLocation.longitude = [self.currentLongitude floatValue];
     
-    /* Define the distance visible by the user */
-    CLLocationDistance visibleDistance = METERS_PER_MILE;
-    
-    /* Create the Region of the specific Venue's location specified */
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, visibleDistance, visibleDistance);
+    /* Create the MKCoordinateRegion and add it to the MapView */
+    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:METERS_PER_MILE];
     [self.mapView setRegion:viewRegion animated:YES];
     
-    /* Attach the specific Venue's Location to a pin on the view */
-    MKPointAnnotation *pointAnnotation = [[MKPointAnnotation alloc] init];
-    pointAnnotation.coordinate = zoomLocation;
-    pointAnnotation.title = self.titleOfVenue;
+    /* Create MKPointAnnotation and add it to the MapView */
+    MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:self.currentLatitude andLongitude:self.currentLongitude andVenueName:self.titleOfVenue];
     [self.mapView addAnnotation:pointAnnotation];
 }
 
@@ -89,6 +78,32 @@
     /* Start the ActivityIndicator */
     self.activityIndicator.hidden = FALSE;
     [self.activityIndicator startAnimating];
+}
+
+- (MKPointAnnotation *)createMapViewAnnotationWith:(NSNumber *)latitude
+                                      andLongitude:(NSNumber *)longitude
+                                      andVenueName:(NSString *)nameOfVenue
+{
+    /* Attach the specific Venue's Location to a pin on the view */
+    MKPointAnnotation *pointAnnotation = [[MKPointAnnotation alloc] init];
+    /* Create the Coordinate to attach the Pin on MapView */
+    pointAnnotation.coordinate = CLLocationCoordinate2DMake([latitude floatValue], [longitude floatValue]);
+    pointAnnotation.title = nameOfVenue;
+    return pointAnnotation;
+}
+
+- (MKCoordinateRegion)createMapRegionWith:(NSNumber *)latitude
+                             andLongitude:(NSNumber *)longitude
+                       andVisibleDistance:(CLLocationDistance)distance
+{
+    /* Create the Location of the current Venue */
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = [latitude floatValue];
+    zoomLocation.longitude = [longitude floatValue];
+    
+    /* Create the Region of the specific Venue's location specified */
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, distance, distance);
+    return viewRegion;
 }
 
 #pragma mark - MKMapView Delegate methods
