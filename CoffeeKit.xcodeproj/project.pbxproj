@@ -290,10 +290,10 @@
 				FCCEB3A21AC88BF300634876 /* VenueViewController.m */,
 				FCB350BA1AC9D0720068DB28 /* VenueDetailsViewController.h */,
 				FCB350BB1AC9D0720068DB28 /* VenueDetailsViewController.m */,
-				FCB350C01ACAE02A0068DB28 /* WebPageViewController.h */,
-				FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */,
 				FC22357F1AD193B500D0E827 /* VenueMapViewController.h */,
 				FC2235801AD193B500D0E827 /* VenueMapViewController.m */,
+				FCB350C01ACAE02A0068DB28 /* WebPageViewController.h */,
+				FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
