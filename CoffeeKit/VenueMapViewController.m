@@ -25,9 +25,10 @@
 #import <MapKit/MapKit.h>
 #import "VenueMapViewController.h"
 
-@interface VenueMapViewController()
+@interface VenueMapViewController() <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -52,6 +53,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    /* Hide the ActivityIndicator when VenueMapView is loaded */
+    self.activityIndicator.hidden = TRUE;
     
     [self.navigationItem setTitle:@"Venue Map View"];
 }
@@ -59,6 +62,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    /* Set the delegate for MKMapView */
+    self.mapView.delegate = self;
     /* Create the Location of the current Venue */
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = [self.currentLatitude floatValue];
@@ -76,6 +81,23 @@
     pointAnnotation.coordinate = zoomLocation;
     pointAnnotation.title = self.titleOfVenue;
     [self.mapView addAnnotation:pointAnnotation];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    /* Start the ActivityIndicator */
+    self.activityIndicator.hidden = FALSE;
+    [self.activityIndicator startAnimating];
+}
+
+#pragma mark - MKMapView Delegate methods
+
+- (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
+{
+    /* Stop the ActivityIndicator when the MapView has loaded */
+    [self.activityIndicator stopAnimating];
+    self.activityIndicator.hidden = TRUE;
 }
 
 

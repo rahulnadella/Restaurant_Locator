@@ -322,16 +322,22 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ywZ-76-Whz">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-Ig-Q9Q">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ywZ-76-Whz" firstAttribute="bottom" secondItem="Bdy-83-cCy" secondAttribute="top" id="8lm-LF-Ukl"/>
-                            <constraint firstItem="ywZ-76-Whz" firstAttribute="leading" secondItem="lHj-oe-nLu" secondAttribute="leading" id="bFk-hJ-sVI"/>
-                            <constraint firstAttribute="trailing" secondItem="ywZ-76-Whz" secondAttribute="trailing" id="g4Y-el-5TG"/>
-                            <constraint firstItem="ywZ-76-Whz" firstAttribute="top" secondItem="lHj-oe-nLu" secondAttribute="top" id="zXf-El-1lU"/>
+                            <constraint firstAttribute="trailing" secondItem="ywZ-76-Whz" secondAttribute="trailing" id="8rf-GE-zyk"/>
+                            <constraint firstItem="yMM-Ig-Q9Q" firstAttribute="centerX" secondItem="ywZ-76-Whz" secondAttribute="centerX" id="EDQ-c2-rrA"/>
+                            <constraint firstItem="ywZ-76-Whz" firstAttribute="top" secondItem="lHj-oe-nLu" secondAttribute="top" id="MeU-hc-WZh"/>
+                            <constraint firstItem="ywZ-76-Whz" firstAttribute="leading" secondItem="lHj-oe-nLu" secondAttribute="leading" id="VEg-Vy-Wqh"/>
+                            <constraint firstItem="yMM-Ig-Q9Q" firstAttribute="centerY" secondItem="ywZ-76-Whz" secondAttribute="centerY" id="iZr-Vg-z9O"/>
+                            <constraint firstItem="ywZ-76-Whz" firstAttribute="bottom" secondItem="Bdy-83-cCy" secondAttribute="top" id="ihT-yV-p3U"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="yMM-Ig-Q9Q" id="Ows-eW-xMD"/>
                         <outlet property="mapView" destination="ywZ-76-Whz" id="YkT-3J-69P"/>
                     </connections>
                 </viewController>
