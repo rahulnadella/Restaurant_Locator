@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,20 +12,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESTKIT DEMO USING FOURSQUARE" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="116" y="194" width="248" height="92"/>
+                    <rect key="frame" x="116" y="8" width="248" height="92"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="92" id="0kn-Up-On1"/>
-                        <constraint firstAttribute="width" constant="248" id="tm3-nI-kA5"/>
+                        <constraint firstAttribute="width" constant="248" id="VcC-vZ-nZZ"/>
+                        <constraint firstAttribute="height" constant="92" id="dwF-vC-J3l"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="36"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective-C demo of RestKit using the Foursquare API" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07R-Er-MH0">
+                    <rect key="frame" x="116" y="421" width="248" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="nB7-k2-keg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.13147874209999999" green="0.203184213" blue="0.62579719389999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7FF-Af-l1n"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WXm-FF-iui"/>
+                <constraint firstItem="07R-Er-MH0" firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" id="3UG-Wx-Mvr"/>
+                <constraint firstItem="07R-Er-MH0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GwE-p8-5t7"/>
+                <constraint firstItem="07R-Er-MH0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="J6a-UO-sG5"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="aZx-JT-ldE"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="07R-Er-MH0" secondAttribute="leading" id="o6q-g2-ESH"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
