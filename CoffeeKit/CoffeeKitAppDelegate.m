@@ -18,6 +18,8 @@
     /* Change the font, color and style of the Application */
     [Appearance customizeNavigationAppearance];
     
+    [self initLocation];
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -30,8 +32,16 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    if ([CLLocationManager significantLocationChangeMonitoringAvailable])
+    {
+        /* Stop normal location updates and start significant location change updates for battery efficiency. */
+        [self.locationManager stopUpdatingLocation];
+        [self.locationManager startMonitoringSignificantLocationChanges];
+    }
+    else
+    {
+        NSLog(@"Significant location change monitoring is not available.");
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -41,12 +51,64 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self.locationManager stopMonitoringSignificantLocationChanges];
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Initialization Location
+
+- (void)initLocation
+{
+    /* Create the CLLocationManager object */
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 &&
+        [CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse)
+    {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    else
+    {
+        [self.locationManager startUpdatingLocation];
+    }
+}
+
+#pragma mark - CLLocationManagerDelegate methods
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    self.currentLocation = [locations lastObject];
+    NSLog(@"lat%f - lon%f", self.currentLocation.coordinate.latitude, self.currentLocation.coordinate.longitude);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    switch (status)
+    {
+        case kCLAuthorizationStatusNotDetermined:
+        {
+            NSLog(@"User still thinking...");
+        }   break;
+        case kCLAuthorizationStatusDenied:
+        {
+            NSLog(@"User did not accept");
+        }   break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+        case kCLAuthorizationStatusAuthorizedAlways:
+        {
+            [self.locationManager startUpdatingLocation];
+        }   break;
+        default:
+            break;
+    }
 }
 
 @end

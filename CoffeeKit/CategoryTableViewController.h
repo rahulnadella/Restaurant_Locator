@@ -22,7 +22,6 @@
  THE SOFTWARE.
  */
 
-#import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
 /*
  The CategoryTableViewController display the current categories (i.e. based on food) 
@@ -30,9 +29,6 @@
  
  @version 1.0
  */
-@interface CategoryTableViewController : UITableViewController <CLLocationManagerDelegate>
-
-@property (nonatomic, strong) CLLocationManager *locationManager;
-@property (nonatomic, strong) CLLocation *currentLocation;
+@interface CategoryTableViewController : UITableViewController
 
 @end
