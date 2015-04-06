@@ -61,14 +61,15 @@
 {
     [super viewDidLoad];
     
-    [[self navigationItem] setTitle:@"Available Venues"];
-    
+    [self.navigationItem setTitle:@"Available Venues"];
+    /* Initialize an Array of size equal to 2 */
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:2];
     
-    /* Add UIBarButtonItem SAVE */
+    /* Add UIBarButtonItem SORT */
     UIImage *sort = [[UIImage imageNamed:@"sort"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *bi = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(showAlertSheet)];
-    [buttons addObject:bi];
+    /* Add UIImage to the UIBarButtonItem */
+    UIBarButtonItem *sortButton = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(showAlertSheet)];
+    [buttons addObject:sortButton];
     
     self.navigationItem.rightBarButtonItems = buttons;
     
@@ -257,6 +258,7 @@
         _venues = mappingResult.array;
         [self.tableView reloadData];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        /* Alert the user that an error occured while retrieving the Venue(s) */
         [self showAlertView];
     }];
 }
