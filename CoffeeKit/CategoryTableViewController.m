@@ -73,6 +73,8 @@
     /* Self-Sizing UITableViewCell */
     self.tableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    [self initLocation];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -82,6 +84,55 @@
     [self.tableView reloadData];
 }
 
+#pragma mark - Initialization Location
+
+- (void)initLocation
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 &&
+        [CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse)
+    {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    else
+    {
+        [self.locationManager startUpdatingLocation];
+    }
+}
+
+#pragma mark - CLLocationManagerDelegate methods
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    self.currentLocation = [locations lastObject];
+    NSLog(@"lat%f - lon%f", self.currentLocation.coordinate.latitude, self.currentLocation.coordinate.longitude);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    switch (status)
+    {
+        case kCLAuthorizationStatusNotDetermined:
+        {
+            NSLog(@"User still thinking...");
+        }   break;
+        case kCLAuthorizationStatusDenied:
+        {
+            NSLog(@"User did not accept");
+        }   break;
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+        case kCLAuthorizationStatusAuthorizedAlways:
+        {
+            [self.locationManager startUpdatingLocation];
+        }   break;
+        default:
+            break;
+    }
+}
 
 #pragma mark - Table view data source
 
