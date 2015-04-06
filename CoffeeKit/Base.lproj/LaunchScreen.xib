@@ -14,8 +14,7 @@
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESTKIT DEMO USING FOURSQUARE" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
                     <rect key="frame" x="116" y="8" width="248" height="92"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="248" id="VcC-vZ-nZZ"/>
-                        <constraint firstAttribute="height" constant="92" id="dwF-vC-J3l"/>
+                        <constraint firstAttribute="width" constant="248" id="KDg-CH-HOa"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="36"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -24,24 +23,33 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective-C demo of RestKit using the Foursquare API" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07R-Er-MH0">
                     <rect key="frame" x="116" y="421" width="248" height="51"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="51" id="nB7-k2-keg"/>
+                        <constraint firstAttribute="height" constant="51" id="V6B-L7-nue"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foursquare" translatesAutoresizingMaskIntoConstraints="NO" id="SYT-TV-JzJ">
+                    <rect key="frame" x="176" y="176" width="128" height="128"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.13147874209999999" green="0.203184213" blue="0.62579719389999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="07R-Er-MH0" firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" id="3UG-Wx-Mvr"/>
-                <constraint firstItem="07R-Er-MH0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GwE-p8-5t7"/>
-                <constraint firstItem="07R-Er-MH0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="J6a-UO-sG5"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="aZx-JT-ldE"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="07R-Er-MH0" secondAttribute="leading" id="o6q-g2-ESH"/>
+                <constraint firstItem="SYT-TV-JzJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Aje-Dk-HPX"/>
+                <constraint firstItem="07R-Er-MH0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="ZFb-bw-nLz"/>
+                <constraint firstItem="SYT-TV-JzJ" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="76" id="b95-RB-ziH"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="07R-Er-MH0" secondAttribute="leading" id="d2l-2Q-QYq"/>
+                <constraint firstItem="SYT-TV-JzJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="njL-Wv-ONz"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="SYT-TV-JzJ" secondAttribute="centerX" id="ovO-hW-g5x"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="trailing" secondItem="07R-Er-MH0" secondAttribute="trailing" id="rYx-RE-Nef"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="wEn-NT-Mrz"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="foursquare" width="128" height="128"/>
+    </resources>
 </document>
