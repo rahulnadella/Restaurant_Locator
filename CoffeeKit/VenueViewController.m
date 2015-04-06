@@ -62,7 +62,7 @@
 {
     [super viewDidLoad];
     
-    [self.navigationItem setTitle:@"Available Venues"];
+    [self.navigationItem setTitle:@"Available Restaurants"];
     /* Initialize an Array of size equal to 2 */
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:2];
     
@@ -312,6 +312,8 @@
             [vmvc setBusinesses:businesses];
             [vmvc setCurrentLatitude:self.currentVenue.location.lat];
             [vmvc setCurrentLongitude:self.currentVenue.location.lng];
+            /* Set View Controller Title */
+            [vmvc setTitle:@"Restaurant(s) Location"];
         }
     }
 }

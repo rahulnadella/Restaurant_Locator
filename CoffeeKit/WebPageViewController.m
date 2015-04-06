@@ -56,7 +56,7 @@
 {
     [super viewDidLoad];
 
-    [self.navigationItem setTitle:@"Venue Webpage"];
+    [self.navigationItem setTitle:@"Restaurant Webpage"];
     
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
     
@@ -155,6 +155,8 @@
             [vmvc setCurrentLongitude:self.currentLocation.lng];
             [vmvc setTitleOfVenue:self.nameOfVenue];
             [vmvc setIsMultipleVenues:true];
+            /* Set View Controller Title */
+            [vmvc setTitle:@"Restaurant Location"];
         }
     }
 }

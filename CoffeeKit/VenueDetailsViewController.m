@@ -203,6 +203,8 @@
             [vmvc setCurrentLongitude:self.currentLocation.lng];
             [vmvc setTitleOfVenue:self.nameOfVenue];
             [vmvc setIsMultipleVenues:true];
+            /* Set View Controller Title */
+            [vmvc setTitle:@"Restaurant Location"];
         }
     }
 }

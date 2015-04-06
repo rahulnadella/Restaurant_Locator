@@ -75,8 +75,6 @@
     [super viewDidLoad];
     /* Hide the ActivityIndicator when VenueMapView is loaded */
     self.activityIndicator.hidden = TRUE;
-    
-    [self.navigationItem setTitle:@"Venue Map View"];
 }
 
 - (void)viewDidAppear:(BOOL)animated
