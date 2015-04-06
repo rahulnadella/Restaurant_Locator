@@ -85,14 +85,8 @@
     /* Set the delegate for MKMapView */
     self.mapView.delegate = self;
     
-    if (self.isMultipleVenues)
-    {
-        [self initializeSingleVenue];
-    }
-    else
-    {
-        [self initializeMultipleVenues];
-    }
+    /* Check to see if the user is viewing a single or multiple Venue(s) */
+    self.isMultipleVenues ? [self initializeSingleVenue] : [self initializeMultipleVenues];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -138,11 +132,15 @@
 - (void)initializeSingleVenue
 {
     /* Create the MKCoordinateRegion and add it to the MapView */
-    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:(METERS_PER_MILE * 0.5)];
+    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude
+                                                 andLongitude:self.currentLongitude
+                                           andVisibleDistance:(METERS_PER_MILE * 0.5)];
     [self.mapView setRegion:viewRegion animated:YES];
     
     /* Create MKPointAnnotation and add it to the MapView */
-    MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:self.currentLatitude andLongitude:self.currentLongitude andVenueName:self.titleOfVenue];
+    MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:self.currentLatitude
+                                                              andLongitude:self.currentLongitude
+                                                              andVenueName:self.titleOfVenue];
     [self.mapView addAnnotation:pointAnnotation];
 }
 
@@ -151,21 +149,23 @@
 - (void)initializeMultipleVenues
 {
     /* Create the MKCoordinateRegion and add it to the MapView */
-    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:(METERS_PER_MILE * 15)];
+    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude
+                                                 andLongitude:self.currentLongitude
+                                           andVisibleDistance:(METERS_PER_MILE * 15)];
     [self.mapView setRegion:viewRegion animated:YES];
     
+    /* Iterate the Venue objects to add each specific Location (latitude and longitude) to the MapView */
     for (Venue *venue in self.businesses)
     {
         if (venue.location)
         {
-            NSString *name = venue.name;
-            NSNumber *latitude = venue.location.lat;
-            NSNumber *longitude = venue.location.lng;
-            MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:latitude andLongitude:longitude andVenueName:name];
+            MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:venue.location.lat
+                                                                      andLongitude:venue.location.lng
+                                                                      andVenueName:venue.name];
             [self.annotations addObject:pointAnnotation];
         }
     }
-    
+    /* Add the List of MKPointAnnotations to the MapView */
     [self.mapView addAnnotations:self.annotations];
 }
 
