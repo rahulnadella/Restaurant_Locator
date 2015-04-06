@@ -85,10 +85,12 @@
     self.navigationItem.rightBarButtonItems = buttons;
     
     /* Initialize ViewDetailsViewController content */
-    [self initializeContent];
+    [self initializeViewContent];
 }
 
-- (void)initializeContent
+#pragma mark - Initialize View Content
+
+- (void)initializeViewContent
 {
     /* Define the name of the View based on the specific Venue */
     self.locationNameLabel.text = @"Contact Info";
