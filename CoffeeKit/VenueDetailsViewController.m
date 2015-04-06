@@ -73,14 +73,23 @@
 {
     [super viewDidLoad];
     
+    /* Initialize an Array of 1 element */
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
-    
+    /* Create the Map image */
     UIImage *mapImage = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    /* Create the UIBarButtonItem associated to the Map Image */
     UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithImage:mapImage style:UIBarButtonItemStylePlain target:self action:@selector(retrieveMapView)];
     [buttons addObject:mapItem];
     
+    /* Set the UIBarButtonItem onto the NavigationItem */
     self.navigationItem.rightBarButtonItems = buttons;
     
+    /* Initialize ViewDetailsViewController content */
+    [self initializeContent];
+}
+
+- (void)initializeContent
+{
     /* Define the name of the View based on the specific Venue */
     self.locationNameLabel.text = @"Contact Info";
     
