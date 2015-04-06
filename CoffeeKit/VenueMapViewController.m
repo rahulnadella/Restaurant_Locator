@@ -97,7 +97,7 @@
 
 # pragma mark - Create MKPointAnnotation
 
-- (MKPointAnnotation *)createMapViewAnnotationWith:(NSNumber *)latitude
+- (MKPointAnnotation *)createMapViewAnnotationWithLatitude:(NSNumber *)latitude
                                       andLongitude:(NSNumber *)longitude
                                       andVenueName:(NSString *)nameOfVenue
 {
@@ -111,7 +111,7 @@
 
 #pragma mark - Create MapRegion
 
-- (MKCoordinateRegion)createMapRegionWith:(NSNumber *)latitude
+- (MKCoordinateRegion)createMapRegionWithLatitude:(NSNumber *)latitude
                              andLongitude:(NSNumber *)longitude
                        andVisibleDistance:(CLLocationDistance)distance
 {
@@ -130,13 +130,13 @@
 - (void)initializeSingleVenue
 {
     /* Create the MKCoordinateRegion and add it to the MapView */
-    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude
+    MKCoordinateRegion viewRegion = [self createMapRegionWithLatitude:self.currentLatitude
                                                  andLongitude:self.currentLongitude
                                            andVisibleDistance:(METERS_PER_MILE * 0.5)];
     [self.mapView setRegion:viewRegion animated:YES];
     
     /* Create MKPointAnnotation and add it to the MapView */
-    MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:self.currentLatitude
+    MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWithLatitude:self.currentLatitude
                                                               andLongitude:self.currentLongitude
                                                               andVenueName:self.titleOfVenue];
     [self.mapView addAnnotation:pointAnnotation];
@@ -147,7 +147,7 @@
 - (void)initializeMultipleVenues
 {
     /* Create the MKCoordinateRegion and add it to the MapView */
-    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude
+    MKCoordinateRegion viewRegion = [self createMapRegionWithLatitude:self.currentLatitude
                                                  andLongitude:self.currentLongitude
                                            andVisibleDistance:(METERS_PER_MILE * 15)];
     [self.mapView setRegion:viewRegion animated:YES];
@@ -157,7 +157,7 @@
     {
         if (venue.location)
         {
-            MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:venue.location.lat
+            MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWithLatitude:venue.location.lat
                                                                       andLongitude:venue.location.lng
                                                                       andVenueName:venue.name];
             [self.annotations addObject:pointAnnotation];

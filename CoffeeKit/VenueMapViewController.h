@@ -45,7 +45,7 @@
  
  @version 1.0
  */
-- (MKPointAnnotation *)createMapViewAnnotationWith:(NSNumber *)latitude
+- (MKPointAnnotation *)createMapViewAnnotationWithLatitude:(NSNumber *)latitude
                                       andLongitude:(NSNumber *)longitude
                                       andVenueName:(NSString *)nameOfVenue;
 
@@ -55,7 +55,7 @@
  
  @version 1.0
  */
-- (MKCoordinateRegion)createMapRegionWith:(NSNumber *)latitude
+- (MKCoordinateRegion)createMapRegionWithLatitude:(NSNumber *)latitude
                              andLongitude:(NSNumber *)longitude
                        andVisibleDistance:(CLLocationDistance)distance;
 
