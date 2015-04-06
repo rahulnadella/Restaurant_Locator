@@ -92,6 +92,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="tQt-TN-PWz"/>
+                    <connections>
+                        <segue destination="ocP-Gf-WZW" kind="show" identifier="Show Venues Map View" id="1sf-cK-7Mb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="hhH-Ft-AO9">
@@ -454,7 +457,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sMY-Xz-kPS"/>
+        <segue reference="1sf-cK-7Mb"/>
         <segue reference="09n-og-gb9"/>
     </inferredMetricsTieBreakers>
 </document>

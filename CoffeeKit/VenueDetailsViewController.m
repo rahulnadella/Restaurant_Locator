@@ -202,6 +202,7 @@
             [vmvc setCurrentLatitude:self.currentLocation.lat];
             [vmvc setCurrentLongitude:self.currentLocation.lng];
             [vmvc setTitleOfVenue:self.nameOfVenue];
+            [vmvc setIsMultipleVenues:true];
         }
     }
 }

@@ -23,9 +23,11 @@
  */
 
 #import "VenueMapViewController.h"
+#import "Venue.h"
 
 @interface VenueMapViewController() <MKMapViewDelegate>
 
+@property (nonatomic, strong) NSMutableArray *annotations;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
@@ -34,9 +36,29 @@
 
 #pragma mark - Properties
 
+@synthesize businesses = _businesses;
 @synthesize currentLatitude = _currentLatitude;
 @synthesize currentLongitude = _currentLongitude;
+@synthesize isMultipleVenues = _isMultipleVenues;
 @synthesize titleOfVenue = _titleOfVenue;
+
+- (NSMutableArray *)annotations
+{
+    if (!_annotations)
+    {
+        _annotations = [[NSMutableArray alloc] init];
+    }
+    return _annotations;
+}
+
+- (NSMutableArray *)businesses
+{
+    if (!_businesses)
+    {
+        _businesses = [[NSMutableArray alloc] init];
+    }
+    return _businesses;
+}
 
 #pragma mark - Memory Allocation
 
@@ -63,13 +85,36 @@
     /* Set the delegate for MKMapView */
     self.mapView.delegate = self;
     
-    /* Create the MKCoordinateRegion and add it to the MapView */
-    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:METERS_PER_MILE];
-    [self.mapView setRegion:viewRegion animated:YES];
-    
-    /* Create MKPointAnnotation and add it to the MapView */
-    MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:self.currentLatitude andLongitude:self.currentLongitude andVenueName:self.titleOfVenue];
-    [self.mapView addAnnotation:pointAnnotation];
+    if (self.isMultipleVenues)
+    {
+        /* Create the MKCoordinateRegion and add it to the MapView */
+        MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:METERS_PER_MILE];
+        [self.mapView setRegion:viewRegion animated:YES];
+        
+        /* Create MKPointAnnotation and add it to the MapView */
+        MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:self.currentLatitude andLongitude:self.currentLongitude andVenueName:self.titleOfVenue];
+        [self.mapView addAnnotation:pointAnnotation];
+    }
+    else
+    {
+        /* Create the MKCoordinateRegion and add it to the MapView */
+        MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:(METERS_PER_MILE * 15)];
+        [self.mapView setRegion:viewRegion animated:YES];
+        
+        for (Venue *venue in self.businesses)
+        {
+            if (venue.location)
+            {
+                NSString *name = venue.name;
+                NSNumber *latitude = venue.location.lat;
+                NSNumber *longitude = venue.location.lng;
+                MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:latitude andLongitude:longitude andVenueName:name];
+                [self.annotations addObject:pointAnnotation];
+            }
+        }
+        
+        [self.mapView addAnnotations:self.annotations];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -79,6 +124,8 @@
     self.activityIndicator.hidden = FALSE;
     [self.activityIndicator startAnimating];
 }
+
+# pragma mark - Create MKPointAnnotation
 
 - (MKPointAnnotation *)createMapViewAnnotationWith:(NSNumber *)latitude
                                       andLongitude:(NSNumber *)longitude
@@ -91,6 +138,8 @@
     pointAnnotation.title = nameOfVenue;
     return pointAnnotation;
 }
+
+#pragma mark - Create MapRegion
 
 - (MKCoordinateRegion)createMapRegionWith:(NSNumber *)latitude
                              andLongitude:(NSNumber *)longitude

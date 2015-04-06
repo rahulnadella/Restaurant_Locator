@@ -22,10 +22,11 @@
  THE SOFTWARE.
  */
 
+#import "VenueViewController.h"
 #import <RestKit/RestKit.h>
 #import "VenueCell.h"
-#import "VenueViewController.h"
 #import "VenueDetailsViewController.h"
+#import "VenueMapViewController.h"
 
 @interface VenueViewController ()
 
@@ -70,6 +71,10 @@
     /* Add UIImage to the UIBarButtonItem */
     UIBarButtonItem *sortButton = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(showAlertSheet)];
     [buttons addObject:sortButton];
+    
+    UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:@selector(showMapView)];
+    [buttons addObject:mapButton];
     
     self.navigationItem.rightBarButtonItems = buttons;
     
@@ -190,6 +195,14 @@
     [self presentViewController:errorAlert animated:YES completion:nil];
 }
 
+- (void)showMapView
+{
+    if (self.venues)
+    {
+        [self performSegueWithIdentifier:@"Show Venues Map View" sender:self];
+    }
+}
+
 #pragma mark - Configure RestKit
 
 - (void)configureRestKit
@@ -287,6 +300,18 @@
                 [vdvc setCurrentContact:self.currentVenue.contact];
                 [vdvc setCurrentMenu:self.currentVenue.menu];
             }
+        }
+    }
+    else if ([segue.identifier isEqualToString:@"Show Venues Map View"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[VenueMapViewController class]])
+        {
+            VenueMapViewController *vmvc = segue.destinationViewController;
+            [vmvc setIsMultipleVenues:false];
+            NSMutableArray *businesses = (NSMutableArray *)self.venues;
+            [vmvc setBusinesses:businesses];
+            [vmvc setCurrentLatitude:self.currentVenue.location.lat];
+            [vmvc setCurrentLongitude:self.currentVenue.location.lng];
         }
     }
 }

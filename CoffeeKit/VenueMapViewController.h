@@ -28,17 +28,29 @@
  The VenueMapViewController displays the map view of the specific Venue's location.
  */
 @interface VenueMapViewController : UIViewController
-
+/* A list of Venue objects */
+@property (nonatomic, strong) NSMutableArray *businesses;
 @property (nonatomic, strong) NSNumber *currentLatitude;
 @property (nonatomic, strong) NSNumber *currentLongitude;
+@property (nonatomic) BOOL isMultipleVenues;
 @property (nonatomic, strong) NSString *titleOfVenue;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+/* 
+ The createMapViewAnnotationWithLatitudeandLongitudeandVenueName method that will 
+ create and return MKPointAnnotation object.
+ 
+ @version 1.0
+ */
 - (MKPointAnnotation *)createMapViewAnnotationWith:(NSNumber *)latitude
                                       andLongitude:(NSNumber *)longitude
                                       andVenueName:(NSString *)nameOfVenue;
-
+/*
+ The createMapRegionWithLatitudeandLongitudeandVenueName method that will create and return MKRegion.
+ 
+ @version 1.0
+ */
 - (MKCoordinateRegion)createMapRegionWith:(NSNumber *)latitude
                              andLongitude:(NSNumber *)longitude
                        andVisibleDistance:(CLLocationDistance)distance;
