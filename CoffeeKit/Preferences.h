@@ -25,6 +25,8 @@
 #import <Foundation/Foundation.h>
 /*
  The Preferences object holds global and/or constant values associated with CoffeeKit application
+ 
+ @version 1.0
  */
 @interface Preferences : NSObject
 

@@ -23,7 +23,11 @@
  */
 
 #import <UIKit/UIKit.h>
-
+/*
+ The CategoryCell provides the layout for the specific Categories listed.
+ 
+ @version 1.0
+ */
 @interface CategoryCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *title;

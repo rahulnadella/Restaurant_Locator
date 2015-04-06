@@ -26,6 +26,8 @@
 #import <UIKit/UIKit.h>
 /*
  The VenueMapViewController displays the map view of the specific Venue's location.
+ 
+ @version 1.0
  */
 @interface VenueMapViewController : UIViewController
 /* A list of Venue objects */

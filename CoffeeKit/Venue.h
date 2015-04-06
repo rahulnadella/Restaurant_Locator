@@ -32,6 +32,8 @@
 
 /*
  The Venue object contains the relationship a specific Venue with the Foursquare api.
+ 
+ @version 1.0
  */
 @interface Venue : NSObject
 

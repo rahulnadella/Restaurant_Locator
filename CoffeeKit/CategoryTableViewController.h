@@ -26,6 +26,8 @@
 /*
  The CategoryTableViewController display the current categories (i.e. based on food) 
  from the Foursquare category api.
+ 
+ @version 1.0
  */
 @interface CategoryTableViewController : UITableViewController
 

@@ -25,6 +25,8 @@
 #import <Foundation/Foundation.h>
 /*
  The Stats object contains specific data (i.e. number of visits through Foursquare) associated with the Venue.
+ 
+ @version 1.0
  */
 @interface Stats : NSObject
 

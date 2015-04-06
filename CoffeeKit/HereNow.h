@@ -25,6 +25,8 @@
 #import <Foundation/Foundation.h>
 /*
  Retrieve the current Status of a particular Venue.
+ 
+ @version 1.0
  */
 @interface HereNow : NSObject
 

@@ -26,10 +26,14 @@
 /*
 The Appearance object defines the various fonts (UIFont), color shading (NSShadow), 
  default color (UIColor) and overall appearance.
+ 
+ @version 1.0
  */
 @interface Appearance : NSObject
 /* 
  The customizeNavigationAppearance method specifies the appearance of the UINavigation menu.
+ 
+ @version 1.0
  */
 + (void)customizeNavigationAppearance;
 

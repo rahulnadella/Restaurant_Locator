@@ -23,7 +23,11 @@
  */
 
 #import <UIKit/UIKit.h>
-
+/*
+ The VenueCell provides the layout of information related to Venue object.
+ 
+ @version 1.0
+ */
 @interface VenueCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;

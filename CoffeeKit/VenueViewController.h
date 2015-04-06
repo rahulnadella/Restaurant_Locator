@@ -26,6 +26,8 @@
 #import "Venue.h"
 /*
  The VenueViewController provides a view of retrieve venues from Foursquare via their JSON api to display the venues registered with Foursquare. Currently the data is being retrieved via RestKit.
+ 
+ @version 1.0
  */
 @interface VenueViewController : UITableViewController
 

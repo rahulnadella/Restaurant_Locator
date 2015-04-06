@@ -25,6 +25,8 @@
 #import <Foundation/Foundation.h>
 /*
  The Contact object currently holds the specific phone number and twitter handle.
+ 
+ @version 1.0
  */
 @interface Contact : NSObject
 

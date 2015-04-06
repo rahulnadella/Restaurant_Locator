@@ -25,6 +25,8 @@
 #import <Foundation/Foundation.h>
 /*
  The Location object holds the specific data associated to a Venue.
+ 
+ @version 1.0
  */
 @interface Location : NSObject
 

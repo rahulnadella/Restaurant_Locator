@@ -25,6 +25,8 @@
 #import <Foundation/Foundation.h>
 /*
  The Menu object holds the specific relationship to link with the particular Venue's menu (if available).
+ 
+ @version 1.0
  */
 @interface Menu : NSObject
 

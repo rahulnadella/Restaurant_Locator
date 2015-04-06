@@ -26,6 +26,8 @@
 /*
  The Categories object represent a specific type a list of Venue(s) will be 
  grouped into (for example a bakery, coffee shop, indian restaurant, etc.)
+ 
+ @version 1.0
  */
 @interface Categories : NSObject
 
