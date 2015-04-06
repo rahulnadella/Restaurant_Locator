@@ -34,7 +34,7 @@
 @property (nonatomic, strong) NSNumber *currentLongitude;
 @property (nonatomic) BOOL isMultipleVenues;
 @property (nonatomic, strong) NSString *titleOfVenue;
-
+/* Outlet connecting the MKMapView to Storyboard View */
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 /* 
@@ -46,13 +46,32 @@
 - (MKPointAnnotation *)createMapViewAnnotationWith:(NSNumber *)latitude
                                       andLongitude:(NSNumber *)longitude
                                       andVenueName:(NSString *)nameOfVenue;
+
 /*
- The createMapRegionWithLatitudeandLongitudeandVenueName method that will create and return MKRegion.
+ The createMapRegionWithLatitudeandLongitudeandVenueName method that will create 
+ and return MKRegion.
  
  @version 1.0
  */
 - (MKCoordinateRegion)createMapRegionWith:(NSNumber *)latitude
                              andLongitude:(NSNumber *)longitude
                        andVisibleDistance:(CLLocationDistance)distance;
+
+/*
+ The initializeSingleVenue method creates a Venue on the MapView with its specific 
+ location designated on the map.
+ 
+ @version 1.0
+ */
+- (void)initializeSingleVenue;
+
+/*
+ The initializeMultipleVenues method creates Venue(s) on the MapView with each of 
+ their designated location coordinates display on the map.
+ 
+ @version 1.0
+ */
+- (void)initializeMultipleVenues;
+
 
 @end

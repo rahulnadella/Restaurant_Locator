@@ -87,33 +87,11 @@
     
     if (self.isMultipleVenues)
     {
-        /* Create the MKCoordinateRegion and add it to the MapView */
-        MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:METERS_PER_MILE];
-        [self.mapView setRegion:viewRegion animated:YES];
-        
-        /* Create MKPointAnnotation and add it to the MapView */
-        MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:self.currentLatitude andLongitude:self.currentLongitude andVenueName:self.titleOfVenue];
-        [self.mapView addAnnotation:pointAnnotation];
+        [self initializeSingleVenue];
     }
     else
     {
-        /* Create the MKCoordinateRegion and add it to the MapView */
-        MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:(METERS_PER_MILE * 15)];
-        [self.mapView setRegion:viewRegion animated:YES];
-        
-        for (Venue *venue in self.businesses)
-        {
-            if (venue.location)
-            {
-                NSString *name = venue.name;
-                NSNumber *latitude = venue.location.lat;
-                NSNumber *longitude = venue.location.lng;
-                MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:latitude andLongitude:longitude andVenueName:name];
-                [self.annotations addObject:pointAnnotation];
-            }
-        }
-        
-        [self.mapView addAnnotations:self.annotations];
+        [self initializeMultipleVenues];
     }
 }
 
@@ -153,6 +131,42 @@
     /* Create the Region of the specific Venue's location specified */
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, distance, distance);
     return viewRegion;
+}
+
+#pragma mark - Initialization of a Single Venue
+
+- (void)initializeSingleVenue
+{
+    /* Create the MKCoordinateRegion and add it to the MapView */
+    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:(METERS_PER_MILE * 0.5)];
+    [self.mapView setRegion:viewRegion animated:YES];
+    
+    /* Create MKPointAnnotation and add it to the MapView */
+    MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:self.currentLatitude andLongitude:self.currentLongitude andVenueName:self.titleOfVenue];
+    [self.mapView addAnnotation:pointAnnotation];
+}
+
+#pragma mark - Initialization of Multiple Venues
+
+- (void)initializeMultipleVenues
+{
+    /* Create the MKCoordinateRegion and add it to the MapView */
+    MKCoordinateRegion viewRegion = [self createMapRegionWith:self.currentLatitude andLongitude:self.currentLongitude andVisibleDistance:(METERS_PER_MILE * 15)];
+    [self.mapView setRegion:viewRegion animated:YES];
+    
+    for (Venue *venue in self.businesses)
+    {
+        if (venue.location)
+        {
+            NSString *name = venue.name;
+            NSNumber *latitude = venue.location.lat;
+            NSNumber *longitude = venue.location.lng;
+            MKPointAnnotation *pointAnnotation = [self createMapViewAnnotationWith:latitude andLongitude:longitude andVenueName:name];
+            [self.annotations addObject:pointAnnotation];
+        }
+    }
+    
+    [self.mapView addAnnotations:self.annotations];
 }
 
 #pragma mark - MKMapView Delegate methods
