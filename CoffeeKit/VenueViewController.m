@@ -259,6 +259,7 @@
 
 - (void)loadVenues
 {
+    NSLog(@"Current Location = %@", LATITUDE_LONGITUDE_FROM_LOCATION);
     NSString *latLon = @"37.33,-122.03"; // approximate latLon of The Mothership
     NSString *clientID = COFFEE_KIT_IDENTIFIER;
     NSString *clientSecret = COFFEE_KIT_SECRET;
