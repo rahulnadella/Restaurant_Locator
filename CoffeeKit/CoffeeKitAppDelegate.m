@@ -26,8 +26,9 @@
 #import "Appearance.h"
 #import "CoffeeKitAppDelegate.h"
 
-
 @implementation CoffeeKitAppDelegate
+
+#pragma AppDelegate methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
