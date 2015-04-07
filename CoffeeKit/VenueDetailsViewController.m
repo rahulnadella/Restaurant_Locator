@@ -22,12 +22,16 @@
  THE SOFTWARE.
  */
 
+#import <RestKit/RestKit.h>
 #import <Social/Social.h>
+#import "Venue.h"
 #import "VenueDetailsViewController.h"
 #import "VenueMapViewController.h"
 #import "WebPageViewController.h"
 
 @interface VenueDetailsViewController ()
+
+@property (nonatomic, strong) Venue *venue;
 
 @property (weak, nonatomic) IBOutlet UILabel *locationNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *streetAddressLabel;
@@ -131,6 +135,17 @@
     [self.menuButton setTitle:self.menuOfUrlVenu forState:UIControlStateNormal];
 }
 
+#pragma mark - Swipe Back
+
+- (IBAction)swipeBack:(UISwipeGestureRecognizer *)sender
+{
+    if (sender.direction & UISwipeGestureRecognizerDirectionRight)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+
 #pragma mark - Active Web Address
 
 - (IBAction)activeWebAddress:(id)sender
@@ -221,14 +236,50 @@
     }
 }
 
-#pragma mark - Swipe Back
+#pragma mark - Configure RestKit
 
-- (IBAction)swipeBack:(UISwipeGestureRecognizer *)sender
+- (void)configureRestKit
 {
-    if (sender.direction & UISwipeGestureRecognizerDirectionRight)
-    {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+    /* Initialize AFNetworking HTTPClient */
+    NSURL *baseURL = [NSURL URLWithString:FOURSQUARE_API];
+    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    
+    /* Initialize RestKit */
+    RKObjectManager *objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
+    
+    /* Setup Object Mappings */
+    RKObjectMapping *venueMapping = [RKObjectMapping mappingForClass:[Venue class]];
+    [venueMapping addAttributeMappingsFromDictionary:@{@"VENUE_ID" : @"id"}];
+    
+    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
+    
+    NSString *pathPattern = [NSString stringWithFormat:@"%@%@", VENUE_ID_SEARCH, self.venueId];
+    
+    /* Register mappings with the provider using a response descriptor */
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:venueMapping method:RKRequestMethodGET pathPattern:pathPattern keyPath:RESPONSE_VENUE statusCodes:statusCodes];
+    
+    [objectManager addResponseDescriptor:responseDescriptor];
+}
+
+#pragma mark - Load Venues
+
+- (void)loadVenues
+{
+    NSString *clientID = COFFEE_KIT_IDENTIFIER;
+    NSString *clientSecret = COFFEE_KIT_SECRET;
+    NSString *pathPattern = [NSString stringWithFormat:@"%@%@", VENUE_ID_SEARCH, self.venueId];
+    
+    NSDictionary *queryParams;
+    queryParams = [NSDictionary dictionaryWithObjectsAndKeys:self.venueId, VENUE_ID, clientID, CLIENT_ID, clientSecret, CLIENT_SECRET, VERSION_NUMBER, VERSION, nil];
+    /* Retrieve the venues from Foursquare using predefined settings */
+    [[RKObjectManager sharedManager] getObjectsAtPath:pathPattern parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
+     {
+         self.venue = mappingResult.firstObject;
+         NSLog(@"VENUE: %@", self.venue);
+     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+         /* Alert the user that an error occured while retrieving the Venue(s) */
+         NSLog(@"ERROR HAPPENED!");
+     }];
 }
 
 @end
