@@ -34,6 +34,7 @@
  */
 @interface VenueDetailsViewController : UIViewController
 
+@property (nonatomic, strong) NSString *venueId;
 @property (nonatomic, strong) NSString *nameOfVenue;
 @property (nonatomic, strong) NSString *urlOfVenue;
 @property (nonatomic, strong) NSString *twitterHandle;

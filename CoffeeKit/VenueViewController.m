@@ -293,6 +293,7 @@
             if (self.currentVenue)
             {
                 [vdvc setTitle:self.currentVenue.name];
+                [vdvc setVenueId:self.currentVenue.id];
                 [vdvc setNameOfVenue:self.currentVenue.name];
                 [vdvc setUrlOfVenue:self.currentVenue.url];
                 [vdvc setCurrentLocation:self.currentVenue.location];

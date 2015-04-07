@@ -50,6 +50,7 @@
 
 #pragma mark - Properties
 
+@synthesize venueId = _venueId;
 @synthesize nameOfVenue = _nameOfVenue;
 @synthesize urlOfVenue = _urlOfVenue;
 @synthesize menuOfUrlVenu = _menuOfUrlVenu;
