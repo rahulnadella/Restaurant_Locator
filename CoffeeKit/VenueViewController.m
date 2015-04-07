@@ -240,6 +240,7 @@
     RKObjectMapping *statusMapping = [RKObjectMapping mappingForClass:[HereNow class]];
     [statusMapping addAttributeMappingsFromArray:@[@"count"]];
     
+    /* Define Menu Object Model */
     RKObjectMapping *menuMapping = [RKObjectMapping mappingForClass:[Menu class]];
     [menuMapping addAttributeMappingsFromArray:@[@"type", @"label", @"url", @"mobileUrl"]];
     
