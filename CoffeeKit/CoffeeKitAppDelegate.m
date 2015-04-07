@@ -32,7 +32,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+#ifdef DEBUG
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelDebug);
+#endif
     /* Change the font, color and style of the Application */
     [Appearance customizeNavigationAppearance];
     
