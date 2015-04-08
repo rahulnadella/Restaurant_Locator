@@ -22,16 +22,12 @@
  THE SOFTWARE.
  */
 
-#import <RestKit/RestKit.h>
 #import <Social/Social.h>
-#import "Venue.h"
 #import "VenueDetailsViewController.h"
 #import "VenueMapViewController.h"
 #import "WebPageViewController.h"
 
 @interface VenueDetailsViewController ()
-
-@property (nonatomic, strong) Venue *venue;
 
 @property (weak, nonatomic) IBOutlet UILabel *locationNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *streetAddressLabel;
