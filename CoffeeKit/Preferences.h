@@ -51,6 +51,7 @@ extern NSString * const NO_INTERNET_CONNECTION_AVAILABLE;
 extern NSString * const NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION;
 extern NSString * const OKAY;
 extern NSString * const PLIST;
+extern NSString * const PREFIX;
 extern NSString * const RESPONSE_VENUE;
 extern NSString * const RESPONSE_VENUES;
 extern NSString * const RETURN_TO_VENUE_INFORMATION;

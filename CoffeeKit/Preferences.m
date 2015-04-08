@@ -46,6 +46,7 @@ NSString * const NO_INTERNET_CONNECTION_AVAILABLE = @"NO INTERNET CONNECTION AVA
 NSString * const NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION = @"You currently do not have access to an active internet connection";
 NSString * const OKAY = @"Ok";
 NSString * const PLIST = @"plist";
+NSString * const PREFIX = @"prefix";
 NSString * const RESPONSE_VENUE = @"response.venue";
 NSString * const RESPONSE_VENUES = @"response.venues";
 NSString * const RETURN_TO_VENUE_INFORMATION = @"Return to Venue Information";

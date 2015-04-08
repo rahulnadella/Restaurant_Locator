@@ -119,20 +119,30 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SqM-3y-xud" id="uZw-ne-8Ae">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H80-30-SiA">
+                                            <rect key="frame" x="8" y="7" width="40" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="Vcg-uY-p3F"/>
+                                            </constraints>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfr-yX-5r4">
-                                            <rect key="frame" x="8" y="11" width="59" height="21"/>
+                                            <rect key="frame" x="56" y="11" width="59" height="21"/>
                                             <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Wfr-yX-5r4" secondAttribute="bottom" constant="3.5" id="1th-wT-pr4"/>
-                                        <constraint firstItem="Wfr-yX-5r4" firstAttribute="leading" secondItem="uZw-ne-8Ae" secondAttribute="leadingMargin" id="MDt-iE-9Ky"/>
-                                        <constraint firstItem="Wfr-yX-5r4" firstAttribute="top" secondItem="uZw-ne-8Ae" secondAttribute="topMargin" constant="3" id="prb-aX-Me4"/>
+                                        <constraint firstItem="H80-30-SiA" firstAttribute="top" secondItem="uZw-ne-8Ae" secondAttribute="topMargin" constant="-1" id="3cX-fz-Gzf"/>
+                                        <constraint firstItem="Wfr-yX-5r4" firstAttribute="centerY" secondItem="uZw-ne-8Ae" secondAttribute="centerY" id="58q-Nw-OAo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="H80-30-SiA" secondAttribute="bottom" constant="-1.5" id="9FK-EX-2qA"/>
+                                        <constraint firstItem="Wfr-yX-5r4" firstAttribute="top" secondItem="uZw-ne-8Ae" secondAttribute="topMargin" constant="3" id="V8F-5V-ne5"/>
+                                        <constraint firstItem="H80-30-SiA" firstAttribute="leading" secondItem="uZw-ne-8Ae" secondAttribute="leadingMargin" id="g6o-83-O6x"/>
+                                        <constraint firstItem="Wfr-yX-5r4" firstAttribute="leading" secondItem="H80-30-SiA" secondAttribute="trailing" constant="8" symbolic="YES" id="pNE-5A-ynW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="categoryImage" destination="H80-30-SiA" id="1Kq-E2-s8t"/>
                                     <outlet property="title" destination="Wfr-yX-5r4" id="ab9-Vf-faO"/>
                                     <segue destination="pGg-6v-bdr" kind="show" identifier="Show Current Venues" id="2sE-ci-rzN"/>
                                 </connections>

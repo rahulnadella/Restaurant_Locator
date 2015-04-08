@@ -31,5 +31,6 @@
 @interface CategoryCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *title;
+@property (nonatomic, weak) IBOutlet UIImageView *categoryImage;
 
 @end

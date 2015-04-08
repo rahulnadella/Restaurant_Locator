@@ -101,6 +101,13 @@
     
     categoryCell.title.text = [[self.categories objectAtIndex:indexPath.row] valueForKey:CATEGORY_NAME];
     
+    NSString *imageName = [[self.categories objectAtIndex:indexPath.row] valueForKey:PREFIX];
+    /* Create the desired path based on the prefix and suffix of the specific Category */
+    NSString *imageUrl = [NSString stringWithFormat:@"%@bg_32.png", imageName];
+    /* Retrieve the Category image */
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
+    categoryCell.categoryImage.image = [UIImage imageWithData:imageData];
+    
     return categoryCell;
 }
 

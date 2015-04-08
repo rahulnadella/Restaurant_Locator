@@ -27,6 +27,7 @@
 @implementation CategoryCell
 
 @synthesize title = _title;
+@synthesize categoryImage = _categoryImage;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -46,6 +47,7 @@
 - (void)dealloc
 {
     _title = nil;
+    _categoryImage = nil;
 }
 
 @end
