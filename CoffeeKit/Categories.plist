@@ -1,708 +1,942 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
-    <dict>
-        <key>categoryName</key>
-        <string>Afghan Restaurant</string>
-        <key>categoryId</key>
-        <string>503288ae91d4c4b30a586d67</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>African Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c8941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>American Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d14e941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Arepa Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d152941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Argentinian Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d107941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Asian Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d142941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Australian Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d169941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Austrian Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a01</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>BBQ Joint</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1df931735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Bagel Shop</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d179941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Bakery</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d16a941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Belgian Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a02</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Bistro</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79f1</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Brazilian Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d16b941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Breakfast Spot</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d143941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Bubble Tea Shop</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a0c</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Buffet</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79f4</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Burger Joint</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d16c941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Burrito Place</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d153941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Cafeteria</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d128941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Café</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d16d941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Cajun / Creole Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d17a941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Cambodian Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a03</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Caribbean Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d144941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Chinese Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d145941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Coffee Shop</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1e0931735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Comfort Food Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a00</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Creperie</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79f2</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Cuban Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d154941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Cupcake Shop</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1bc941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Czech Restaurant</string>
-        <key>categoryId</key>
-        <string>52f2ae52bcbc57f1066b8b81</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Deli / Bodega</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d146941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Dessert Shop</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1d0941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Dim Sum Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1f5931735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Diner</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d147941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Distillery</string>
-        <key>categoryId</key>
-        <string>4e0e22f5a56208c4ea9a85a0</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Donut Shop</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d148941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Dumpling Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d108941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Eastern European Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d109941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>English Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a05</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Ethiopian Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d10a941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Falafel Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d10b941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Fast Food Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d16e941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Filipino Restaurant</string>
-        <key>categoryId</key>
-        <string>4eb1bd1c3b7b55596b4a748f</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Fish and Chips Shop</string>
-        <key>categoryId</key>
-        <string>4edd64a0c7ddd24ca188df1a</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Fondue Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a09</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Food Truck</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1cb941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>French Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d10c941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Fried Chicken Joint</string>
-        <key>categoryId</key>
-        <string>4d4ae6fc7a7b7dea34424761</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Gastropub</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d155941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>German Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d10d941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Gluten-free Restaurant</string>
-        <key>categoryId</key>
-        <string>4c2cd86ed066bed06c3c5209</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Greek Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d10e941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Halal Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79ff</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Hawaiian Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79fe</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Himalayan Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79fb</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Hot Dog Joint</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d16f941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Hotpot Restaurant</string>
-        <key>categoryId</key>
-        <string>52af0bd33cf9994f4e043bdd</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Hungarian Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79fa</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Ice Cream Shop</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c9941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Indian Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d10f941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Indonesian Restaurant</string>
-        <key>categoryId</key>
-        <string>4deefc054765f83613cdba6f</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Irish Pub</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a06</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Italian Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d110941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Japanese Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d111941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Jewish Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79fd</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Juice Bar</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d112941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Korean Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d113941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Kosher Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79fc</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Latin American Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1be941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Mac and Cheese Joint</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1bf941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Malaysian Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d156941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Mediterranean Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c0941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Mexican Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c1941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Middle Eastern Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d115941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Modern European Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79f9</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Molecular Gastronomy Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c2941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Mongolian Restaurant</string>
-        <key>categoryId</key>
-        <string>4eb1d5724b900d56c88a45fe</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Moroccan Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c3941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>New American Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d157941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Pakistani Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79f8</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Persian Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79f7</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Peruvian Restaurant</string>
-        <key>categoryId</key>
-        <string>4eb1bfa43b7b52c0e1adc2e8</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Pie Shop</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a0a</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Pizza Place</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1ca941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Polish Restaurant</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b7a04</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Portuguese Restaurant</string>
-        <key>categoryId</key>
-        <string>4def73e84765ae376e57713a</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Ramen / Noodle House</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1d1941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c4941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Romanian Restaurant</string>
-        <key>categoryId</key>
-        <string>52960bac3cf9994f4e043ac4</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Russian Restaurant</string>
-        <key>categoryId</key>
-        <string>5293a7563cf9994f4e043a44</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Salad Place</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1bd941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Sandwich Place</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c5941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Scandinavian Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c6941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Seafood Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1ce941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Snack Place</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1c7941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Soup Place</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1dd931735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>South American Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1cd941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Southern / Soul Food Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d14f941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Souvlaki Shop</string>
-        <key>categoryId</key>
-        <string>52e81612bcbc57f1066b79f3</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Spanish Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d150941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Sri Lankan Restaurant</string>
-        <key>categoryId</key>
-        <string>5413605de4b0ae91d18581a9</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Steakhouse</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1cc941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Sushi Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1d2941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Swiss Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d158941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Taco Place</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d151941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Tapas Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1db931735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Tea Room</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1dc931735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Thai Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d149941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Tibetan Restaurant</string>
-        <key>categoryId</key>
-        <string>52af39fb3cf9994f4e043be9</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Turkish Restaurant</string>
-        <key>categoryId</key>
-        <string>4f04af1f2fb6e1c99f3db0bb</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Ukrainian Restaurant</string>
-        <key>categoryId</key>
-        <string>52e928d0bcbc57f1066b7e96</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Vegetarian / Vegan Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d1d3941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Vietnamese Restaurant</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d14a941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Winery</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d14b941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Wings Joint</string>
-        <key>categoryId</key>
-        <string>4bf58dd8d48988d14c941735</string>
-    </dict>
-    <dict>
-        <key>categoryName</key>
-        <string>Frozen Yogurt</string>
-        <key>categoryId</key>
-        <string>512e7cae91d4cbb4e5efe0af</string>
-    </dict>
-</array>
+    <array>
+        <dict>
+            <key>categoryName</key>
+            <string>Afghan Restaurant</string>
+            <key>categoryId</key>
+            <string>503288ae91d4c4b30a586d67</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/afghan_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>African Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c8941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/african_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>American Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d14e941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Arepa Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d152941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/arepas_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Argentinian Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d107941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/argentinian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Asian Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d142941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/asian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Australian Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d169941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/australian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Austrian Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a01</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/austrian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>BBQ Joint</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1df931735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/bbq_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Bagel Shop</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d179941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/bagels_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Bakery</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d16a941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/bakery_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Belgian Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a02</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Bistro</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79f1</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Brazilian Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d16b941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/argentinian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Breakfast Spot</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d143941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/breakfast_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Bubble Tea Shop</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a0c</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/bubble_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Buffet</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79f4</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Burger Joint</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d16c941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/burger_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Burrito Place</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d153941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/burrito_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Cafeteria</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d128941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/education/cafeteria_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Café</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d16d941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/cafe_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Cajun / Creole Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d17a941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/cajun_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Cambodian Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a03</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Caribbean Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d144941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/caribbean_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Chinese Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d145941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/asian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Coffee Shop</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1e0931735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Comfort Food Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a00</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Creperie</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79f2</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/creperie_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Cuban Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d154941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/cuban_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Cupcake Shop</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1bc941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/cupcakes_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Czech Restaurant</string>
+            <key>categoryId</key>
+            <string>52f2ae52bcbc57f1066b8b81</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Deli / Bodega</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d146941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/deli_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Dessert Shop</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1d0941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/dessert_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Dim Sum Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1f5931735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/dimsum_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Diner</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d147941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/diner_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Distillery</string>
+            <key>categoryId</key>
+            <string>4e0e22f5a56208c4ea9a85a0</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/brewery_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Donut Shop</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d148941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/donuts_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Dumpling Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d108941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/dumplings_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Eastern European Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d109941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>English Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a05</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Ethiopian Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d10a941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/ethiopian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Falafel Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d10b941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/falafel_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Fast Food Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d16e941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/fastfood_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Filipino Restaurant</string>
+            <key>categoryId</key>
+            <string>4eb1bd1c3b7b55596b4a748f</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/filipino_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Fish and Chips Shop</string>
+            <key>categoryId</key>
+            <string>4edd64a0c7ddd24ca188df1a</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/fishandchips_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Fondue Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a09</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Food Truck</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1cb941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/streetfood_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>French Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d10c941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/french_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Fried Chicken Joint</string>
+            <key>categoryId</key>
+            <string>4d4ae6fc7a7b7dea34424761</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/friedchicken_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Gastropub</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d155941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/gastropub_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>German Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d10d941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/german_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Gluten-free Restaurant</string>
+            <key>categoryId</key>
+            <string>4c2cd86ed066bed06c3c5209</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/glutenfree_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Greek Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d10e941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/greek_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Halal Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79ff</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/halal_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Hawaiian Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79fe</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Himalayan Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79fb</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Hot Dog Joint</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d16f941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/hotdog_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Hotpot Restaurant</string>
+            <key>categoryId</key>
+            <string>52af0bd33cf9994f4e043bdd</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/asian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Hungarian Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79fa</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Ice Cream Shop</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c9941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/icecream_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Indian Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d10f941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/indian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Indonesian Restaurant</string>
+            <key>categoryId</key>
+            <string>4deefc054765f83613cdba6f</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/indonesian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Irish Pub</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a06</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/nightlife/pub_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Italian Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d110941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/italian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Japanese Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d111941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/japanese_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Jewish Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79fd</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Juice Bar</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d112941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/juicebar_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Korean Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d113941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/korean_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Kosher Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79fc</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Latin American Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1be941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/latinamerican_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Mac and Cheese Joint</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1bf941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/macandcheese_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Malaysian Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d156941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/malaysian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Mediterranean Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c0941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/mediterranean_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Mexican Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c1941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/mexican_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Middle Eastern Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d115941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/middleeastern_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Modern European Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79f9</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Molecular Gastronomy Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c2941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/moleculargastronomy_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Mongolian Restaurant</string>
+            <key>categoryId</key>
+            <string>4eb1d5724b900d56c88a45fe</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/mongolian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Moroccan Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c3941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/moroccan_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>New American Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d157941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/newamerican_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Pakistani Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79f8</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Persian Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79f7</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/persian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Peruvian Restaurant</string>
+            <key>categoryId</key>
+            <string>4eb1bfa43b7b52c0e1adc2e8</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/peruvian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Pie Shop</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a0a</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/pieshop_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Pizza Place</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1ca941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/pizza_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Polish Restaurant</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b7a04</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Portuguese Restaurant</string>
+            <key>categoryId</key>
+            <string>4def73e84765ae376e57713a</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/portuguese_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Ramen / Noodle House</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1d1941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/ramen_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c4941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Romanian Restaurant</string>
+            <key>categoryId</key>
+            <string>52960bac3cf9994f4e043ac4</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Russian Restaurant</string>
+            <key>categoryId</key>
+            <string>5293a7563cf9994f4e043a44</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/russian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Salad Place</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1bd941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/salad_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Sandwich Place</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c5941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/deli_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Scandinavian Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c6941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/scandinavian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Seafood Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1ce941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/seafood_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Snack Place</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1c7941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/snacks_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Soup Place</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1dd931735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/soup_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>South American Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1cd941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/argentinian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Southern / Soul Food Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d14f941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/southern_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Souvlaki Shop</string>
+            <key>categoryId</key>
+            <string>52e81612bcbc57f1066b79f3</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/souvlaki_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Spanish Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d150941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/spanish_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Sri Lankan Restaurant</string>
+            <key>categoryId</key>
+            <string>5413605de4b0ae91d18581a9</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Steakhouse</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1cc941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/steakhouse_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Sushi Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1d2941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/sushi_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Swiss Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d158941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/swiss_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Taco Place</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d151941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/taco_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Tapas Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1db931735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/tapas_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Tea Room</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1dc931735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/tearoom_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Thai Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d149941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/thai_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Tibetan Restaurant</string>
+            <key>categoryId</key>
+            <string>52af39fb3cf9994f4e043be9</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/tibetan_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Turkish Restaurant</string>
+            <key>categoryId</key>
+            <string>4f04af1f2fb6e1c99f3db0bb</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/turkish_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Ukrainian Restaurant</string>
+            <key>categoryId</key>
+            <string>52e928d0bcbc57f1066b7e96</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/default_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Vegetarian / Vegan Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d1d3941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/vegetarian_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Vietnamese Restaurant</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d14a941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/vietnamese_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Winery</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d14b941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/winery_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Wings Joint</string>
+            <key>categoryId</key>
+            <string>4bf58dd8d48988d14c941735</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/wings_</string>
+        </dict>
+        <dict>
+            <key>categoryName</key>
+            <string>Frozen Yogurt</string>
+            <key>categoryId</key>
+            <string>512e7cae91d4cbb4e5efe0af</string>
+            <key>prefix</key>
+            <string>https://ss3.4sqi.net/img/categories_v2/food/frozenyogurt_</string>
+        </dict>
+    </array>
 </plist>
