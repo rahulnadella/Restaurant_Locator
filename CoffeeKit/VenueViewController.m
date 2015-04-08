@@ -235,7 +235,7 @@
     /* Define Categories Object Model */
     RKObjectMapping *venueCategoryMapping = [RKObjectMapping mappingForClass:[Categories class]];
     [venueCategoryMapping addAttributeMappingsFromArray:@[@"id", @"name", @"icon", @"primary"]];
-    
+
     /* Define HereNow Object Model */
     RKObjectMapping *statusMapping = [RKObjectMapping mappingForClass:[HereNow class]];
     [statusMapping addAttributeMappingsFromArray:@[@"count"]];
