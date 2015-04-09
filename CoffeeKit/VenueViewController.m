@@ -73,13 +73,14 @@
     /* Add UIImage to the UIBarButtonItem */
     UIBarButtonItem *sortButton = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(showAlertSheet)];
     [buttons addObject:sortButton];
-    
+    /* Add UIBarButtonItem MAP */
     UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:@selector(showMapView)];
     [buttons addObject:mapButton];
-    
+    /* Adding to the buttons to the right of VenueView */
     self.navigationItem.rightBarButtonItems = buttons;
     
+    /* Defining the Venue Search Bar */
     self.venueSearchBar.delegate = self;
     self.venueSearchBar.placeholder = @"Search for Specific Restaurant";
     
@@ -101,6 +102,16 @@
     [super viewWillAppear:animated];
     
     [self.venueSearchBar becomeFirstResponder];
+}
+
+#pragma mark - Swipe Back
+
+- (IBAction)swipeBack:(UISwipeGestureRecognizer *)sender
+{
+    if (sender.direction & UISwipeGestureRecognizerDirectionRight)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - Table View
@@ -368,16 +379,6 @@
             /* Set View Controller Title */
             [vmvc setTitle:@"Restaurant(s) Location"];
         }
-    }
-}
-
-#pragma mark - Swipe Back
-
-- (IBAction)swipeBack:(UISwipeGestureRecognizer *)sender
-{
-    if (sender.direction & UISwipeGestureRecognizerDirectionRight)
-    {
-        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

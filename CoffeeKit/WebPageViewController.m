@@ -69,6 +69,16 @@
     [self refresh:self];
 }
 
+#pragma mark - Swipe Back
+
+- (IBAction)swipeBack:(UISwipeGestureRecognizer *)sender
+{
+    if (sender.direction & UISwipeGestureRecognizerDirectionRight)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 #pragma mark - Back
 
 - (IBAction)back:(UIButton *)sender
@@ -120,16 +130,6 @@
     
     [connectionView addAction:previous];
     [self presentViewController:connectionView animated:YES completion:nil];
-}
-
-#pragma mark - Swipe Back
-
-- (IBAction)swipeBack:(UISwipeGestureRecognizer *)sender
-{
-    if (sender.direction & UISwipeGestureRecognizerDirectionRight)
-    {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
 }
 
 #pragma mark - Venue Webpage MapView Action
