@@ -60,7 +60,17 @@
     }
     else
     {
-        NSLog(@"Significant location change monitoring is not available.");
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Significant location change monitoring is not available." message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:OKAY style:UIAlertActionStyleDefault handler:nil];
+        
+        [alert addAction:ok];
+        
+        id rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
+        if([rootViewController isKindOfClass:[UINavigationController class]])
+        {
+            rootViewController=[((UINavigationController *)rootViewController).viewControllers objectAtIndex:0];
+        }
+        [rootViewController presentViewController:alert animated:YES completion:nil];
     }
 }
 
