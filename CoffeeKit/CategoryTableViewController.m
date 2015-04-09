@@ -26,9 +26,11 @@
 #import "CategoryCell.h"
 #import "VenueViewController.h"
 
-@interface CategoryTableViewController ()
+@interface CategoryTableViewController () <UISearchBarDelegate>
 
 @property (nonatomic, strong) NSArray *categories;
+@property (nonatomic, strong) NSMutableArray *filteredCategories;
+@property (weak, nonatomic) IBOutlet UISearchBar *categorySearchBar;
 
 @end
 
@@ -70,6 +72,11 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:CATEGORIES ofType:PLIST];
     /* Allocate/Initialize the plist file */
     self.categories = [[NSArray alloc] initWithContentsOfFile:path];
+    self.filteredCategories = [[NSMutableArray alloc] initWithArray:self.categories];
+    
+    self.categorySearchBar.delegate = self;
+    self.categorySearchBar.placeholder = @"Search for Specific Restaurant Category";
+    
     /* Self-Sizing UITableViewCell */
     self.tableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -82,6 +89,13 @@
     [self.tableView reloadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.categorySearchBar becomeFirstResponder];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -91,7 +105,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.categories count];
+    return [self.filteredCategories count];
 }
 
 
@@ -99,9 +113,9 @@
 {
     CategoryCell *categoryCell = [tableView dequeueReusableCellWithIdentifier:@"CategoryCell" forIndexPath:indexPath];
     
-    categoryCell.title.text = [[self.categories objectAtIndex:indexPath.row] valueForKey:CATEGORY_NAME];
+    categoryCell.title.text = [[self.filteredCategories objectAtIndex:indexPath.row] valueForKey:CATEGORY_NAME];
     
-    NSString *imageName = [[self.categories objectAtIndex:indexPath.row] valueForKey:PREFIX];
+    NSString *imageName = [[self.filteredCategories objectAtIndex:indexPath.row] valueForKey:PREFIX];
     /* Create the desired path based on the prefix and suffix of the specific Category */
     NSString *imageUrl = [NSString stringWithFormat:@"%@bg_32.png", imageName];
     /* Retrieve the Category image */
@@ -109,6 +123,36 @@
     categoryCell.categoryImage.image = [UIImage imageWithData:imageData];
     
     return categoryCell;
+}
+
+#pragma mark - UISearchBar methods
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if ([searchText length] == 0)
+    {
+        [self.filteredCategories removeAllObjects];
+        [self.filteredCategories addObjectsFromArray:self.categories];
+    }
+    else
+    {
+        [self.filteredCategories removeAllObjects];
+        for (NSDictionary *item in self.categories)
+        {
+            NSString *categoryName = [item valueForKey:CATEGORY_NAME];
+            NSRange range = [categoryName rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if (range.location != NSNotFound)
+            {
+                [self.filteredCategories addObject:item];
+            }
+        }
+    }
+    [self.tableView reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)aSearchBar
+{
+    [self.categorySearchBar resignFirstResponder];
 }
 
 #pragma mark - Segue
