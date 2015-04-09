@@ -74,6 +74,7 @@
     self.categories = [[NSArray alloc] initWithContentsOfFile:path];
     self.filteredCategories = [[NSMutableArray alloc] initWithArray:self.categories];
     
+    /* Defining the Category Search Bar */
     self.categorySearchBar.delegate = self;
     self.categorySearchBar.placeholder = @"Search for Specific Restaurant Category";
     
@@ -105,9 +106,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    /* Return the sorted by search results */
     return [self.filteredCategories count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
