@@ -28,9 +28,11 @@
 #import "VenueDetailsViewController.h"
 #import "VenueMapViewController.h"
 
-@interface VenueViewController ()
+@interface VenueViewController () <UISearchBarDelegate>
 
 @property (nonatomic, strong) NSArray *venues;
+@property (nonatomic, strong) NSMutableArray *filteredVenues;
+@property (weak, nonatomic) IBOutlet UISearchBar *venueSearchBar;
 
 @end
 
@@ -78,10 +80,27 @@
     
     self.navigationItem.rightBarButtonItems = buttons;
     
+    self.venueSearchBar.delegate = self;
+    self.venueSearchBar.placeholder = @"Search for Specific Restaurant";
+    
     /* Configure RestKit to connect to Foursquare API */
     [self configureRestKit];
     /* Retrieve the venues specified by the mapping */
     [self loadVenues];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.venueSearchBar becomeFirstResponder];
 }
 
 #pragma mark - Table View
@@ -93,14 +112,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _venues.count;
+    return _filteredVenues.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VenueCell" forIndexPath:indexPath];
     
-    Venue *venue = _venues[indexPath.row];
+    Venue *venue = _filteredVenues[indexPath.row];
     cell.nameLabel.text = venue.name;
     cell.distanceLabel.text = [NSString stringWithFormat:@"%.0fm", venue.location.distance.floatValue];
     cell.checkinsLabel.text = [NSString stringWithFormat:@"%d checkins", venue.stats.checkins.intValue];
@@ -120,6 +139,35 @@
     cell.statusImage.image = (venue.hereNow.count.intValue > 0) ? [UIImage imageNamed:@"openSign"] : [UIImage imageNamed:@"closedSign"];
     
     return cell;
+}
+
+#pragma mark - UISearchBar Delegate methods
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if ([searchText length] == 0)
+    {
+        [self.filteredVenues removeAllObjects];
+        [self.filteredVenues addObjectsFromArray:self.venues];
+    }
+    else
+    {
+        [self.filteredVenues removeAllObjects];
+        for (Venue *venue in self.venues)
+        {
+            NSRange range = [venue.name rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if (range.location != NSNotFound)
+            {
+                [self.filteredVenues addObject:venue];
+            }
+        }
+    }
+    [self.tableView reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)aSearchBar
+{
+    [self.venueSearchBar resignFirstResponder];
 }
 
 #pragma mark - Ascending Order by Distancer
@@ -272,6 +320,7 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:VENUE_SEARCH parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult)
     {
         _venues = mappingResult.array;
+        _filteredVenues = [[NSMutableArray alloc] initWithArray: mappingResult.array];
         [self.tableView reloadData];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         /* Alert the user that an error occured while retrieving the Venue(s) */
