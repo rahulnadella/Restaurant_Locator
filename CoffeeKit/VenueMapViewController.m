@@ -25,7 +25,7 @@
 #import "VenueMapViewController.h"
 #import "Venue.h"
 
-@interface VenueMapViewController() <MKMapViewDelegate>
+@interface VenueMapViewController() <MKMapViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *annotations;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -94,6 +94,17 @@
     self.activityIndicator.hidden = FALSE;
     [self.activityIndicator startAnimating];
 }
+
+#pragma mark - Swipe Back
+
+- (IBAction)swipeBack:(UISwipeGestureRecognizer *)sender
+{
+    if (sender.direction & UISwipeGestureRecognizerDirectionRight)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 
 # pragma mark - Create MKPointAnnotation
 

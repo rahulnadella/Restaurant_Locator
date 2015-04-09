@@ -361,6 +361,7 @@
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ywZ-76-Whz" secondAttribute="trailing" id="8rf-GE-zyk"/>
                             <constraint firstItem="yMM-Ig-Q9Q" firstAttribute="centerX" secondItem="ywZ-76-Whz" secondAttribute="centerX" id="EDQ-c2-rrA"/>
@@ -369,6 +370,9 @@
                             <constraint firstItem="yMM-Ig-Q9Q" firstAttribute="centerY" secondItem="ywZ-76-Whz" secondAttribute="centerY" id="iZr-Vg-z9O"/>
                             <constraint firstItem="ywZ-76-Whz" firstAttribute="bottom" secondItem="Bdy-83-cCy" secondAttribute="top" id="ihT-yV-p3U"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pB2-fq-SQm" appends="YES" id="hw4-hY-fwU"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="yMM-Ig-Q9Q" id="Ows-eW-xMD"/>
@@ -376,6 +380,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTs-A0-cz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="pB2-fq-SQm">
+                    <connections>
+                        <action selector="swipeBack:" destination="ocP-Gf-WZW" id="SIM-8E-9oA"/>
+                        <outlet property="delegate" destination="ocP-Gf-WZW" id="jNe-Yz-2d4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2699" y="-629"/>
         </scene>
@@ -487,7 +497,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1sf-cK-7Mb"/>
         <segue reference="09n-og-gb9"/>
+        <segue reference="sMY-Xz-kPS"/>
     </inferredMetricsTieBreakers>
 </document>
