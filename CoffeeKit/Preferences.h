@@ -44,6 +44,8 @@ extern NSString * const DISTANCE_ASCENDING;
 extern NSString * const ERROR_DESCRIPTION;
 extern NSString * const ERROR_TITLE;
 extern NSString * const FOURSQUARE_API;
+extern NSString * const ICON_EXTENSION_32;
+extern NSString * const ICON_EXTENSION_64;
 extern NSString * const LATITUDE_LONGITUDE;
 extern NSString * LATITUDE_LONGITUDE_FROM_LOCATION;
 extern NSString * const MAP_TYPE_TITLE;

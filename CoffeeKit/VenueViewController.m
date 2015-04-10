@@ -147,7 +147,7 @@
     NSString *suffix = [icon objectForKey:@"suffix"];
     
     /* Create the desired path based on the prefix and suffix of the specific Category */
-    NSString *imageUrl = [NSString stringWithFormat:@"%@bg_32%@", prefix, suffix];
+    NSString *imageUrl = [NSString stringWithFormat:ICON_EXTENSION_32, prefix, suffix];
     /* Retrieve the Category image */
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
     cell.venueCategoryImage.image = [UIImage imageWithData:imageData];

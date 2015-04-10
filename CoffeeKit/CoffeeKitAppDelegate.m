@@ -132,15 +132,8 @@
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     if (abs(howRecent) < 15.0)
     {
-        #ifdef DEBUG
-        NSLog(@"latitude %+.6f, longitude %+.6f\n",
-              self.currentLocation.coordinate.latitude,
-              self.currentLocation.coordinate.longitude);
-        #endif
         [self returnLocationData];
     }
-
-    [self returnLocationData];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
