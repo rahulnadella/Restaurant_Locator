@@ -37,5 +37,4 @@
 @property (nonatomic, strong) NSString *nameOfVenue;
 @property (nonatomic, strong) NSString *urlAddress;
 
-
 @end
