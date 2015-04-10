@@ -57,7 +57,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    /* Dispose of any resources that can be recreated. */
+    self.categories = nil;
+    self.filteredCategories = nil;
+    self.categorySearchBar = nil;
 }
 
 #pragma mark - View Lifecycle

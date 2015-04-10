@@ -66,6 +66,32 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
+    /* Dispose of any resources that can be recreated. */
+    self.venueId = nil;
+    self.nameOfVenue = nil;
+    self.urlOfVenue = nil;
+    self.menuOfUrlVenu = nil;
+    self.facebookHandle = nil;
+    self.twitterHandle = nil;
+    self.currentContact = nil;
+    self.currentLocation = nil;
+    self.currentMenu = nil;
+    self.currentStats = nil;
+    self.locationNameLabel = nil;
+    self.streetAddressLabel = nil;
+    self.cityStateZipcodeLabel = nil;
+    self.totalCheckins = nil;
+    self.tipsLeft = nil;
+    self.phoneLabel = nil;
+    self.twitterLabel = nil;
+    self.twitterButton = nil;
+    self.urlLabel = nil;
+    self.urlButton = nil;
+    self.facebookLabel = nil;
+    self.facebookButton = nil;
+    self.menuLabel = nil;
+    self.menuButton = nil;
 }
 
 #pragma mark - View Lifecycle

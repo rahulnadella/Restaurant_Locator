@@ -47,7 +47,14 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    /* Dispose of any resources that can be recreated. */
+    self.currentLocation = nil;
+    self.menuAddress = nil;
+    self.nameOfVenue = nil;
+    self.urlAddress = nil;
+    self.webView = nil;
+    self.activityIndicator = nil;
 }
 
 #pragma mark - View Lifecycle

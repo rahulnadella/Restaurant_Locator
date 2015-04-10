@@ -48,7 +48,13 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    /* Dispose of any resources that can be recreated. */
+    self.currentVenue = nil;
+    self.currentCategoryId = nil;
+    self.venues = nil;
+    self.filteredVenues = nil;
+    self.venueSearchBar = nil;
 }
 
 #pragma mark - awakeFromNib
