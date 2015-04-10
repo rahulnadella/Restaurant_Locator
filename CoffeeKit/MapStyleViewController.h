@@ -25,7 +25,10 @@
 #import <UIKit/UIKit.h>
 /*
  The MapStyleViewController is an object that contains the logic for displaying 
- a specific style of MapView.
+ a specific style of MapView. 
+ 
+ The MapStyleViewController is a class that should
+ be used for as base implementation of MapView customizable constraints.
  
  @version 1.0
  */
