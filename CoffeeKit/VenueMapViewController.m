@@ -80,6 +80,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     /* Hide the ActivityIndicator when VenueMapView is loaded */
     self.activityIndicator.hidden = TRUE;
 }
@@ -91,6 +92,7 @@
     /* Set the delegate for MKMapView */
     [self setMapType];
     [self.mapView setScrollEnabled:YES];
+    self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
     
     /* Check to see if the user is viewing a single or multiple Venue(s) */
@@ -211,6 +213,5 @@
     [self.activityIndicator stopAnimating];
     self.activityIndicator.hidden = TRUE;
 }
-
 
 @end
