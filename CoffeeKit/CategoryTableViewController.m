@@ -31,6 +31,7 @@
 @property (nonatomic, strong) NSArray *categories;
 @property (nonatomic, strong) NSMutableArray *filteredCategories;
 @property (weak, nonatomic) IBOutlet UISearchBar *categorySearchBar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *searchBarButtonItem;
 
 @end
 
@@ -69,8 +70,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    /* Setting Navigation Title */
     [[self navigationItem] setTitle:@"Food Categories"];
+    /* Adding Search Button */
+    self.searchBarButtonItem.target = self;
+    self.searchBarButtonItem.action = @selector(searchCategories:);
     
     /* Path to the plist (in the application bundle) */
     NSString *path = [[NSBundle mainBundle] pathForResource:CATEGORIES ofType:PLIST];
@@ -98,6 +102,21 @@
 {
     [super viewWillAppear:animated];
     
+    [self.categorySearchBar becomeFirstResponder];
+}
+
+# pragma mark - Search Categories
+
+- (IBAction)searchCategories:(UIBarButtonItem *)sender
+{
+    CGRect newBounds = self.tableView.bounds;
+    if (self.tableView.bounds.origin.y < 44)
+    {
+        newBounds.origin.y = newBounds.origin.y + self.categorySearchBar.bounds.size.height;
+        self.tableView.bounds = newBounds;
+    }
+
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:0 animated:YES];
     [self.categorySearchBar becomeFirstResponder];
 }
 

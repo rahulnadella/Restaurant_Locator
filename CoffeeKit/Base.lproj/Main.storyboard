@@ -170,9 +170,16 @@
                             <outlet property="delegate" destination="VAs-pM-6NE" id="L3t-bG-NDn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cY2-Jw-gG5"/>
+                    <navigationItem key="navigationItem" id="cY2-Jw-gG5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="qEt-VO-123">
+                            <connections>
+                                <action selector="searchCategories:" destination="VAs-pM-6NE" id="3hR-Nt-jgD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="categorySearchBar" destination="5Xu-Ru-sPo" id="1gU-oz-WBC"/>
+                        <outlet property="searchBarButtonItem" destination="qEt-VO-123" id="CjV-T4-jEn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lD0-SE-Chv" userLabel="First Responder" sceneMemberID="firstResponder"/>
