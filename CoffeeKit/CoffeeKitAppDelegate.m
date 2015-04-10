@@ -42,7 +42,7 @@
     [Appearance customizeNavigationBarColor];
     
     /* Initialize the Location of the User device (if allowed by the user) */
-    [self initLocation];
+    [self initializeLocation];
     
     /* Override point for customization after application launch. */
     return YES;
@@ -105,7 +105,7 @@
 
 #pragma mark - Initialization Location
 
-- (void)initLocation
+- (void)initializeLocation
 {
     if ([CLLocationManager locationServicesEnabled])
     {
