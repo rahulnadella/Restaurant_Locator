@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QR1-Ng-7vc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QR1-Ng-7vc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -106,7 +106,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="hhH-Ft-AO9">
+                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="hhH-Ft-AO9">
                     <connections>
                         <action selector="swipeBack:" destination="pGg-6v-bdr" id="Mof-fX-3Fk"/>
                     </connections>
@@ -380,7 +380,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTs-A0-cz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="pB2-fq-SQm">
+                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="pB2-fq-SQm">
                     <connections>
                         <action selector="swipeBack:" destination="ocP-Gf-WZW" id="SIM-8E-9oA"/>
                         <outlet property="delegate" destination="ocP-Gf-WZW" id="jNe-Yz-2d4"/>
