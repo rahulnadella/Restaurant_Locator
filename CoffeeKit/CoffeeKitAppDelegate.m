@@ -95,20 +95,23 @@
 
 - (void)initLocation
 {
-    /* Create the CLLocationManager object */
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
-    self.locationManager.distanceFilter = kCLDistanceFilterNone;
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 &&
-        [CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse)
+    if ([CLLocationManager locationServicesEnabled])
     {
-        [self.locationManager requestWhenInUseAuthorization];
-    }
-    else
-    {
-        [self.locationManager startUpdatingLocation];
+        /* Create the CLLocationManager object */
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 &&
+            [CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse)
+        {
+            [self.locationManager requestWhenInUseAuthorization];
+        }
+        else
+        {
+            [self.locationManager startUpdatingLocation];
+        }
     }
 }
 
