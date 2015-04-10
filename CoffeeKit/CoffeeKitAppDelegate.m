@@ -35,6 +35,7 @@
 #ifdef DEBUG
     RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelInfo);
 #endif
+    
     /* Change the font, color and style of the Application */
     [Appearance customizeNavigationAppearance];
     
@@ -125,10 +126,11 @@
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     if (abs(howRecent) < 15.0)
     {
-        // If the event is recent, do something with it.
+        #ifdef DEBUG
         NSLog(@"latitude %+.6f, longitude %+.6f\n",
               self.currentLocation.coordinate.latitude,
               self.currentLocation.coordinate.longitude);
+        #endif
         [self returnLocationData];
     }
 
