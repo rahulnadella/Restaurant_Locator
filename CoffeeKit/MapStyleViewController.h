@@ -37,6 +37,6 @@
  
  @version 1.0
  */
-- (void)showAlertSheet:(NSString *)identifier;
+- (void)showAlertSheetBySegueIdentifier:(NSString *)identifier;
 
 @end

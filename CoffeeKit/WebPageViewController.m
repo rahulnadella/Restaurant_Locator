@@ -145,7 +145,7 @@
 {
     if (self.currentLocation)
     {
-        [self showAlertSheet:VENUE_MAP_VIEW_IDENTIFIER];
+        [self showAlertSheetBySegueIdentifier:VENUE_MAP_VIEW_IDENTIFIER];
     }
 }
 

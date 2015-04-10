@@ -47,7 +47,7 @@
 
 #pragma mark - Show AlertSheet
 
-- (void)showAlertSheet:(NSString *)identifier
+- (void)showAlertSheetBySegueIdentifier:(NSString *)identifier
 {
     /* Using the UIAlertController in iOS 8.0 (ActionSheetDelegate is deprecated) */
     UIAlertController *mapView = [UIAlertController alertControllerWithTitle:MAP_TYPE_TITLE
