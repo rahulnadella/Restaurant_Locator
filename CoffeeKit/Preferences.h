@@ -66,7 +66,7 @@ extern NSString * const VERSION;
 extern NSString * const VERSION_NUMBER;
 extern NSString * const VENUE_DETAILS_VIEW_IDENTIFIER;
 extern NSString * const VENUE_MAP_VIEW_IDENTIFIER;
-
+/* MapStyle Constraints */
 extern NSString * const STANDARD;
 extern NSString * const HYBRID;
 extern NSString * const SATELLITE;

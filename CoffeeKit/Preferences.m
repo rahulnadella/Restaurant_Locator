@@ -62,7 +62,7 @@ NSString * const VERSION_NUMBER = @"20140609";
 NSString * const VENUE_DETAILS_VIEW_IDENTIFIER = @"Show Map View";
 NSString * const VENUE_MAP_VIEW_IDENTIFIER = @"Show Venue Map View";
 
-NSString * const STANDARD = @"Standard";
-NSString * const HYBRID = @"Hybrid";
-NSString * const SATELLITE = @"Satellite";
+NSString * const STANDARD = @"Standard Map";
+NSString * const HYBRID = @"Hybrid Map";
+NSString * const SATELLITE = @"Satellite Map";
 @end
