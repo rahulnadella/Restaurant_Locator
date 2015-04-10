@@ -67,15 +67,17 @@
     else
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Significant location change monitoring is not available." message:nil preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *ok = [UIAlertAction actionWithTitle:OKAY style:UIAlertActionStyleDefault handler:nil];
         
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:OKAY style:UIAlertActionStyleDefault handler:nil];
         [alert addAction:ok];
         
+        /* Retrieve the RootViewController and if a UINavigationController retrieve its Controller */
         id rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
         if([rootViewController isKindOfClass:[UINavigationController class]])
         {
-            rootViewController=[((UINavigationController *)rootViewController).viewControllers objectAtIndex:0];
+            rootViewController = [((UINavigationController *)rootViewController).viewControllers objectAtIndex:0];
         }
+        /* Present the Alert for the UIAlertController */
         [rootViewController presentViewController:alert animated:YES completion:nil];
     }
 }
