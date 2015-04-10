@@ -38,7 +38,10 @@
     
     /* Change the font, color and style of the Application */
     [Appearance customizeNavigationAppearance];
+    /* Change the Navigation Bar (specifically back buttons) to color white */
+    [Appearance customizeNavigationBarColor];
     
+    /* Initialize the Location of the User device (if allowed by the user) */
     [self initLocation];
     
     /* Override point for customization after application launch. */

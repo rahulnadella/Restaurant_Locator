@@ -26,6 +26,8 @@
 
 @implementation Appearance
 
+#pragma mark - Customize Navigation Appearance
+
 + (void)customizeNavigationAppearance
 {
     /* Create resizable images */
@@ -52,6 +54,13 @@
     
     /* Customize the title text for *all* UINavigationBars */
     [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+}
+
+#pragma mark - Customize NavigationBar Color
+
++ (void)customizeNavigationBarColor
+{
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 @end

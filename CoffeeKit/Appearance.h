@@ -37,4 +37,11 @@ The Appearance object defines the various fonts (UIFont), color shading (NSShado
  */
 + (void)customizeNavigationAppearance;
 
+/*
+ The customizeNavigationBarColor method specifies the color of the UINavigationBar menu.
+ 
+ @version 1.0
+ */
++ (void)customizeNavigationBarColor;
+
 @end
