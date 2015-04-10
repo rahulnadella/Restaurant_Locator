@@ -40,6 +40,7 @@
 		FCCEB3BD1AC88CE800634876 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3B91AC88CE800634876 /* SystemConfiguration.framework */; };
 		FCCEB3C01AC88D0900634876 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3BE1AC88D0900634876 /* CoreData.framework */; };
 		FCCEB3C11AC88D0900634876 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3BF1AC88D0900634876 /* MobileCoreServices.framework */; };
+		FCFBF0C51AD832710055EA73 /* MapStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFBF0C41AD832710055EA73 /* MapStyleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		FCCEB3BE1AC88D0900634876 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FCCEB3BF1AC88D0900634876 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FCCEB3C21AC88E3D00634876 /* CoffeeKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoffeeKit-Prefix.pch"; sourceTree = "<group>"; };
+		FCFBF0C31AD832710055EA73 /* MapStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStyleViewController.h; sourceTree = "<group>"; };
+		FCFBF0C41AD832710055EA73 /* MapStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapStyleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +301,8 @@
 				FC2235801AD193B500D0E827 /* VenueMapViewController.m */,
 				FCB350C01ACAE02A0068DB28 /* WebPageViewController.h */,
 				FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */,
+				FCFBF0C31AD832710055EA73 /* MapStyleViewController.h */,
+				FCFBF0C41AD832710055EA73 /* MapStyleViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 				FCCEB39E1AC88BE800634876 /* Location.m in Sources */,
 				FCCEB3021AC84E8800634876 /* main.m in Sources */,
 				FCCEB3A31AC88BF300634876 /* VenueViewController.m in Sources */,
+				FCFBF0C51AD832710055EA73 /* MapStyleViewController.m in Sources */,
 				FCB350BF1AC9F0B00068DB28 /* Contact.m in Sources */,
 				FCB350BC1AC9D0720068DB28 /* VenueDetailsViewController.m in Sources */,
 				FCB350D61ACD96ED0068DB28 /* Categories.m in Sources */,
