@@ -293,6 +293,8 @@
 			children = (
 				FCB350CC1ACC6CF40068DB28 /* CategoryTableViewController.h */,
 				FCB350CD1ACC6CF40068DB28 /* CategoryTableViewController.m */,
+				FCFBF0C31AD832710055EA73 /* MapStyleViewController.h */,
+				FCFBF0C41AD832710055EA73 /* MapStyleViewController.m */,
 				FCCEB3A11AC88BF300634876 /* VenueViewController.h */,
 				FCCEB3A21AC88BF300634876 /* VenueViewController.m */,
 				FCB350BA1AC9D0720068DB28 /* VenueDetailsViewController.h */,
@@ -301,8 +303,6 @@
 				FC2235801AD193B500D0E827 /* VenueMapViewController.m */,
 				FCB350C01ACAE02A0068DB28 /* WebPageViewController.h */,
 				FCB350C11ACAE02A0068DB28 /* WebPageViewController.m */,
-				FCFBF0C31AD832710055EA73 /* MapStyleViewController.h */,
-				FCFBF0C41AD832710055EA73 /* MapStyleViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
