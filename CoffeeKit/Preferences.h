@@ -64,6 +64,7 @@ extern NSString * const VENUE_SEARCH;
 extern NSString * const VENUE_ID_SEARCH;
 extern NSString * const VERSION;
 extern NSString * const VERSION_NUMBER;
+extern NSString * const VENUE_DETAILS_VIEW_IDENTIFIER;
 extern NSString * const VENUE_MAP_VIEW_IDENTIFIER;
 
 extern NSString * const STANDARD;

@@ -25,6 +25,7 @@
 #import <UIKit/UIKit.h>
 #import "Contact.h"
 #import "Location.h"
+#import "MapStyleViewController.h"
 #import "Menu.h"
 #import "Stats.h"
 /*
@@ -32,7 +33,7 @@
  
  @version 1.0
  */
-@interface VenueDetailsViewController : UIViewController
+@interface VenueDetailsViewController : MapStyleViewController
 
 @property (nonatomic, strong) NSString *venueId;
 @property (nonatomic, strong) NSString *nameOfVenue;

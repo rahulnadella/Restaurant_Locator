@@ -215,7 +215,7 @@
 {
     if (self.currentLocation)
     {
-        [self performSegueWithIdentifier:@"Show Map View" sender:self];
+        [self showAlertSheetBySegueIdentifier:VENUE_DETAILS_VIEW_IDENTIFIER];
     }
 }
 
@@ -243,7 +243,7 @@
             [wpvc setNameOfVenue:self.nameOfVenue];
         }
     }
-    else if ([segue.identifier isEqualToString:@"Show Map View"])
+    else if ([segue.identifier isEqualToString:VENUE_DETAILS_VIEW_IDENTIFIER])
     {
         if ([segue.destinationViewController isKindOfClass:[VenueMapViewController class]])
         {
@@ -252,6 +252,7 @@
             [vmvc setCurrentLongitude:self.currentLocation.lng];
             [vmvc setTitleOfVenue:self.nameOfVenue];
             [vmvc setIsMultipleVenues:true];
+            [vmvc setMenuType:self.mapType];
             /* Set View Controller Title */
             [vmvc setTitle:@"Restaurant Location"];
         }
