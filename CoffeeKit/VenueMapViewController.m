@@ -189,6 +189,8 @@
     [self.mapView addAnnotations:self.annotations];
 }
 
+#pragma mark - Set MapType (MKMapType)
+
 - (void)setMapType
 {
     if ([self.menuType isEqualToString:STANDARD])
