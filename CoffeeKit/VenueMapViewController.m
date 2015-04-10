@@ -87,7 +87,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+
     /* Set the delegate for MKMapView */
+    [self setMapType];
+    [self.mapView setScrollEnabled:YES];
     self.mapView.delegate = self;
     
     /* Check to see if the user is viewing a single or multiple Venue(s) */
@@ -111,7 +114,6 @@
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
-
 
 # pragma mark - Create MKPointAnnotation
 
@@ -183,6 +185,22 @@
     }
     /* Add the List of MKPointAnnotations to the MapView */
     [self.mapView addAnnotations:self.annotations];
+}
+
+- (void)setMapType
+{
+    if ([self.menuType isEqualToString:STANDARD])
+    {
+        [self.mapView setMapType:MKMapTypeStandard];
+    }
+    else if ([self.menuType isEqualToString:HYBRID])
+    {
+        [self.mapView setMapType:MKMapTypeHybrid];
+    }
+    else if ([self.menuType isEqualToString:SATELLITE])
+    {
+        [self.mapView setMapType:MKMapTypeSatellite];
+    }
 }
 
 #pragma mark - MKMapView Delegate methods

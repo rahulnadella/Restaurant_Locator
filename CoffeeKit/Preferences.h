@@ -46,6 +46,8 @@ extern NSString * const ERROR_TITLE;
 extern NSString * const FOURSQUARE_API;
 extern NSString * const LATITUDE_LONGITUDE;
 extern NSString * LATITUDE_LONGITUDE_FROM_LOCATION;
+extern NSString * const MAP_TYPE_TITLE;
+extern NSString * const MAP_TYPE_DESCRIPTION;
 extern double const METERS_PER_MILE;
 extern NSString * const NO_INTERNET_CONNECTION_AVAILABLE;
 extern NSString * const NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION;
@@ -63,5 +65,9 @@ extern NSString * const VENUE_ID_SEARCH;
 extern NSString * const VERSION;
 extern NSString * const VERSION_NUMBER;
 extern NSString * const VENUE_MAP_VIEW_IDENTIFIER;
+
+extern NSString * const STANDARD;
+extern NSString * const HYBRID;
+extern NSString * const SATELLITE;
 
 @end

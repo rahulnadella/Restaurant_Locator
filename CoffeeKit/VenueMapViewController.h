@@ -35,6 +35,7 @@
 @property (nonatomic, strong) NSNumber *currentLatitude;
 @property (nonatomic, strong) NSNumber *currentLongitude;
 @property (nonatomic) BOOL isMultipleVenues;
+@property (nonatomic, strong) NSString *menuType;
 @property (nonatomic, strong) NSString *titleOfVenue;
 /* Outlet connecting the MKMapView to Storyboard View */
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

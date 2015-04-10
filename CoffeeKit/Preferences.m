@@ -41,6 +41,8 @@ NSString * const ERROR_TITLE = @"ERROR: UNABLE TO RETRIEVE VENUES";
 NSString * const FOURSQUARE_API = @"https://api.foursquare.com";
 NSString * const LATITUDE_LONGITUDE = @"ll";
 NSString * LATITUDE_LONGITUDE_FROM_LOCATION = @"";
+NSString * const MAP_TYPE_TITLE = @"MAP STYLE TO DISPLAY";
+NSString * const MAP_TYPE_DESCRIPTION = @"Choose the Map Type to be Displayed";
 double const METERS_PER_MILE = 1609.344;
 NSString * const NO_INTERNET_CONNECTION_AVAILABLE = @"NO INTERNET CONNECTION AVAILABLE";
 NSString * const NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION = @"You currently do not have access to an active internet connection";
@@ -59,4 +61,7 @@ NSString * const VERSION = @"v";
 NSString * const VERSION_NUMBER = @"20140609";
 NSString * const VENUE_MAP_VIEW_IDENTIFIER = @"Show Venue Map View";
 
+NSString * const STANDARD = @"Standard";
+NSString * const HYBRID = @"Hybrid";
+NSString * const SATELLITE = @"Satellite";
 @end

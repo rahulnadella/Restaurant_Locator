@@ -145,7 +145,7 @@
 {
     if (self.currentLocation)
     {
-        [self performSegueWithIdentifier:VENUE_MAP_VIEW_IDENTIFIER sender:self];
+        [self showAlertSheet:VENUE_MAP_VIEW_IDENTIFIER];
     }
 }
 
@@ -162,6 +162,7 @@
             [vmvc setCurrentLongitude:self.currentLocation.lng];
             [vmvc setTitleOfVenue:self.nameOfVenue];
             [vmvc setIsMultipleVenues:true];
+            [vmvc setMenuType:self.mapType];
             /* Set View Controller Title */
             [vmvc setTitle:@"Restaurant Location"];
         }
