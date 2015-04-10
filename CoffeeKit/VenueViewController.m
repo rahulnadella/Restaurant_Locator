@@ -191,11 +191,11 @@
 
 - (void)ascendingOrderByDistance
 {
-    _venues = [self.venues sortedArrayUsingComparator: ^(id a, id b) {
+    _filteredVenues = [[self.filteredVenues sortedArrayUsingComparator: ^(id a, id b) {
         NSNumber *firstDistance = [[(Venue *)a location] distance];
         NSNumber *secondDistance = [[(Venue *)b location] distance];
         return [firstDistance compare:secondDistance];
-    }];
+    }] mutableCopy];
     
     [self.tableView reloadData];
 }
@@ -204,11 +204,11 @@
 
 - (void)descendingOrderByCheckins
 {
-    _venues = [self.venues sortedArrayUsingComparator:^(id a, id b){
+    _filteredVenues = [[self.filteredVenues sortedArrayUsingComparator:^(id a, id b){
         NSNumber *firstCheckIns = [[(Venue *)a stats] checkins];
         NSNumber *secondCheckIns = [[(Venue *)b stats] checkins];
         return [secondCheckIns compare:firstCheckIns];
-    }];
+    }] mutableCopy];
     
     [self.tableView reloadData];
 }
@@ -351,7 +351,7 @@
 {
     /* Retrieve the current Venue being selected by the user */
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    Venue *currentVenue = _venues[indexPath.row];
+    Venue *currentVenue = _filteredVenues[indexPath.row];
     self.currentVenue = currentVenue;
     
     if ([segue.identifier isEqualToString:@"Show Current Venue"])
