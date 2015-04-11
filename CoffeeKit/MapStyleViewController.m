@@ -26,6 +26,8 @@
 
 @implementation MapStyleViewController
 
+#pragma mark - Properties
+
 @synthesize mapType = _mapType;
 @synthesize nameOfVenue = _nameOfVenue;
 @synthesize currentLocation = _currentLocation;
@@ -47,7 +49,9 @@
     [super viewDidLoad];
 }
 
-- (NSMutableArray *)rightBarButtons
+#pragma mark - Retrieve the UIBarButtonItems (Right Side)
+
+- (NSMutableArray *)retrieveRightNavigationButtons
 {
     /* Initialize an Array of size equal to 1 */
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
@@ -94,6 +98,7 @@
     [mapView addAction:hybrid];
     [mapView addAction:satellite];
     [mapView addAction:cancel];
+    /* Present the Alert to the present View */
     [self presentViewController:mapView animated:YES completion:nil];
 }
 

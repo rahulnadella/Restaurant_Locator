@@ -44,7 +44,9 @@
  @version 1.0
  */
 - (void)showAlertSheetBySegueIdentifier:(NSString *)identifier;
-
-- (NSMutableArray *)rightBarButtons;
+/*
+ The retrieveRightNavigationButtons method gets the default right UIBarButtonItems for the any class extending base MapStyleViewController
+ */
+- (NSMutableArray *)retrieveRightNavigationButtons;
 
 @end

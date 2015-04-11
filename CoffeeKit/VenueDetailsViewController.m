@@ -99,7 +99,7 @@
     [super viewDidLoad];
     
     /* Retrieve the UIBarButton objects */
-    NSMutableArray *buttons = [self rightBarButtons];
+    NSMutableArray *buttons = [self retrieveRightNavigationButtons];
     /* Set the specific method to call when clicked */
     UIBarButtonItem *map = [buttons objectAtIndex:0];
     map.action = @selector(retrieveMapView);
