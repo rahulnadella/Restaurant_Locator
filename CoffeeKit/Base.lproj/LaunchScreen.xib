@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -11,19 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESTKIT DEMO USING FOURSQUARE" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="116" y="8" width="248" height="92"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective-C demo of Foursquare API" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07R-Er-MH0">
+                    <rect key="frame" x="146" y="421" width="188" height="51"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="248" id="KDg-CH-HOa"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="36"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective-C demo of RestKit using the Foursquare API" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07R-Er-MH0">
-                    <rect key="frame" x="116" y="421" width="248" height="51"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="51" id="V6B-L7-nue"/>
+                        <constraint firstAttribute="width" constant="188" id="BfO-ON-wVd"/>
+                        <constraint firstAttribute="height" constant="51" id="a9L-YI-rTn"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,17 +24,23 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foursquare" translatesAutoresizingMaskIntoConstraints="NO" id="SYT-TV-JzJ">
                     <rect key="frame" x="176" y="176" width="128" height="128"/>
                 </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Locator" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
+                    <rect key="frame" x="6" y="8" width="466" height="120"/>
+                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="45"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.13147874209999999" green="0.203184213" blue="0.62579719389999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="SYT-TV-JzJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Aje-Dk-HPX"/>
-                <constraint firstItem="07R-Er-MH0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="ZFb-bw-nLz"/>
-                <constraint firstItem="SYT-TV-JzJ" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="76" id="b95-RB-ziH"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="07R-Er-MH0" secondAttribute="leading" id="d2l-2Q-QYq"/>
-                <constraint firstItem="SYT-TV-JzJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="njL-Wv-ONz"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerX" secondItem="SYT-TV-JzJ" secondAttribute="centerX" id="ovO-hW-g5x"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="trailing" secondItem="07R-Er-MH0" secondAttribute="trailing" id="rYx-RE-Nef"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="wEn-NT-Mrz"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="5NW-2T-Zyw"/>
+                <constraint firstItem="07R-Er-MH0" firstAttribute="centerX" secondItem="SYT-TV-JzJ" secondAttribute="centerX" id="R1N-XO-BwX"/>
+                <constraint firstItem="SYT-TV-JzJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Yfl-zY-EqQ"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="cpd-Qv-exJ"/>
+                <constraint firstItem="SYT-TV-JzJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="iPe-oP-Jx1"/>
+                <constraint firstItem="07R-Er-MH0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="u3s-th-FHz"/>
+                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="6" id="w2i-rq-PH2"/>
+                <constraint firstItem="SYT-TV-JzJ" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="48" id="zEz-Wf-ACz"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
