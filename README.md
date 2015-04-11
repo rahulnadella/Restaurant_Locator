@@ -1,1 +1,1 @@
-# RestKit_Demo
+# Restaurant Locator
