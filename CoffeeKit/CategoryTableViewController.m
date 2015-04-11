@@ -73,7 +73,7 @@
     [super viewDidLoad];
     
     /* Setting Navigation Title */
-    [[self navigationItem] setTitle:@"Food Categories"];
+    [[self navigationItem] setTitle:@"Types of Restaurants"];
     
     /* Adding Search Button */
     self.searchBarButtonItem.target = self;
