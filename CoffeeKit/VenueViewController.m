@@ -72,20 +72,27 @@
     
     [self.navigationItem setTitle:@"Available Restaurants"];
     /* Initialize an Array of size equal to 2 */
-    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:2];
+    NSMutableArray *rightButtons = [[NSMutableArray alloc] initWithCapacity:2];
+    NSMutableArray *leftButtons = [[NSMutableArray alloc] initWithCapacity:1];
     
+    UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchVenues)];
+    [rightButtons addObject:search];
     /* Add UIBarButtonItem SORT */
     UIImage *sort = [[UIImage imageNamed:@"sort"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     /* Add UIImage to the UIBarButtonItem */
     UIBarButtonItem *sortButton = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(showAlertSheet)];
-    [buttons addObject:sortButton];
+    [rightButtons addObject:sortButton];
+    /* Adding to the buttons to the right of VenueView */
+    self.navigationItem.rightBarButtonItems = rightButtons;
+    
     /* Add UIBarButtonItem MAP */
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(previousView)];
+    [leftButtons addObject:backButton];
     UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:@selector(showMapView)];
-    [buttons addObject:mapButton];
-    /* Adding to the buttons to the right of VenueView */
-    self.navigationItem.rightBarButtonItems = buttons;
+    [leftButtons addObject:mapButton];
     
+    self.navigationItem.leftBarButtonItems = leftButtons;
     /* Defining the Venue Search Bar */
     self.venueSearchBar.delegate = self;
     self.venueSearchBar.placeholder = @"Search for Specific Restaurant";
@@ -108,6 +115,24 @@
     [super viewWillAppear:animated];
     
     [self.venueSearchBar becomeFirstResponder];
+}
+
+- (void)searchVenues
+{
+    CGRect newBounds = self.tableView.bounds;
+    if (self.tableView.bounds.origin.y < 44)
+    {
+        newBounds.origin.y = newBounds.origin.y + self.venueSearchBar.bounds.size.height;
+        self.tableView.bounds = newBounds;
+    }
+    
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:0 animated:YES];
+    [self.venueSearchBar becomeFirstResponder];
+}
+
+- (void)previousView
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - Swipe Back
