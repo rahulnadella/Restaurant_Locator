@@ -73,9 +73,9 @@
     [self.navigationItem setTitle:@"Available Restaurants"];
     
     /* Retrieve the right UIBarButtonItems and set on the NavigationItem */
-    self.navigationItem.rightBarButtonItems = [self rightBarButtons];
+    self.navigationItem.rightBarButtonItems = [self initializeRightBarButtons];
     /* Retrieve the left UIBarButtonItems and set on the NavigationItem */
-    self.navigationItem.leftBarButtonItems = [self leftBarButtons];
+    self.navigationItem.leftBarButtonItems = [self initializeLeftBarButtons];
     
     /* Defining the Venue Search Bar */
     self.venueSearchBar.delegate = self;
@@ -103,7 +103,7 @@
 
 #pragma mark - Initialize the Right UIBarButtonItems
 
-- (NSMutableArray *)rightBarButtons
+- (NSMutableArray *)initializeRightBarButtons
 {
     /* Initialize an Array of size equal to 2 */
     NSMutableArray *rightButtons = [[NSMutableArray alloc] initWithCapacity:2];
@@ -123,7 +123,7 @@
 
 #pragma mark - Initialize the Left UIBarButtonItems
 
-- (NSMutableArray *)leftBarButtons
+- (NSMutableArray *)initializeLeftBarButtons
 {
     /* Initialize an Array of size equal to 2 */
     NSMutableArray *leftButtons = [[NSMutableArray alloc] initWithCapacity:2];
