@@ -70,7 +70,7 @@
 {
     [super viewDidLoad];
     
-    [self.navigationItem setTitle:@"Available Restaurants"];
+    [self.navigationItem setTitle:@"Restaurants"];
     
     /* Retrieve the right UIBarButtonItems and set on the NavigationItem */
     self.navigationItem.rightBarButtonItems = [self initializeRightBarButtons];
