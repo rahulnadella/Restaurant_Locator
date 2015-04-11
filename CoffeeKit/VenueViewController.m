@@ -85,9 +85,11 @@
     /* Adding to the buttons to the right of VenueView */
     self.navigationItem.rightBarButtonItems = rightButtons;
     
-    /* Add UIBarButtonItem MAP */
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(previousView)];
+    
+    UIImage *back = [[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:back style:UIBarButtonItemStylePlain target:self action:@selector(previousView)];
     [leftButtons addObject:backButton];
+    /* Add UIBarButtonItem MAP */
     UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:@selector(showMapView)];
     [leftButtons addObject:mapButton];
