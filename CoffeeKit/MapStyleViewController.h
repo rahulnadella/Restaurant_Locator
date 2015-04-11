@@ -23,6 +23,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "Location.h"
 /*
  The MapStyleViewController is an object that contains the logic for displaying 
  a specific style of MapView. 
@@ -35,11 +36,15 @@
 @interface MapStyleViewController : UIViewController
 
 @property (nonatomic, strong) NSString *mapType;
+@property (nonatomic, strong) NSString *nameOfVenue;
+@property (nonatomic, strong) Location *currentLocation;
 /*
  The showAlertSheet displays the an action sheet to allow the user to choose what MapType to display.
  
  @version 1.0
  */
 - (void)showAlertSheetBySegueIdentifier:(NSString *)identifier;
+
+- (NSMutableArray *)rightBarButtons;
 
 @end

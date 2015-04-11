@@ -36,13 +36,11 @@
 @interface VenueDetailsViewController : MapStyleViewController
 
 @property (nonatomic, strong) NSString *venueId;
-@property (nonatomic, strong) NSString *nameOfVenue;
 @property (nonatomic, strong) NSString *urlOfVenue;
 @property (nonatomic, strong) NSString *twitterHandle;
 @property (nonatomic, strong) NSString *facebookHandle;
 @property (nonatomic, strong) NSString *menuOfUrlVenu;
 @property (nonatomic, strong) Contact *currentContact;
-@property (nonatomic, strong) Location *currentLocation;
 @property (nonatomic, strong) Menu *currentMenu;
 @property (nonatomic, strong) Stats *currentStats;
 

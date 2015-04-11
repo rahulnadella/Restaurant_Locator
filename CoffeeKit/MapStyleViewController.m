@@ -27,6 +27,8 @@
 @implementation MapStyleViewController
 
 @synthesize mapType = _mapType;
+@synthesize nameOfVenue = _nameOfVenue;
+@synthesize currentLocation = _currentLocation;
 
 #pragma mark - Memory Allocation
 
@@ -43,6 +45,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (NSMutableArray *)rightBarButtons
+{
+    /* Initialize an Array of size equal to 1 */
+    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    /* Add UIBarButtonItem MAP */
+    UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:nil];
+    [buttons addObject:mapButton];
+    
+    return buttons;
 }
 
 #pragma mark - Show AlertSheet

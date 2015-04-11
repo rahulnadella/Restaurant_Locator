@@ -32,9 +32,7 @@
  */
 @interface WebPageViewController : MapStyleViewController
 
-@property (nonatomic, strong) Location *currentLocation;
 @property (nonatomic, strong) NSString *menuAddress;
-@property (nonatomic, strong) NSString *nameOfVenue;
 @property (nonatomic, strong) NSString *urlAddress;
 
 @end

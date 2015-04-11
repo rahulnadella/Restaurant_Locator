@@ -37,9 +37,7 @@
 
 #pragma mark - Properties
 
-@synthesize currentLocation = _currentLocation;
 @synthesize menuAddress = _menuAddress;
-@synthesize nameOfVenue = _nameOfVenue;
 @synthesize urlAddress = _urlAddress;
 
 #pragma mark - Memory Allocation
@@ -65,12 +63,12 @@
 
     [self.navigationItem setTitle:@"Restaurant Webpage"];
     
-    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
-    
-    UIImage *mapImage = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithImage:mapImage style:UIBarButtonItemStylePlain target:self action:@selector(retrieveMapViewFromWebpage)];
-    [buttons addObject:mapItem];
-    
+    /* Retrieve the UIBarButton objects */
+    NSMutableArray *buttons = [self rightBarButtons];
+    /* Set the specific method to call when clicked */
+    UIBarButtonItem *map = [buttons objectAtIndex:0];
+    map.action = @selector(retrieveMapViewFromWebpage);
+    /* Set the UIBarButton objects to the right side of the view */
     self.navigationItem.rightBarButtonItems = buttons;
     
     [self refresh:self];

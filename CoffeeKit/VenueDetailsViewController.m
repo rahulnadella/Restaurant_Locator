@@ -51,13 +51,11 @@
 #pragma mark - Properties
 
 @synthesize venueId = _venueId;
-@synthesize nameOfVenue = _nameOfVenue;
 @synthesize urlOfVenue = _urlOfVenue;
 @synthesize menuOfUrlVenu = _menuOfUrlVenu;
 @synthesize facebookHandle = _facebookHandle;
 @synthesize twitterHandle = _twitterHandle;
 @synthesize currentContact = _currentContact;
-@synthesize currentLocation = _currentLocation;
 @synthesize currentMenu = _currentMenu;
 @synthesize currentStats = _currentStats;
 
@@ -100,15 +98,12 @@
 {
     [super viewDidLoad];
     
-    /* Initialize an Array of 1 element */
-    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
-    /* Create the Map image */
-    UIImage *mapImage = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    /* Create the UIBarButtonItem associated to the Map Image */
-    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithImage:mapImage style:UIBarButtonItemStylePlain target:self action:@selector(retrieveMapView)];
-    [buttons addObject:mapItem];
-    
-    /* Set the UIBarButtonItem onto the NavigationItem */
+    /* Retrieve the UIBarButton objects */
+    NSMutableArray *buttons = [self rightBarButtons];
+    /* Set the specific method to call when clicked */
+    UIBarButtonItem *map = [buttons objectAtIndex:0];
+    map.action = @selector(retrieveMapView);
+    /* Set the UIBarButton objects to the right side of the view */
     self.navigationItem.rightBarButtonItems = buttons;
     
     /* Initialize ViewDetailsViewController content */
