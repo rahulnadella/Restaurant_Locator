@@ -63,6 +63,7 @@
     self.categories = nil;
     self.filteredCategories = nil;
     self.categorySearchBar = nil;
+    self.searchBarButtonItem = nil;
 }
 
 #pragma mark - View Lifecycle
@@ -70,8 +71,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     /* Setting Navigation Title */
     [[self navigationItem] setTitle:@"Food Categories"];
+    
     /* Adding Search Button */
     self.searchBarButtonItem.target = self;
     self.searchBarButtonItem.action = @selector(searchCategories:);
