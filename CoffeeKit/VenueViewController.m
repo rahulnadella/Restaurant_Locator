@@ -72,8 +72,11 @@
     
     [self.navigationItem setTitle:@"Available Restaurants"];
     
+    /* Retrieve the right UIBarButtonItems and set on the NavigationItem */
     self.navigationItem.rightBarButtonItems = [self rightBarButtons];
+    /* Retrieve the left UIBarButtonItems and set on the NavigationItem */
     self.navigationItem.leftBarButtonItems = [self leftBarButtons];
+    
     /* Defining the Venue Search Bar */
     self.venueSearchBar.delegate = self;
     self.venueSearchBar.placeholder = @"Search for Specific Restaurant";
@@ -98,13 +101,17 @@
     [self.venueSearchBar becomeFirstResponder];
 }
 
+#pragma mark - Initialize the Right UIBarButtonItems
+
 - (NSMutableArray *)rightBarButtons
 {
     /* Initialize an Array of size equal to 2 */
     NSMutableArray *rightButtons = [[NSMutableArray alloc] initWithCapacity:2];
     
+    /* Add UIBarButtonItem SEARCH */
     UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchVenues)];
     [rightButtons addObject:search];
+    
     /* Add UIBarButtonItem SORT */
     UIImage *sort = [[UIImage imageNamed:@"sort"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     /* Add UIImage to the UIBarButtonItem */
@@ -114,15 +121,22 @@
     return rightButtons;
 }
 
+#pragma mark - Initialize the Left UIBarButtonItems
+
 - (NSMutableArray *)leftBarButtons
 {
-    NSMutableArray *leftButtons = [[NSMutableArray alloc] initWithCapacity:1];
+    /* Initialize an Array of size equal to 2 */
+    NSMutableArray *leftButtons = [[NSMutableArray alloc] initWithCapacity:2];
     
+    /* Add UIBarButtonItem BACK */
     UIImage *back = [[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    /* Add UIImage to the UIBarButtonItem */
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:back style:UIBarButtonItemStylePlain target:self action:@selector(previousView)];
     [leftButtons addObject:backButton];
+    
     /* Add UIBarButtonItem MAP */
     UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    /* Add UIImage to the UIBarButtonItem */
     UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:@selector(showMapView)];
     [leftButtons addObject:mapButton];
     
