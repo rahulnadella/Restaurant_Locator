@@ -71,30 +71,9 @@
     [super viewDidLoad];
     
     [self.navigationItem setTitle:@"Available Restaurants"];
-    /* Initialize an Array of size equal to 2 */
-    NSMutableArray *rightButtons = [[NSMutableArray alloc] initWithCapacity:2];
-    NSMutableArray *leftButtons = [[NSMutableArray alloc] initWithCapacity:1];
     
-    UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchVenues)];
-    [rightButtons addObject:search];
-    /* Add UIBarButtonItem SORT */
-    UIImage *sort = [[UIImage imageNamed:@"sort"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    /* Add UIImage to the UIBarButtonItem */
-    UIBarButtonItem *sortButton = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(showAlertSheet)];
-    [rightButtons addObject:sortButton];
-    /* Adding to the buttons to the right of VenueView */
-    self.navigationItem.rightBarButtonItems = rightButtons;
-    
-    
-    UIImage *back = [[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:back style:UIBarButtonItemStylePlain target:self action:@selector(previousView)];
-    [leftButtons addObject:backButton];
-    /* Add UIBarButtonItem MAP */
-    UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:@selector(showMapView)];
-    [leftButtons addObject:mapButton];
-    
-    self.navigationItem.leftBarButtonItems = leftButtons;
+    self.navigationItem.rightBarButtonItems = [self rightBarButtons];
+    self.navigationItem.leftBarButtonItems = [self leftBarButtons];
     /* Defining the Venue Search Bar */
     self.venueSearchBar.delegate = self;
     self.venueSearchBar.placeholder = @"Search for Specific Restaurant";
@@ -117,6 +96,37 @@
     [super viewWillAppear:animated];
     
     [self.venueSearchBar becomeFirstResponder];
+}
+
+- (NSMutableArray *)rightBarButtons
+{
+    /* Initialize an Array of size equal to 2 */
+    NSMutableArray *rightButtons = [[NSMutableArray alloc] initWithCapacity:2];
+    
+    UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchVenues)];
+    [rightButtons addObject:search];
+    /* Add UIBarButtonItem SORT */
+    UIImage *sort = [[UIImage imageNamed:@"sort"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    /* Add UIImage to the UIBarButtonItem */
+    UIBarButtonItem *sortButton = [[UIBarButtonItem alloc] initWithImage:sort style:UIBarButtonItemStylePlain target:self action:@selector(showAlertSheet)];
+    [rightButtons addObject:sortButton];
+    
+    return rightButtons;
+}
+
+- (NSMutableArray *)leftBarButtons
+{
+    NSMutableArray *leftButtons = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    UIImage *back = [[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:back style:UIBarButtonItemStylePlain target:self action:@selector(previousView)];
+    [leftButtons addObject:backButton];
+    /* Add UIBarButtonItem MAP */
+    UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:@selector(showMapView)];
+    [leftButtons addObject:mapButton];
+    
+    return leftButtons;
 }
 
 - (void)searchVenues
