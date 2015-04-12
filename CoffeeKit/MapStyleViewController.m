@@ -64,6 +64,27 @@
     return buttons;
 }
 
+#pragma mark - Initialize the Left UIBarButtonItems
+
+- (NSMutableArray *)initializeLeftBarButtons
+{
+    /* Initialize an Array of size equal to 2 */
+    NSMutableArray *leftButtons = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    /* Add UIBarButtonItem BACK */
+    UIImage *back = [[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    /* Add UIImage to the UIBarButtonItem */
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:back style:UIBarButtonItemStylePlain target:self action:@selector(previousView)];
+    [leftButtons addObject:backButton];
+    
+    return leftButtons;
+}
+
+- (void)previousView
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - Show AlertSheet
 
 - (void)showAlertSheetBySegueIdentifier:(NSString *)identifier

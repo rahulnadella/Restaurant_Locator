@@ -49,4 +49,6 @@
  */
 - (NSMutableArray *)retrieveRightNavigationButtons;
 
+- (NSMutableArray *)initializeLeftBarButtons;
+
 @end

@@ -106,6 +106,10 @@
     /* Set the UIBarButton objects to the right side of the view */
     self.navigationItem.rightBarButtonItems = buttons;
     
+    /* Retrieve the Left UIBarButtonItems and Initialize the Left Side of VenueDetailsView */
+    NSMutableArray *leftButtons = [self initializeLeftBarButtons];
+    self.navigationItem.leftBarButtonItems = leftButtons;
+    
     /* Initialize ViewDetailsViewController content */
     [self initializeViewContent];
 }
