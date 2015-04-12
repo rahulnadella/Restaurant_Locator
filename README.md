@@ -1,13 +1,6 @@
 # Restaurant Locator
 
-The Restaurant Locator is a sample iOS application that allows the user to locate Restaurants using their current location. The Restaurant data has been requested through the [Foursquare API](https://developer.foursquare.com/). 
-
-<img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/LaunchScreen.png" alt="Launch Screen" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/CategoryScreen.png" alt="Types of Restaurants" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/Venues.png" alt="Restaurants" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/MapView.png" alt="Map of Restaurant(s)" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/VenueDetails.png" alt="Specific Restaurant" width="150" height="300" /> 
-
-
-##Overview
-
-This iOS application is built to locate Restaurants based on the user's location (latitude and longitude).
+The Restaurant Locator is a sample iOS application that allows the user to locate Restaurant(s) using the user's current location (based on their latitude and longitude). The Restaurant data has been requested through the [Foursquare API](https://developer.foursquare.com/). 
 
 #####Version
 >Version 1.0 - Design and Implementation of the Restaurant Locator
@@ -15,7 +8,9 @@ This iOS application is built to locate Restaurants based on the user's location
 #####Build
 >Master -> Only works on iOS 8.2 or greater
 
-##User Interface
+#####User Interface
+
+<img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/LaunchScreen.png" alt="Launch Screen" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/CategoryScreen.png" alt="Types of Restaurants" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/Venues.png" alt="Restaurants" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/MapView.png" alt="Map of Restaurant(s)" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/VenueDetails.png" alt="Specific Restaurant" width="150" height="300" /> 
 
 ##License
 
