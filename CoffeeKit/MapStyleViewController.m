@@ -80,6 +80,8 @@
     return leftButtons;
 }
 
+# pragma mark - Previous ViewController
+
 - (void)previousView
 {
     [self.navigationController popViewControllerAnimated:YES];
