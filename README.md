@@ -5,6 +5,12 @@ Overview
 
 This iOS application is built to locate Restaurants based on the user's location (latitude and longitude).
 
+#####Version
+>Version 1.0 - Design and Implementation of the Local Notifications
+
+#####Build
+>Master -> Only works on iOS 8.2 or greater
+
 User Interface
 --------------
 
