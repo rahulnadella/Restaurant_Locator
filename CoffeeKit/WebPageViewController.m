@@ -64,12 +64,12 @@
     [self.navigationItem setTitle:@"Restaurant Webpage"];
     
     /* Retrieve the UIBarButton objects */
-    NSMutableArray *buttons = [self retrieveRightNavigationButtons];
+    NSMutableArray *rightButtons = [self retrieveRightNavigationButtons];
     /* Set the specific method to call when clicked */
-    UIBarButtonItem *map = [buttons objectAtIndex:0];
+    UIBarButtonItem *map = [rightButtons objectAtIndex:0];
     map.action = @selector(retrieveMapViewFromWebpage);
     /* Set the UIBarButton objects to the right side of the view */
-    self.navigationItem.rightBarButtonItems = buttons;
+    self.navigationItem.rightBarButtonItems = rightButtons;
     
     /* Retrieve the UIBarButtonItems and Initialize the left header of WebpageView */
     NSMutableArray *leftButtons = [self initializeLeftBarButtons];
