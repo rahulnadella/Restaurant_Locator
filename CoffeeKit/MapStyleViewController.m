@@ -49,7 +49,7 @@
     [super viewDidLoad];
 }
 
-#pragma mark - Retrieve the UIBarButtonItems (Right Side)
+#pragma mark - Initialize the UIBarButtonItems (Right Side)
 
 - (NSMutableArray *)initializeRightNavigationButtons
 {
@@ -64,7 +64,7 @@
     return buttons;
 }
 
-#pragma mark - Initialize the Left UIBarButtonItems
+#pragma mark - Initialize the UIBarButtonItems (Left Side)
 
 - (NSMutableArray *)initializeLeftBarButtons
 {
