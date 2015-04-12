@@ -72,7 +72,7 @@
     self.navigationItem.rightBarButtonItems = rightButtons;
     
     /* Retrieve the UIBarButtonItems and Initialize the left header of WebpageView */
-    NSMutableArray *leftButtons = [self initializeLeftBarButtons];
+    NSMutableArray *leftButtons = [self initializeLeftNavigationButtons];
     self.navigationItem.leftBarButtonItems = leftButtons;
     
     [self refresh:self];

@@ -51,6 +51,6 @@
 /*
  The initializeLeftNavigationButtons method gets the default left UIBarButtonItems for any interface extending the base implementation.
  */
-- (NSMutableArray *)initializeLeftBarButtons;
+- (NSMutableArray *)initializeLeftNavigationButtons;
 
 @end

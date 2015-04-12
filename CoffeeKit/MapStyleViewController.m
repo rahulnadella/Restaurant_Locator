@@ -66,7 +66,7 @@
 
 #pragma mark - Initialize the UIBarButtonItems (Left Side)
 
-- (NSMutableArray *)initializeLeftBarButtons
+- (NSMutableArray *)initializeLeftNavigationButtons
 {
     /* Initialize an Array of size equal to 2 */
     NSMutableArray *leftButtons = [[NSMutableArray alloc] initWithCapacity:1];

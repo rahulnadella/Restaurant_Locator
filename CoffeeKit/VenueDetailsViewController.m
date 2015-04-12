@@ -107,7 +107,7 @@
     self.navigationItem.rightBarButtonItems = rightButtons;
     
     /* Retrieve the Left UIBarButtonItems and Initialize the left header of VenueDetailsView */
-    NSMutableArray *leftButtons = [self initializeLeftBarButtons];
+    NSMutableArray *leftButtons = [self initializeLeftNavigationButtons];
     self.navigationItem.leftBarButtonItems = leftButtons;
     
     /* Initialize ViewDetailsViewController content */
