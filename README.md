@@ -1,6 +1,7 @@
 # Restaurant Locator
 
-<img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/LaunchScreen.png" alt="Launch Screen" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/CategoryScreen.png" alt="Types of Restaurants" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/Venues.png" alt="Restaurants" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/VenueDetails.png" alt="Specific Restaurant" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/Webpage.png" alt="Specific Restaurant" width="150" height="300" />
+<img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/LaunchScreen.png" alt="Launch Screen" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/CategoryScreen.png" alt="Types of Restaurants" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/Venues.png" alt="Restaurants" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/MapView.png" alt="Map of Restaurant(s)" width="150" height="300" /> <img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/VenueDetails.png" alt="Specific Restaurant" width="150" height="300" /> 
+
 
 ##Overview
 
