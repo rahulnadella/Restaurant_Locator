@@ -131,7 +131,7 @@
     /* Add UIBarButtonItem BACK */
     UIImage *back = [[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     /* Add UIImage to the UIBarButtonItem */
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:back style:UIBarButtonItemStylePlain target:self action:@selector(previousView)];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:back style:UIBarButtonItemStylePlain target:self action:@selector(previousViewController)];
     [leftButtons addObject:backButton];
     
     /* Add UIBarButtonItem MAP */
@@ -142,6 +142,8 @@
     
     return leftButtons;
 }
+
+#pragma mark - Search Venues
 
 - (void)searchVenues
 {
@@ -156,7 +158,9 @@
     [self.venueSearchBar becomeFirstResponder];
 }
 
-- (void)previousView
+#pragma mark - Previous ViewController
+
+- (void)previousViewController
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
