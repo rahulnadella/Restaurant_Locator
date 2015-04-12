@@ -51,7 +51,7 @@
 
 #pragma mark - Retrieve the UIBarButtonItems (Right Side)
 
-- (NSMutableArray *)retrieveRightNavigationButtons
+- (NSMutableArray *)initializeRightNavigationButtons
 {
     /* Initialize an Array of size equal to 1 */
     NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];

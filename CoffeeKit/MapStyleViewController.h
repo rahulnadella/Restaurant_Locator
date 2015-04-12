@@ -47,7 +47,7 @@
 /*
  The retrieveRightNavigationButtons method gets the default right UIBarButtonItems for the any class extending base MapStyleViewController
  */
-- (NSMutableArray *)retrieveRightNavigationButtons;
+- (NSMutableArray *)initializeRightNavigationButtons;
 
 - (NSMutableArray *)initializeLeftBarButtons;
 
