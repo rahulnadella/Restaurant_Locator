@@ -1,6 +1,6 @@
 # Restaurant Locator
 
-![alt text](https://github.com/rahulnadella/Restaurant_Locator/screenshots/LaunchScreen.png "Restaurant Locator")
+<img src="https://github.com/rahulnadella/Restaurant_Locator/blob/master/screenshots/LaunchScreen.png" alt="Launch Screen" width="150" height="300" />
 
 ##Overview
 
