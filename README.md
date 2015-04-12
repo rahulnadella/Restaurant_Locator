@@ -1,5 +1,7 @@
 # Restaurant Locator
 
+![alt text](https://github.com/rahulnadella/Restaurant_Locator/screenshots/LaunchScreen.png "Restaurant Locator")
+
 ##Overview
 
 This iOS application is built to locate Restaurants based on the user's location (latitude and longitude).
