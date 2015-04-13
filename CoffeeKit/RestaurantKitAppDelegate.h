@@ -25,12 +25,12 @@
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
 /*
- The CoffeeKitAppDelegate class is used to perform tasks on application startup 
+ The RestaurantKitAppDelegate class is used to perform tasks on application startup 
  and shutdown, handling URL open requests and similar application-wide tasks.
  
  This class currently manages the updating of the location and appearance of the application.
  */
-@interface CoffeeKitAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
+@interface RestaurantKitAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 /* The Location objects used to retrieve the user's current location */

@@ -24,9 +24,9 @@
 
 #import <RestKit/RestKit.h>
 #import "Appearance.h"
-#import "CoffeeKitAppDelegate.h"
+#import "RestaurantKitAppDelegate.h"
 
-@implementation CoffeeKitAppDelegate
+@implementation RestaurantKitAppDelegate
 
 #pragma AppDelegate methods
 

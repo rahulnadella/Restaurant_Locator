@@ -28,7 +28,7 @@
 		FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30F1AC84E8800634876 /* Images.xcassets */; };
 		FCCEB3131AC84E8800634876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB3111AC84E8800634876 /* LaunchScreen.xib */; };
 		FCCEB31F1AC84E8800634876 /* RestaurantKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB31E1AC84E8800634876 /* RestaurantKitTests.m */; };
-		FCCEB3911AC88B9B00634876 /* CoffeeKitAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3901AC88B9B00634876 /* CoffeeKitAppDelegate.m */; };
+		FCCEB3911AC88B9B00634876 /* RestaurantKitAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3901AC88B9B00634876 /* RestaurantKitAppDelegate.m */; };
 		FCCEB3971AC88BDA00634876 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3961AC88BDA00634876 /* VenueCell.m */; };
 		FCCEB39E1AC88BE800634876 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3991AC88BE800634876 /* Location.m */; };
 		FCCEB39F1AC88BE800634876 /* Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB39B1AC88BE800634876 /* Stats.m */; };
@@ -125,8 +125,8 @@
 		FCCEB3181AC84E8800634876 /* RestaurantKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB31D1AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB31E1AC84E8800634876 /* RestaurantKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantKitTests.m; sourceTree = "<group>"; };
-		FCCEB38F1AC88B9B00634876 /* CoffeeKitAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeKitAppDelegate.h; sourceTree = "<group>"; };
-		FCCEB3901AC88B9B00634876 /* CoffeeKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeKitAppDelegate.m; sourceTree = "<group>"; };
+		FCCEB38F1AC88B9B00634876 /* RestaurantKitAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantKitAppDelegate.h; sourceTree = "<group>"; };
+		FCCEB3901AC88B9B00634876 /* RestaurantKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantKitAppDelegate.m; sourceTree = "<group>"; };
 		FCCEB3951AC88BDA00634876 /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
 		FCCEB3961AC88BDA00634876 /* VenueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCell.m; sourceTree = "<group>"; };
 		FCCEB3981AC88BE800634876 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
@@ -240,8 +240,8 @@
 			children = (
 				FCB350D21ACC6EC70068DB28 /* Categories.plist */,
 				FCCEB3C21AC88E3D00634876 /* CoffeeKit-Prefix.pch */,
-				FCCEB38F1AC88B9B00634876 /* CoffeeKitAppDelegate.h */,
-				FCCEB3901AC88B9B00634876 /* CoffeeKitAppDelegate.m */,
+				FCCEB38F1AC88B9B00634876 /* RestaurantKitAppDelegate.h */,
+				FCCEB3901AC88B9B00634876 /* RestaurantKitAppDelegate.m */,
 				FCB350DD1ACDEB560068DB28 /* images */,
 				FCCEB3001AC84E8800634876 /* Info.plist */,
 				FCCEB3011AC84E8800634876 /* main.m */,
@@ -476,7 +476,7 @@
 				FCB350E81AD02DCC0068DB28 /* Menu.m in Sources */,
 				FCB350CE1ACC6CF40068DB28 /* CategoryTableViewController.m in Sources */,
 				FCCEB39F1AC88BE800634876 /* Stats.m in Sources */,
-				FCCEB3911AC88B9B00634876 /* CoffeeKitAppDelegate.m in Sources */,
+				FCCEB3911AC88B9B00634876 /* RestaurantKitAppDelegate.m in Sources */,
 				FCCEB3971AC88BDA00634876 /* VenueCell.m in Sources */,
 				FC2235811AD193B500D0E827 /* VenueMapViewController.m in Sources */,
 				FCCEB3A01AC88BE800634876 /* Venue.m in Sources */,
