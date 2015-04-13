@@ -204,8 +204,8 @@
 				FCB350C31ACAFDA30068DB28 /* Social.framework */,
 				FCCEB3B91AC88CE800634876 /* SystemConfiguration.framework */,
 				FCCEB3A41AC88CB600634876 /* RestKit.xcodeproj */,
-				FCCEB2FE1AC84E8800634876 /* CoffeeKit */,
-				FCCEB31B1AC84E8800634876 /* CoffeeKitTests */,
+				FCCEB2FE1AC84E8800634876 /* RestaurantKit */,
+				FCCEB31B1AC84E8800634876 /* RestaurantKitTests */,
 				FCCEB2FD1AC84E8800634876 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FCCEB2FE1AC84E8800634876 /* CoffeeKit */ = {
+		FCCEB2FE1AC84E8800634876 /* RestaurantKit */ = {
 			isa = PBXGroup;
 			children = (
 				FCCEB3931AC88BB400634876 /* Controllers */,
@@ -231,6 +231,7 @@
 				FCB350D91ACDD43F0068DB28 /* Style */,
 				FCCEB2FF1AC84E8800634876 /* Supporting Files */,
 			);
+			name = RestaurantKit;
 			path = CoffeeKit;
 			sourceTree = "<group>";
 		};
@@ -250,12 +251,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FCCEB31B1AC84E8800634876 /* CoffeeKitTests */ = {
+		FCCEB31B1AC84E8800634876 /* RestaurantKitTests */ = {
 			isa = PBXGroup;
 			children = (
 				FCCEB31E1AC84E8800634876 /* CoffeeKitTests.m */,
 				FCCEB31C1AC84E8800634876 /* Supporting Files */,
 			);
+			name = RestaurantKitTests;
 			path = CoffeeKitTests;
 			sourceTree = "<group>";
 		};

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CoffeeKit.xcodeproj">
+      location = "self:RestaurantKit.xcodeproj">
    </FileRef>
 </Workspace>

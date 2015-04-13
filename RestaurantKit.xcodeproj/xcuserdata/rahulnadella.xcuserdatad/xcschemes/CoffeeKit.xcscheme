@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FCCEB2FB1AC84E8800634876"
-               BuildableName = "CoffeeKit.app"
-               BlueprintName = "CoffeeKit"
-               ReferencedContainer = "container:CoffeeKit.xcodeproj">
+               BuildableName = "RestaurantKit.app"
+               BlueprintName = "RestaurantKit"
+               ReferencedContainer = "container:RestaurantKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FCCEB3171AC84E8800634876"
-               BuildableName = "CoffeeKitTests.xctest"
-               BlueprintName = "CoffeeKitTests"
-               ReferencedContainer = "container:CoffeeKit.xcodeproj">
+               BuildableName = "RestaurantKitTests.xctest"
+               BlueprintName = "RestaurantKitTests"
+               ReferencedContainer = "container:RestaurantKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FCCEB3171AC84E8800634876"
-               BuildableName = "CoffeeKitTests.xctest"
-               BlueprintName = "CoffeeKitTests"
-               ReferencedContainer = "container:CoffeeKit.xcodeproj">
+               BuildableName = "RestaurantKitTests.xctest"
+               BlueprintName = "RestaurantKitTests"
+               ReferencedContainer = "container:RestaurantKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCCEB2FB1AC84E8800634876"
-            BuildableName = "CoffeeKit.app"
-            BlueprintName = "CoffeeKit"
-            ReferencedContainer = "container:CoffeeKit.xcodeproj">
+            BuildableName = "RestaurantKit.app"
+            BlueprintName = "RestaurantKit"
+            ReferencedContainer = "container:RestaurantKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCCEB2FB1AC84E8800634876"
-            BuildableName = "CoffeeKit.app"
-            BlueprintName = "CoffeeKit"
-            ReferencedContainer = "container:CoffeeKit.xcodeproj">
+            BuildableName = "RestaurantKit.app"
+            BlueprintName = "RestaurantKit"
+            ReferencedContainer = "container:RestaurantKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCCEB2FB1AC84E8800634876"
-            BuildableName = "CoffeeKit.app"
-            BlueprintName = "CoffeeKit"
-            ReferencedContainer = "container:CoffeeKit.xcodeproj">
+            BuildableName = "RestaurantKit.app"
+            BlueprintName = "RestaurantKit"
+            ReferencedContainer = "container:RestaurantKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
