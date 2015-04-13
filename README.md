@@ -6,7 +6,9 @@ The Restaurant Locator is a sample iOS application that allows the user to locat
 >Version 1.0 - Design and Implementation of the Restaurant Locator
 
 #####Build
->Master -> Only works on iOS 8.2 or greater
+>Master -> Only works on iOS 8.2 or greater <br/>
+>Frameworks -> AFNetworking, ISO8601DateFormatterValueTransformer, RKValueTransformers, RestKit, SOCKit, and
+TransitionKit (obtained via CocoaPods)
 
 #####User Interface
 
