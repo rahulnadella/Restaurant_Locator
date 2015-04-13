@@ -27,7 +27,6 @@
 		FCCEB30E1AC84E8800634876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30C1AC84E8800634876 /* Main.storyboard */; };
 		FCCEB3101AC84E8800634876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB30F1AC84E8800634876 /* Images.xcassets */; };
 		FCCEB3131AC84E8800634876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCCEB3111AC84E8800634876 /* LaunchScreen.xib */; };
-		FCCEB31F1AC84E8800634876 /* RestaurantKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB31E1AC84E8800634876 /* RestaurantKitTests.m */; };
 		FCCEB3911AC88B9B00634876 /* RestaurantKitAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3901AC88B9B00634876 /* RestaurantKitAppDelegate.m */; };
 		FCCEB3971AC88BDA00634876 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3961AC88BDA00634876 /* VenueCell.m */; };
 		FCCEB39E1AC88BE800634876 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCEB3991AC88BE800634876 /* Location.m */; };
@@ -41,6 +40,7 @@
 		FCCEB3C01AC88D0900634876 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3BE1AC88D0900634876 /* CoreData.framework */; };
 		FCCEB3C11AC88D0900634876 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3BF1AC88D0900634876 /* MobileCoreServices.framework */; };
 		FCFBF0C51AD832710055EA73 /* MapStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFBF0C41AD832710055EA73 /* MapStyleViewController.m */; };
+		FCFBF1211ADC259B0055EA73 /* RestaurantKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFBF1201ADC259B0055EA73 /* RestaurantKitTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,8 +123,6 @@
 		FCCEB30F1AC84E8800634876 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FCCEB3121AC84E8800634876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FCCEB3181AC84E8800634876 /* RestaurantKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCCEB31D1AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCCEB31E1AC84E8800634876 /* RestaurantKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantKitTests.m; sourceTree = "<group>"; };
 		FCCEB38F1AC88B9B00634876 /* RestaurantKitAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantKitAppDelegate.h; sourceTree = "<group>"; };
 		FCCEB3901AC88B9B00634876 /* RestaurantKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantKitAppDelegate.m; sourceTree = "<group>"; };
 		FCCEB3951AC88BDA00634876 /* VenueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCell.h; sourceTree = "<group>"; };
@@ -146,6 +144,8 @@
 		FCCEB3C21AC88E3D00634876 /* CoffeeKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoffeeKit-Prefix.pch"; sourceTree = "<group>"; };
 		FCFBF0C31AD832710055EA73 /* MapStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStyleViewController.h; sourceTree = "<group>"; };
 		FCFBF0C41AD832710055EA73 /* MapStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapStyleViewController.m; sourceTree = "<group>"; };
+		FCFBF1201ADC259B0055EA73 /* RestaurantKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestaurantKitTests.m; path = RestaurantKitTests/RestaurantKitTests.m; sourceTree = SOURCE_ROOT; };
+		FCFBF1221ADC25AB0055EA73 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RestaurantKitTests/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +254,7 @@
 		FCCEB31B1AC84E8800634876 /* RestaurantKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				FCCEB31E1AC84E8800634876 /* RestaurantKitTests.m */,
+				FCFBF1201ADC259B0055EA73 /* RestaurantKitTests.m */,
 				FCCEB31C1AC84E8800634876 /* Supporting Files */,
 			);
 			name = RestaurantKitTests;
@@ -264,7 +264,7 @@
 		FCCEB31C1AC84E8800634876 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FCCEB31D1AC84E8800634876 /* Info.plist */,
+				FCFBF1221ADC25AB0055EA73 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -497,7 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCCEB31F1AC84E8800634876 /* RestaurantKitTests.m in Sources */,
+				FCFBF1211ADC259B0055EA73 /* RestaurantKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +658,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CoffeeKitTests/Info.plist;
+				INFOPLIST_FILE = RestaurantKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = RestaurantKitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeKit.app/CoffeeKit";
@@ -673,7 +673,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CoffeeKitTests/Info.plist;
+				INFOPLIST_FILE = RestaurantKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = RestaurantKitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeKit.app/CoffeeKit";
