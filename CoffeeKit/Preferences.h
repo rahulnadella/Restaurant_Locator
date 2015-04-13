@@ -24,7 +24,8 @@
 
 #import <Foundation/Foundation.h>
 /*
- The Preferences object holds global and/or constant values associated with CoffeeKit application
+ The Preferences object holds global and/or constant values associated with 
+ RestaurantKit application
  
  @version 1.0
  */
