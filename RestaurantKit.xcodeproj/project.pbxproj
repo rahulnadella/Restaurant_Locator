@@ -116,13 +116,13 @@
 		FCB350E41ACF2BED0068DB28 /* HereNow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HereNow.m; sourceTree = "<group>"; };
 		FCB350E61AD02DCC0068DB28 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		FCB350E71AD02DCC0068DB28 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
-		FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCCEB2FC1AC84E8800634876 /* RestaurantKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3001AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB3011AC84E8800634876 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FCCEB30D1AC84E8800634876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCCEB30F1AC84E8800634876 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FCCEB3121AC84E8800634876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		FCCEB3181AC84E8800634876 /* CoffeeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCCEB3181AC84E8800634876 /* RestaurantKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB31D1AC84E8800634876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCEB31E1AC84E8800634876 /* CoffeeKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeKitTests.m; sourceTree = "<group>"; };
 		FCCEB38F1AC88B9B00634876 /* CoffeeKitAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeKitAppDelegate.h; sourceTree = "<group>"; };
@@ -213,8 +213,8 @@
 		FCCEB2FD1AC84E8800634876 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */,
-				FCCEB3181AC84E8800634876 /* CoffeeKitTests.xctest */,
+				FCCEB2FC1AC84E8800634876 /* RestaurantKit.app */,
+				FCCEB3181AC84E8800634876 /* RestaurantKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -332,9 +332,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FCCEB2FB1AC84E8800634876 /* CoffeeKit */ = {
+		FCCEB2FB1AC84E8800634876 /* RestaurantKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCCEB3221AC84E8800634876 /* Build configuration list for PBXNativeTarget "CoffeeKit" */;
+			buildConfigurationList = FCCEB3221AC84E8800634876 /* Build configuration list for PBXNativeTarget "RestaurantKit" */;
 			buildPhases = (
 				FCCEB2F81AC84E8800634876 /* Sources */,
 				FCCEB2F91AC84E8800634876 /* Frameworks */,
@@ -345,14 +345,14 @@
 			dependencies = (
 				FCCEB3B41AC88CC200634876 /* PBXTargetDependency */,
 			);
-			name = CoffeeKit;
+			name = RestaurantKit;
 			productName = CoffeeKit;
-			productReference = FCCEB2FC1AC84E8800634876 /* CoffeeKit.app */;
+			productReference = FCCEB2FC1AC84E8800634876 /* RestaurantKit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FCCEB3171AC84E8800634876 /* CoffeeKitTests */ = {
+		FCCEB3171AC84E8800634876 /* RestaurantKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCCEB3251AC84E8800634876 /* Build configuration list for PBXNativeTarget "CoffeeKitTests" */;
+			buildConfigurationList = FCCEB3251AC84E8800634876 /* Build configuration list for PBXNativeTarget "RestaurantKitTests" */;
 			buildPhases = (
 				FCCEB3141AC84E8800634876 /* Sources */,
 				FCCEB3151AC84E8800634876 /* Frameworks */,
@@ -363,9 +363,9 @@
 			dependencies = (
 				FCCEB31A1AC84E8800634876 /* PBXTargetDependency */,
 			);
-			name = CoffeeKitTests;
+			name = RestaurantKitTests;
 			productName = CoffeeKitTests;
-			productReference = FCCEB3181AC84E8800634876 /* CoffeeKitTests.xctest */;
+			productReference = FCCEB3181AC84E8800634876 /* RestaurantKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -386,7 +386,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FCCEB2F71AC84E8800634876 /* Build configuration list for PBXProject "CoffeeKit" */;
+			buildConfigurationList = FCCEB2F71AC84E8800634876 /* Build configuration list for PBXProject "RestaurantKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -405,8 +405,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				FCCEB2FB1AC84E8800634876 /* CoffeeKit */,
-				FCCEB3171AC84E8800634876 /* CoffeeKitTests */,
+				FCCEB2FB1AC84E8800634876 /* RestaurantKit */,
+				FCCEB3171AC84E8800634876 /* RestaurantKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -504,7 +504,7 @@
 /* Begin PBXTargetDependency section */
 		FCCEB31A1AC84E8800634876 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FCCEB2FB1AC84E8800634876 /* CoffeeKit */;
+			target = FCCEB2FB1AC84E8800634876 /* RestaurantKit */;
 			targetProxy = FCCEB3191AC84E8800634876 /* PBXContainerItemProxy */;
 		};
 		FCCEB3B41AC88CC200634876 /* PBXTargetDependency */ = {
@@ -623,7 +623,7 @@
 				INFOPLIST_FILE = CoffeeKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RestaurantKit;
 			};
 			name = Debug;
 		};
@@ -640,7 +640,7 @@
 				INFOPLIST_FILE = CoffeeKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RestaurantKit;
 			};
 			name = Release;
 		};
@@ -658,7 +658,7 @@
 				);
 				INFOPLIST_FILE = CoffeeKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RestaurantKitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeKit.app/CoffeeKit";
 			};
 			name = Debug;
@@ -673,7 +673,7 @@
 				);
 				INFOPLIST_FILE = CoffeeKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RestaurantKitTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeKit.app/CoffeeKit";
 			};
 			name = Release;
@@ -681,7 +681,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FCCEB2F71AC84E8800634876 /* Build configuration list for PBXProject "CoffeeKit" */ = {
+		FCCEB2F71AC84E8800634876 /* Build configuration list for PBXProject "RestaurantKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FCCEB3201AC84E8800634876 /* Debug */,
@@ -690,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCCEB3221AC84E8800634876 /* Build configuration list for PBXNativeTarget "CoffeeKit" */ = {
+		FCCEB3221AC84E8800634876 /* Build configuration list for PBXNativeTarget "RestaurantKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FCCEB3231AC84E8800634876 /* Debug */,
@@ -699,7 +699,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCCEB3251AC84E8800634876 /* Build configuration list for PBXNativeTarget "CoffeeKitTests" */ = {
+		FCCEB3251AC84E8800634876 /* Build configuration list for PBXNativeTarget "RestaurantKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FCCEB3261AC84E8800634876 /* Debug */,
