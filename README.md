@@ -1,6 +1,6 @@
 # Restaurant Locator
 
-The Restaurant Locator is a sample iOS application that allows the user to locate Restaurant(s) using the user's current location (based on their latitude and longitude). The Restaurant data has been requested through the [Foursquare API](https://developer.foursquare.com/). The [Restkit](https://github.com/RestKit/RestKit) is used as the RESTful API to retrieve and parse the data.
+The Restaurant Locator is a sample iOS application that allows the user to locate Restaurant(s) using the user's current location (based on their latitude and longitude). The Restaurant data has been requested through the [Foursquare API](https://developer.foursquare.com/). The [Restkit](https://github.com/RestKit/RestKit) project is used as the RESTful API to retrieve and parse the data acquired from Foursquare.
 
 #####Version
 >Version 1.0 - Design and Implementation of the Restaurant Locator
