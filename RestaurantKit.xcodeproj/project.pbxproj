@@ -141,7 +141,7 @@
 		FCCEB3B91AC88CE800634876 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FCCEB3BE1AC88D0900634876 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FCCEB3BF1AC88D0900634876 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		FCCEB3C21AC88E3D00634876 /* CoffeeKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoffeeKit-Prefix.pch"; sourceTree = "<group>"; };
+		FCCEB3C21AC88E3D00634876 /* RestaurantKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RestaurantKit-Prefix.pch"; sourceTree = "<group>"; };
 		FCFBF0C31AD832710055EA73 /* MapStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStyleViewController.h; sourceTree = "<group>"; };
 		FCFBF0C41AD832710055EA73 /* MapStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapStyleViewController.m; sourceTree = "<group>"; };
 		FCFBF1201ADC259B0055EA73 /* RestaurantKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestaurantKitTests.m; path = RestaurantKitTests/RestaurantKitTests.m; sourceTree = SOURCE_ROOT; };
@@ -239,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB350D21ACC6EC70068DB28 /* Categories.plist */,
-				FCCEB3C21AC88E3D00634876 /* CoffeeKit-Prefix.pch */,
+				FCCEB3C21AC88E3D00634876 /* RestaurantKit-Prefix.pch */,
 				FCCEB38F1AC88B9B00634876 /* RestaurantKitAppDelegate.h */,
 				FCCEB3901AC88B9B00634876 /* RestaurantKitAppDelegate.m */,
 				FCB350DD1ACDEB560068DB28 /* images */,
@@ -616,7 +616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CoffeeKit/CoffeeKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CoffeeKit/RestaurantKit-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -633,7 +633,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CoffeeKit/CoffeeKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CoffeeKit/RestaurantKit-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
