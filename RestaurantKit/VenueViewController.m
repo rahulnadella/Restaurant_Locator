@@ -97,8 +97,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self.venueSearchBar becomeFirstResponder];
 }
 
 #pragma mark - Initialize the Right UIBarButtonItems

@@ -104,8 +104,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self.categorySearchBar becomeFirstResponder];
 }
 
 # pragma mark - Search Categories
