@@ -154,6 +154,14 @@
 		5E15EA07F0E09F18E3C1F815 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCCEB3B61AC88CE800634876 /* CFNetwork.framework */,
+				FCCEB3BE1AC88D0900634876 /* CoreData.framework */,
+				FC2235871AD3089F00D0E827 /* CoreLocation.framework */,
+				FC2235851AD1953E00D0E827 /* MapKit.framework */,
+				FCCEB3BF1AC88D0900634876 /* MobileCoreServices.framework */,
+				FCCEB3B81AC88CE800634876 /* Security.framework */,
+				FCB350C31ACAFDA30068DB28 /* Social.framework */,
+				FCCEB3B91AC88CE800634876 /* SystemConfiguration.framework */,
 				D0A3356CC65406ED554CC112 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -179,14 +187,6 @@
 		FCCEB2F31AC84E8800634876 = {
 			isa = PBXGroup;
 			children = (
-				FCCEB3B61AC88CE800634876 /* CFNetwork.framework */,
-				FCCEB3BE1AC88D0900634876 /* CoreData.framework */,
-				FC2235871AD3089F00D0E827 /* CoreLocation.framework */,
-				FC2235851AD1953E00D0E827 /* MapKit.framework */,
-				FCCEB3BF1AC88D0900634876 /* MobileCoreServices.framework */,
-				FCCEB3B81AC88CE800634876 /* Security.framework */,
-				FCB350C31ACAFDA30068DB28 /* Social.framework */,
-				FCCEB3B91AC88CE800634876 /* SystemConfiguration.framework */,
 				FCCEB2FE1AC84E8800634876 /* RestaurantKit */,
 				FCCEB31B1AC84E8800634876 /* RestaurantKitTests */,
 				FCCEB2FD1AC84E8800634876 /* Products */,
