@@ -10,6 +10,9 @@ The Restaurant Locator is a sample iOS application that allows the user to locat
 >Frameworks -> AFNetworking, ISO8601DateFormatterValueTransformer, RKValueTransformers, RestKit, SOCKit, and
 TransitionKit (obtained via CocoaPods)
 
+#####Issues
+>Master -> Open or Closed indicator is not working correctly (incorrect data request to Foursquare API)
+
 #####User Interface
 
 The Restaurant Locator is a simple interface built using Xcode 6. The iOS application interface contains the following screens: Launch Screen, Types of Restaurants, Restaurants (in your location), the Map of the Restaurant(s), and the choosen Restaurant's details.
