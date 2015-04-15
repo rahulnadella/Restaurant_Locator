@@ -26,12 +26,6 @@
 
 @implementation MapStyleViewController
 
-#pragma mark - Properties
-
-@synthesize mapType = _mapType;
-@synthesize nameOfVenue = _nameOfVenue;
-@synthesize currentLocation = _currentLocation;
-
 #pragma mark - Memory Allocation
 
 - (void)didReceiveMemoryWarning

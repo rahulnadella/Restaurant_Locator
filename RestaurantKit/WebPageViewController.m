@@ -35,11 +35,6 @@
 
 @implementation WebPageViewController
 
-#pragma mark - Properties
-
-@synthesize menuAddress = _menuAddress;
-@synthesize urlAddress = _urlAddress;
-
 #pragma mark - Memory Allocation
 
 - (void)didReceiveMemoryWarning

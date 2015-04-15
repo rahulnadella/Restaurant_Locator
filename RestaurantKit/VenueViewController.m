@@ -38,13 +38,6 @@
 
 @implementation VenueViewController
 
-#pragma mark - Properties
-
-@synthesize currentVenue = _currentVenue;
-@synthesize currentCategoryId = _currentCategoryId;
-
-#pragma mark - Memory Allocation
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

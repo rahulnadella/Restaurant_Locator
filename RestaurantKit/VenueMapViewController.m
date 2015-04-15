@@ -34,14 +34,6 @@
 
 @implementation VenueMapViewController
 
-#pragma mark - Properties
-
-@synthesize businesses = _businesses;
-@synthesize currentLatitude = _currentLatitude;
-@synthesize currentLongitude = _currentLongitude;
-@synthesize isMultipleVenues = _isMultipleVenues;
-@synthesize titleOfVenue = _titleOfVenue;
-
 - (NSMutableArray *)annotations
 {
     if (!_annotations)

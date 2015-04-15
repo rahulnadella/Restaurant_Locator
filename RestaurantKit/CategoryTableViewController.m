@@ -37,10 +37,6 @@
 
 @implementation CategoryTableViewController
 
-#pragma mark - Properties
-
-@synthesize categories = _categories;
-
 - (NSArray *)categories
 {
     if (_categories)

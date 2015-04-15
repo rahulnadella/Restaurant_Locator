@@ -48,17 +48,6 @@
 
 @implementation VenueDetailsViewController
 
-#pragma mark - Properties
-
-@synthesize venueId = _venueId;
-@synthesize urlOfVenue = _urlOfVenue;
-@synthesize menuOfUrlVenu = _menuOfUrlVenu;
-@synthesize facebookHandle = _facebookHandle;
-@synthesize twitterHandle = _twitterHandle;
-@synthesize currentContact = _currentContact;
-@synthesize currentMenu = _currentMenu;
-@synthesize currentStats = _currentStats;
-
 #pragma mark - Memory Allocation
 
 - (void)didReceiveMemoryWarning
