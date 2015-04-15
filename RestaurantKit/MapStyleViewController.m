@@ -38,6 +38,10 @@
 {
     [super didReceiveMemoryWarning];
     
+    if ([self isViewLoaded] && [self.view window] == nil)
+    {
+        self.view = nil;
+    }
     /* Dispose of any resources that can be recreated. */
     self.mapType = nil;
 }
