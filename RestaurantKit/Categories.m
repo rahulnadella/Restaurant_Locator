@@ -26,9 +26,4 @@
 
 @implementation Categories
 
-@synthesize id = _id;
-@synthesize name = _name;
-@synthesize icon = _icon;
-@synthesize primary = _primary;
-
 @end

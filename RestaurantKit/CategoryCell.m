@@ -26,9 +26,6 @@
 
 @implementation CategoryCell
 
-@synthesize title = _title;
-@synthesize categoryImage = _categoryImage;
-
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

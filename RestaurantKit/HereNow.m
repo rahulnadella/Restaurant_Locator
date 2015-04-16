@@ -26,6 +26,4 @@
 
 @implementation HereNow
 
-@synthesize count = count;
-
 @end

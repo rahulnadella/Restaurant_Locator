@@ -26,10 +26,4 @@
 
 @implementation Stats
 
-#pragma mark - Properties
-
-@synthesize checkins = _checkins;
-@synthesize tips = _tips;
-@synthesize users = _users;
-
 @end

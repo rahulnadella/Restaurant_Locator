@@ -26,12 +26,6 @@
 
 @implementation VenueCell
 
-@synthesize nameLabel = _nameLabel;
-@synthesize distanceLabel = _distanceLabel;
-@synthesize checkinsLabel = _checkinsLabel;
-@synthesize venueCategoryImage = _venueCategoryImage;
-@synthesize statusImage = _statusImage;
-
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

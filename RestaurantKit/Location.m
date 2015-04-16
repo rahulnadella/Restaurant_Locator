@@ -28,14 +28,4 @@
 
 #pragma mark - Properties
 
-@synthesize address = _address;
-@synthesize city = _city;
-@synthesize country = _country;
-@synthesize crossStreet = _crossStreet;
-@synthesize postalCode = _postalCode;
-@synthesize state = _state;
-@synthesize distance = _distance;
-@synthesize lat = _lat;
-@synthesize lng = _lng;
-
 @end

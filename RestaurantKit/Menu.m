@@ -26,9 +26,4 @@
 
 @implementation Menu
 
-@synthesize type = _type;
-@synthesize label = _label;
-@synthesize url = _url;
-@synthesize mobileUrl = _mobileUrl;
-
 @end
