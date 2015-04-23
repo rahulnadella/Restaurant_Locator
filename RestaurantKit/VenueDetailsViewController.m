@@ -228,10 +228,8 @@
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&localError];
     NSArray *results = [data valueForKey:@"response"];
     NSDictionary *venue = [results valueForKey:@"venue"];
-    NSString *ratingsColor = [venue objectForKey:@"ratingColor"];
-    NSLog(@"%@", ratingsColor);
     NSDictionary *hours = [venue objectForKey:@"hours"];
-    NSLog(@"%@", hours);
+    self.isOpen = [hours valueForKey:@"isOpen"];
 }
 
 #pragma mark - Segue
