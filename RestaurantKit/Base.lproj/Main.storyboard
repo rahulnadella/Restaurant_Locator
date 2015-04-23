@@ -131,7 +131,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryCell" id="SqM-3y-xud" customClass="CategoryCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CategoryCell" id="SqM-3y-xud" customClass="CategoryCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SqM-3y-xud" id="uZw-ne-8Ae">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -505,6 +505,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="09n-og-gb9"/>
-        <segue reference="sMY-Xz-kPS"/>
+        <segue reference="1sf-cK-7Mb"/>
     </inferredMetricsTieBreakers>
 </document>

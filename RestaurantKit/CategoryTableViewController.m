@@ -147,6 +147,12 @@
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: imageUrl]];
     categoryCell.categoryImage.image = [UIImage imageWithData:imageData];
     
+    /* Change the selection style color of the CategoryCell */
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor colorWithRed:(76.0/255.0) green:(161.0/255.0) blue:(255.0/255.0) alpha:1.0];
+    bgColorView.layer.masksToBounds = YES;
+    categoryCell.selectedBackgroundView = bgColorView;
+    
     return categoryCell;
 }
 
