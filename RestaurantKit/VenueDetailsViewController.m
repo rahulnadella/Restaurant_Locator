@@ -90,7 +90,6 @@
 
 - (void)viewDidLoad
 {
-    [self exploreVenue];
     [super viewDidLoad];
     
     /* Retrieve the UIBarButton objects */
@@ -108,7 +107,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self exploreVenue];
+    [super viewWillAppear:animated];
     
     /* Initialize ViewDetailsViewController content */
     [self initializeViewContent];
@@ -216,21 +215,6 @@
     {
         [self showAlertSheetBySegueIdentifier:VENUE_DETAILS_VIEW_IDENTIFIER];
     }
-}
-
-- (void)exploreVenue
-{
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3?oauth_token=V0BEQXY5EU4JTGYO1YP3QRRH04C1LMLFHXZRWUHQL5CE5SCR&v=20150423"]];
-    
-    // Perform request and get JSON back as a NSData object
-    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    
-    NSError *localError = nil;
-    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&localError];
-    NSArray *results = [data valueForKey:@"response"];
-    NSDictionary *venue = [results valueForKey:@"venue"];
-    NSDictionary *hours = [venue objectForKey:@"hours"];
-    self.isOpen = [hours valueForKey:@"isOpen"];
 }
 
 #pragma mark - Segue

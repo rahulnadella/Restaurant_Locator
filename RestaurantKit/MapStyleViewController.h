@@ -38,6 +38,7 @@
 @property (nonatomic, strong) NSString *mapType;
 @property (nonatomic, strong) NSString *nameOfVenue;
 @property (nonatomic, strong) Location *currentLocation;
+/* Specific value(s) of the Venue retrieved via Social Framework */
 @property (nonatomic) BOOL isOpen;
 /*
  The showAlertSheet displays the an action sheet to allow the user to choose what MapType to display.
@@ -53,5 +54,8 @@
  The initializeLeftNavigationButtons method gets the default left UIBarButtonItems for any interface extending the base implementation.
  */
 - (NSMutableArray *)initializeLeftNavigationButtons;
-
+/*
+ The exploreVenue method obtains information specific to the Venue being displayed
+ */
+- (void)exploreVenue;
 @end

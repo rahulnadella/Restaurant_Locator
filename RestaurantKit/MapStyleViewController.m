@@ -45,6 +45,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    /* Need to set the values of the Venue retrieved via foursquare */
+    [self exploreVenue];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    /* Need to set the values of the Venue retrieved via foursquare */
+    [self exploreVenue];
 }
 
 #pragma mark - Initialize the UIBarButtonItems (Right Side)
@@ -59,16 +70,16 @@
     UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:nil];
     [buttons addObject:mapButton];
     
-    UIBarButtonItem *statusButton = nil;
+    UIBarButtonItem *statusButton = [[UIBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:self action:nil];
     if (self.isOpen)
     {
-        UIImage *status = [[UIImage imageNamed:@"openSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        statusButton = [[UIBarButtonItem alloc] initWithImage:status style:UIBarButtonItemStylePlain target:self action:nil];
+        UIImage *statusOpen = [[UIImage imageNamed:@"openSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [statusButton setImage:statusOpen];
     }
     else
     {
-        UIImage *status = [[UIImage imageNamed:@"closedSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        statusButton = [[UIBarButtonItem alloc] initWithImage:status style:UIBarButtonItemStylePlain target:self action:nil];
+        UIImage *statusClosed = [[UIImage imageNamed:@"closedSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [statusButton setImage:statusClosed];
     }
     [buttons addObject:statusButton];
     
@@ -134,6 +145,21 @@
     [mapView addAction:cancel];
     /* Present the Alert to the present View */
     [self presentViewController:mapView animated:YES completion:nil];
+}
+
+- (void)exploreVenue
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3?oauth_token=V0BEQXY5EU4JTGYO1YP3QRRH04C1LMLFHXZRWUHQL5CE5SCR&v=20150423"]];
+    
+    // Perform request and get JSON back as a NSData object
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    
+    NSError *localError = nil;
+    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&localError];
+    NSArray *results = [data valueForKey:@"response"];
+    NSDictionary *venue = [results valueForKey:@"venue"];
+    NSDictionary *hours = [venue objectForKey:@"hours"];
+    self.isOpen = [hours valueForKey:@"isOpen"];
 }
 
 @end
