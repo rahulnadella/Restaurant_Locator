@@ -35,6 +35,7 @@
  */
 @interface MapStyleViewController : UIViewController
 
+@property (nonatomic, strong) NSString *venueId;
 @property (nonatomic, strong) NSString *mapType;
 @property (nonatomic, strong) NSString *nameOfVenue;
 @property (nonatomic, strong) Location *currentLocation;

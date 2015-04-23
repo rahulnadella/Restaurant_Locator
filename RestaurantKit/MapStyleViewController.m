@@ -149,8 +149,9 @@
 
 - (void)exploreVenue
 {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3?oauth_token=V0BEQXY5EU4JTGYO1YP3QRRH04C1LMLFHXZRWUHQL5CE5SCR&v=20150423"]];
-    
+    NSString *venueIdSearch = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", FOURSQUARE_API, @"/", VENUE_ID_SEARCH, self.venueId, @"?", CLIENT_ID, @"=", COFFEE_KIT_IDENTIFIER, @"&", CLIENT_SECRET, @"=", COFFEE_KIT_SECRET, @"&", VERSION, @"=", VERSION_NUMBER];
+
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:venueIdSearch]];
     // Perform request and get JSON back as a NSData object
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     
