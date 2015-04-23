@@ -43,5 +43,9 @@
 @property (nonatomic, strong) Contact *currentContact;
 @property (nonatomic, strong) Menu *currentMenu;
 @property (nonatomic, strong) Stats *currentStats;
+/*
+ The exploreVenue method obtains information specific to the Venue being displayed
+ */
+- (void)exploreVenue;
 
 @end

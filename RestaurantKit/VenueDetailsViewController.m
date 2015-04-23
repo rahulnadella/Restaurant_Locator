@@ -103,11 +103,14 @@
     /* Retrieve the Left UIBarButtonItems and Initialize the left header of VenueDetailsView */
     NSMutableArray *leftButtons = [self initializeLeftNavigationButtons];
     self.navigationItem.leftBarButtonItems = leftButtons;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self exploreVenue];
     
     /* Initialize ViewDetailsViewController content */
     [self initializeViewContent];
-    
-    [self exploreVenues];
 }
 
 #pragma mark - Initialize View Content
@@ -214,7 +217,7 @@
     }
 }
 
-- (void)exploreVenues
+- (void)exploreVenue
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3?oauth_token=V0BEQXY5EU4JTGYO1YP3QRRH04C1LMLFHXZRWUHQL5CE5SCR&v=20150423"]];
     
