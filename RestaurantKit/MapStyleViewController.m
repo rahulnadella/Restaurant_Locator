@@ -70,14 +70,17 @@
     UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:nil];
     [buttons addObject:mapButton];
     
+    /* Add UIBarButtonItem STATUS - Open or Closed */
     UIBarButtonItem *statusButton = [[UIBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:self action:nil];
     if (self.isOpen)
     {
+        /* Open sign */
         UIImage *statusOpen = [[UIImage imageNamed:@"openSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [statusButton setImage:statusOpen];
     }
     else
     {
+        /* Closed Sign */
         UIImage *statusClosed = [[UIImage imageNamed:@"closedSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [statusButton setImage:statusClosed];
     }
@@ -147,15 +150,20 @@
     [self presentViewController:mapView animated:YES completion:nil];
 }
 
+# pragma mark - Explore Specific Venue
+
 - (void)exploreVenue
 {
+    /* Generate the specific RESTful API call using the Foursquare API */
     NSString *venueIdSearch = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", FOURSQUARE_API, @"/", VENUE_ID_SEARCH, self.venueId, @"?", CLIENT_ID, @"=", COFFEE_KIT_IDENTIFIER, @"&", CLIENT_SECRET, @"=", COFFEE_KIT_SECRET, @"&", VERSION, @"=", VERSION_NUMBER];
 
+    /* Open the URL to obtain the JSON Data from Foursquare */
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:venueIdSearch]];
-    // Perform request and get JSON back as a NSData object
+    /* Perform request and get JSON back as a NSData object */
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     
     NSError *localError = nil;
+    /* Parse the JSON data for the Specific Venue's item(s) */
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&localError];
     NSArray *results = [data valueForKey:@"response"];
     NSDictionary *venue = [results valueForKey:@"venue"];

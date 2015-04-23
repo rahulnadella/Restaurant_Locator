@@ -35,6 +35,7 @@
  */
 @interface MapStyleViewController : UIViewController
 
+/* Unique Identifier for a specific Venue */
 @property (nonatomic, strong) NSString *venueId;
 @property (nonatomic, strong) NSString *mapType;
 @property (nonatomic, strong) NSString *nameOfVenue;
@@ -49,14 +50,20 @@
 - (void)showAlertSheetBySegueIdentifier:(NSString *)identifier;
 /*
  The initializeRightNavigationButtons method gets the default right UIBarButtonItems for any interface extending the base implementation
+ 
+ @version 1.0
  */
 - (NSMutableArray *)initializeRightNavigationButtons;
 /*
  The initializeLeftNavigationButtons method gets the default left UIBarButtonItems for any interface extending the base implementation.
+ 
+ @version 1.0
  */
 - (NSMutableArray *)initializeLeftNavigationButtons;
 /*
  The exploreVenue method obtains information specific to the Venue being displayed
+ 
+ @version 1.0
  */
 - (void)exploreVenue;
 @end
