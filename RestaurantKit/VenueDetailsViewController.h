@@ -44,7 +44,6 @@
 @property (nonatomic, strong) Menu *currentMenu;
 @property (nonatomic, strong) Stats *currentStats;
 
-@property (nonatomic) BOOL isOpen;
 /*
  The exploreVenue method obtains information specific to the Venue being displayed
  */

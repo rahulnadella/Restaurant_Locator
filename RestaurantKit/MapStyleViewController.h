@@ -38,6 +38,7 @@
 @property (nonatomic, strong) NSString *mapType;
 @property (nonatomic, strong) NSString *nameOfVenue;
 @property (nonatomic, strong) Location *currentLocation;
+@property (nonatomic) BOOL isOpen;
 /*
  The showAlertSheet displays the an action sheet to allow the user to choose what MapType to display.
  

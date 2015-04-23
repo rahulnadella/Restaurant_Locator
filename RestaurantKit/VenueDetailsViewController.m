@@ -90,6 +90,7 @@
 
 - (void)viewDidLoad
 {
+    [self exploreVenue];
     [super viewDidLoad];
     
     /* Retrieve the UIBarButton objects */

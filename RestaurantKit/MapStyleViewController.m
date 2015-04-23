@@ -52,12 +52,25 @@
 - (NSMutableArray *)initializeRightNavigationButtons
 {
     /* Initialize an Array of size equal to 1 */
-    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:1];
+    NSMutableArray *buttons = [[NSMutableArray alloc] initWithCapacity:2];
     
     /* Add UIBarButtonItem MAP */
     UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:nil];
     [buttons addObject:mapButton];
+    
+    UIBarButtonItem *statusButton = nil;
+    if (self.isOpen)
+    {
+        UIImage *status = [[UIImage imageNamed:@"openSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        statusButton = [[UIBarButtonItem alloc] initWithImage:status style:UIBarButtonItemStylePlain target:self action:nil];
+    }
+    else
+    {
+        UIImage *status = [[UIImage imageNamed:@"closedSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        statusButton = [[UIBarButtonItem alloc] initWithImage:status style:UIBarButtonItemStylePlain target:self action:nil];
+    }
+    [buttons addObject:statusButton];
     
     return buttons;
 }
