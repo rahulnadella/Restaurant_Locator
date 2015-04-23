@@ -29,6 +29,8 @@
  and shutdown, handling URL open requests and similar application-wide tasks.
  
  This class currently manages the updating of the location and appearance of the application.
+ 
+ @version 1.0
  */
 @interface RestaurantKitAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 
@@ -36,5 +38,12 @@
 /* The Location objects used to retrieve the user's current location */
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CLLocation *currentLocation;
+
+/*
+ The returnLocationData method retrieves the user's device coordinates.
+ 
+ @version 1.0
+ */
+- (void)retrieveLocationData;
 
 @end

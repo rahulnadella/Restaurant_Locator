@@ -93,7 +93,7 @@
 {
     [self.locationManager stopMonitoringSignificantLocationChanges];
     [self.locationManager startUpdatingLocation];
-    [self returnLocationData];
+    [self retrieveLocationData];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -137,7 +137,7 @@
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     if (abs(howRecent) < 15.0)
     {
-        [self returnLocationData];
+        [self retrieveLocationData];
     }
 }
 
@@ -165,7 +165,7 @@
 
 # pragma mark - Retrieving the change Location Data
 
-- (void)returnLocationData
+- (void)retrieveLocationData
 {
     LATITUDE_LONGITUDE_FROM_LOCATION = [NSString stringWithFormat:@"%+.6f,%+.6f", self.currentLocation.coordinate.latitude, self.currentLocation.coordinate.longitude];
 }
