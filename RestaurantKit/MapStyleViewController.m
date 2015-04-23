@@ -46,7 +46,7 @@
 {
     [super viewDidLoad];
     
-    /* Need to set the values of the Venue retrieved via foursquare */
+    /* Need to set the values of the Venue retrieved via Foursquare */
     [self retrieveVenue];
 }
 
@@ -54,7 +54,7 @@
 {
     [super viewWillAppear:animated];
     
-    /* Need to set the values of the Venue retrieved via foursquare */
+    /* Need to set the values of the Venue retrieved via Foursquare */
     [self retrieveVenue];
 }
 
