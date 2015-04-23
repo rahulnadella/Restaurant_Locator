@@ -65,5 +65,5 @@
  
  @version 1.0
  */
-- (void)exploreVenue;
+- (void)retrieveVenue;
 @end

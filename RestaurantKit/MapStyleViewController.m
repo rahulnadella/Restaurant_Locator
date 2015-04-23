@@ -47,7 +47,7 @@
     [super viewDidLoad];
     
     /* Need to set the values of the Venue retrieved via foursquare */
-    [self exploreVenue];
+    [self retrieveVenue];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -55,7 +55,7 @@
     [super viewWillAppear:animated];
     
     /* Need to set the values of the Venue retrieved via foursquare */
-    [self exploreVenue];
+    [self retrieveVenue];
 }
 
 #pragma mark - Initialize the UIBarButtonItems (Right Side)
@@ -150,9 +150,9 @@
     [self presentViewController:mapView animated:YES completion:nil];
 }
 
-# pragma mark - Explore Specific Venue
+# pragma mark - Retrieve Specific Venue
 
-- (void)exploreVenue
+- (void)retrieveVenue
 {
     /* Generate the specific RESTful API call using the Foursquare API */
     NSString *venueIdSearch = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", FOURSQUARE_API, @"/", VENUE_ID_SEARCH, self.venueId, @"?", CLIENT_ID, @"=", RESTAURANT_KIT_IDENTIFIER, @"&", CLIENT_SECRET, @"=", RESTAURANT_KIT_SECRET, @"&", VERSION, @"=", VERSION_NUMBER];
