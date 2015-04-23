@@ -378,8 +378,8 @@
 - (void)loadVenues
 {
     NSString *latLon = LATITUDE_LONGITUDE_FROM_LOCATION; // @"37.33,-122.03" AKA Apple;
-    NSString *clientID = COFFEE_KIT_IDENTIFIER;
-    NSString *clientSecret = COFFEE_KIT_SECRET;
+    NSString *clientID = RESTAURANT_KIT_IDENTIFIER;
+    NSString *clientSecret = RESTAURANT_KIT_SECRET;
     
     NSDictionary *queryParams;
     queryParams = [NSDictionary dictionaryWithObjectsAndKeys:latLon, LATITUDE_LONGITUDE, clientID, CLIENT_ID, clientSecret, CLIENT_SECRET, self.currentCategoryId, CATEGORY_ID, VERSION_NUMBER, VERSION, nil];

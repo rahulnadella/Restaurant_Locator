@@ -36,9 +36,9 @@ extern NSString * const CATEGORIES;
 extern NSString * const CHECKINS_DESCENDING;
 extern NSString * const CLIENT_ID;
 extern NSString * const CLIENT_SECRET;
-extern NSString * const COFFEE_KIT_IDENTIFIER;
+extern NSString * const RESTAURANT_KIT_IDENTIFIER;
 /* This value should always be retrieved from a server (this only for demo purposes) */
-extern NSString * const COFFEE_KIT_SECRET;
+extern NSString * const RESTAURANT_KIT_SECRET;
 extern NSString * const CATEGORY_ID;
 extern NSString * const CATEGORY_NAME;
 extern NSString * const DISTANCE_ASCENDING;

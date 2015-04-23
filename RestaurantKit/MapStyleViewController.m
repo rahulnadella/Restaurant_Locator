@@ -155,7 +155,7 @@
 - (void)exploreVenue
 {
     /* Generate the specific RESTful API call using the Foursquare API */
-    NSString *venueIdSearch = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", FOURSQUARE_API, @"/", VENUE_ID_SEARCH, self.venueId, @"?", CLIENT_ID, @"=", COFFEE_KIT_IDENTIFIER, @"&", CLIENT_SECRET, @"=", COFFEE_KIT_SECRET, @"&", VERSION, @"=", VERSION_NUMBER];
+    NSString *venueIdSearch = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", FOURSQUARE_API, @"/", VENUE_ID_SEARCH, self.venueId, @"?", CLIENT_ID, @"=", RESTAURANT_KIT_IDENTIFIER, @"&", CLIENT_SECRET, @"=", RESTAURANT_KIT_SECRET, @"&", VERSION, @"=", VERSION_NUMBER];
 
     /* Open the URL to obtain the JSON Data from Foursquare */
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:venueIdSearch]];
