@@ -38,6 +38,8 @@
 
 @implementation VenueViewController
 
+#pragma mark - Memory Allocation
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
