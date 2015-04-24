@@ -43,6 +43,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *facebookButton;
 @property (weak, nonatomic) IBOutlet UILabel *menuLabel;
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 
 @end
 
@@ -153,6 +154,9 @@
     self.menuLabel.text = @"Menu:";
     self.menuOfUrlVenu = self.currentMenu.mobileUrl ? [NSString stringWithFormat:@"%@", self.currentMenu.mobileUrl] : @"N/A";
     [self.menuButton setTitle:self.menuOfUrlVenu forState:UIControlStateNormal];
+    
+    /* Set the rating of the specific Venue */
+    self.ratingLabel.text = self.rating ? [NSString stringWithFormat:@"Rating: %.01f", [self.rating floatValue]] : [NSString stringWithFormat:@"Current Rating: N/A"];
 }
 
 #pragma mark - Swipe Back

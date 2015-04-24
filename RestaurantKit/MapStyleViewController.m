@@ -23,6 +23,7 @@
  */
 
 #import "MapStyleViewController.h"
+#import "Appearance.h"
 
 @implementation MapStyleViewController
 
@@ -53,6 +54,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    /* Set the color (if available) for the view based on the rating */
+    self.ratingColor ? [self.view setBackgroundColor:[Appearance colorWithHexString:self.ratingColor]] : nil;
     
     /* Need to set the values of the Venue retrieved via Foursquare */
     [self retrieveVenue];
