@@ -42,6 +42,8 @@
 @property (nonatomic, strong) NSString *nameOfVenue;
 @property (nonatomic, strong) NSNumber *rating;
 @property (nonatomic, strong) NSString *ratingColor;
+@property (nonatomic) BOOL verified;
+@property (nonatomic, strong) NSString *verifiedStatus;
 @property (nonatomic, strong) Hours *hours;
 @property (nonatomic, strong) Location *currentLocation;
 /*

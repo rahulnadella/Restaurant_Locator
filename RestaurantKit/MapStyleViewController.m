@@ -25,6 +25,12 @@
 #import "MapStyleViewController.h"
 #import "Appearance.h"
 
+/* BOOL to String converter for verified Venue */
+static inline NSString* NSStringFromBOOL(BOOL aBool)
+{
+    return aBool? @"Business Owner Verified Information" : @"Information NOT Verified";
+}
+
 @implementation MapStyleViewController
 
 #pragma mark - Memory Allocation
@@ -191,6 +197,10 @@
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&localError];
     NSArray *results = [data valueForKey:@"response"];
     NSDictionary *venue = [results valueForKey:@"venue"];
+    
+    /* Determine if the Venue has been verified or not */
+    self.verified = [venue valueForKey:@"verified"];
+    self.verifiedStatus = NSStringFromBOOL(self.verified);
     
     /* Obtain the rating for a specific Venue */
     self.rating = [venue valueForKey:@"rating"];

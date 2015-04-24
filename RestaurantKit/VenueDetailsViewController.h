@@ -29,7 +29,8 @@
 #import "Menu.h"
 #import "Stats.h"
 /*
- The VenueDetailsViewController provides specific details associated with each Venue. For example, the Contact info, the number of people visted, etc.
+ The VenueDetailsViewController provides specific details associated with each Venue. 
+ For example, the Contact info, the number of people visted, etc.
  
  @version 1.0
  */
