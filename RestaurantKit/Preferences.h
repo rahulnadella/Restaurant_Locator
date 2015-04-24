@@ -31,6 +31,7 @@
  */
 @interface Preferences : NSObject
 
+extern NSString * const BEST_PHOTO_PAGE_IDENTIFIER;
 extern NSString * const CANCEL;
 extern NSString * const CATEGORIES;
 extern NSString * const CHECKINS_DESCENDING;
@@ -58,10 +59,12 @@ extern NSString * const NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION;
 extern NSString * const OKAY;
 extern NSString * const OPEN_SIGN;
 extern NSString * const PLIST;
+extern NSString * const PUBLIC;
 extern NSString * const PREFIX;
 extern NSString * const RESPONSE_VENUE;
 extern NSString * const RESPONSE_VENUES;
 extern NSString * const RETURN_TO_VENUE_INFORMATION;
+extern NSString * const SHOW_WEBPAGE_VIEW_IDENTIFIER;
 extern NSString * const SORT_DESCRIPTION;
 extern NSString * const SORT_TITLE;
 extern NSString * const VENUE_ID;

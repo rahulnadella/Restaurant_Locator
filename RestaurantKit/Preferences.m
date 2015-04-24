@@ -26,6 +26,7 @@
 
 @implementation Preferences
 
+NSString * const BEST_PHOTO_PAGE_IDENTIFIER = @"Best Photo Page";
 NSString * const CANCEL = @"Cancel";
 NSString * const CATEGORIES = @"Categories";
 NSString * const CHECKINS_DESCENDING = @"Checkins (Descending)";
@@ -52,10 +53,12 @@ NSString * const NO_INTERNET_CONNECTION_AVAILABLE_DESCRIPTION = @"You currently 
 NSString * const OKAY = @"Ok";
 NSString * const OPEN_SIGN = @"openSign";
 NSString * const PLIST = @"plist";
+NSString * const PUBLIC = @"public";
 NSString * const PREFIX = @"prefix";
 NSString * const RESPONSE_VENUE = @"response.venue";
 NSString * const RESPONSE_VENUES = @"response.venues";
 NSString * const RETURN_TO_VENUE_INFORMATION = @"Return to Venue Information";
+NSString * const SHOW_WEBPAGE_VIEW_IDENTIFIER = @"Show Web Page";
 NSString * const SORT_DESCRIPTION = @"Sort Venue(s) by Distance or Checkins";
 NSString * const SORT_TITLE = @"Sort Venue(s)";
 NSString * const VENUE_ID = @"VENUE_ID";

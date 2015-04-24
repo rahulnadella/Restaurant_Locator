@@ -190,7 +190,7 @@
 {
     if (self.urlOfVenue)
     {
-        [self performSegueWithIdentifier:@"Show Web Page" sender:self];
+        [self performSegueWithIdentifier:SHOW_WEBPAGE_VIEW_IDENTIFIER sender:self];
     }
 }
 
@@ -198,9 +198,9 @@
 
 - (IBAction)viewBestPhoto:(id)sender
 {
-    if ([self.bestPhoto.visibility isEqualToString:@"public"])
+    if ([self.bestPhoto.visibility isEqualToString:PUBLIC])
     {
-        [self performSegueWithIdentifier:@"Best Photo Page" sender:self];
+        [self performSegueWithIdentifier:BEST_PHOTO_PAGE_IDENTIFIER sender:self];
     }
 }
 
@@ -249,7 +249,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"Show Web Page"])
+    if ([segue.identifier isEqualToString:SHOW_WEBPAGE_VIEW_IDENTIFIER])
     {
         if ([segue.destinationViewController isKindOfClass:[WebPageViewController class]])
         {
@@ -283,7 +283,7 @@
             [vmvc setTitle:@"Restaurant Location"];
         }
     }
-    else if ([segue.identifier isEqualToString:@"Best Photo Page"])
+    else if ([segue.identifier isEqualToString:BEST_PHOTO_PAGE_IDENTIFIER])
     {
         if ([segue.destinationViewController isKindOfClass:[BestPhotoViewController class]])
         {
