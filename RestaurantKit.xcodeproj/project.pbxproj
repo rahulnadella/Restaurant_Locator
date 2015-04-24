@@ -38,6 +38,7 @@
 		FC96BA121AEA92AD0003ECC3 /* TimeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FC96BA111AEA92AD0003ECC3 /* TimeFrame.m */; };
 		FC96BA151AEABCEB0003ECC3 /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = FC96BA141AEABCEB0003ECC3 /* Price.m */; };
 		FC96BA181AEAE2220003ECC3 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC96BA171AEAE2220003ECC3 /* Photo.m */; };
+		FC96BA1B1AEAEB3F0003ECC3 /* BestPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC96BA1A1AEAEB3F0003ECC3 /* BestPhotoViewController.m */; };
 		FCB350C41ACAFDA30068DB28 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB350C31ACAFDA30068DB28 /* Social.framework */; };
 		FCCEB3BA1AC88CE800634876 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3B61AC88CE800634876 /* CFNetwork.framework */; };
 		FCCEB3BC1AC88CE800634876 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3B81AC88CE800634876 /* Security.framework */; };
@@ -115,6 +116,8 @@
 		FC96BA141AEABCEB0003ECC3 /* Price.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Price.m; sourceTree = SOURCE_ROOT; };
 		FC96BA161AEAE2220003ECC3 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = SOURCE_ROOT; };
 		FC96BA171AEAE2220003ECC3 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = SOURCE_ROOT; };
+		FC96BA191AEAEB3F0003ECC3 /* BestPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestPhotoViewController.h; sourceTree = SOURCE_ROOT; };
+		FC96BA1A1AEAEB3F0003ECC3 /* BestPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BestPhotoViewController.m; sourceTree = SOURCE_ROOT; };
 		FCB350C31ACAFDA30068DB28 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FCCEB2FC1AC84E8800634876 /* RestaurantKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3181AC84E8800634876 /* RestaurantKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,6 +301,8 @@
 		FCCEB3931AC88BB400634876 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC96BA191AEAEB3F0003ECC3 /* BestPhotoViewController.h */,
+				FC96BA1A1AEAEB3F0003ECC3 /* BestPhotoViewController.m */,
 				FC5855131ADC4F9400D4EB3F /* CategoryTableViewController.h */,
 				FC5855141ADC4F9400D4EB3F /* CategoryTableViewController.m */,
 				FC5855151ADC4F9400D4EB3F /* MapStyleViewController.h */,
@@ -473,6 +478,7 @@
 				FC5855031ADC4EFD00D4EB3F /* Appearance.m in Sources */,
 				FC5855371ADC4FC800D4EB3F /* Menu.m in Sources */,
 				FC58553E1ADC4FF500D4EB3F /* CategoryCell.m in Sources */,
+				FC96BA1B1AEAEB3F0003ECC3 /* BestPhotoViewController.m in Sources */,
 				FC5855381ADC4FC800D4EB3F /* Stats.m in Sources */,
 				FC58553F1ADC4FF500D4EB3F /* VenueCell.m in Sources */,
 				FC5855361ADC4FC800D4EB3F /* Location.m in Sources */,

@@ -319,13 +319,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je1-x3-qbQ">
-                                <rect key="frame" x="16" y="473.5" width="42" height="20.5"/>
+                                <rect key="frame" x="16" y="473" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnH-2v-Lz0">
                                 <rect key="frame" x="16" y="445" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iY-Zc-8nk">
+                                <rect key="frame" x="129" y="350" width="239" height="30"/>
+                                <color key="backgroundColor" red="0.2057880446" green="0.55092186239999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewBestPhoto:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="ObQ-Kh-kHB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkA-ap-nI2">
+                                <rect key="frame" x="16" y="354" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -353,6 +371,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="cra-N8-TIN"/>
                     <connections>
+                        <outlet property="bestPhotoButton" destination="2iY-Zc-8nk" id="vAu-Q2-VAx"/>
+                        <outlet property="bestPhotoLabel" destination="TkA-ap-nI2" id="TGC-At-P4O"/>
                         <outlet property="cityStateZipcodeLabel" destination="zhy-ED-fdq" id="Yra-9r-ijW"/>
                         <outlet property="currencyLabel" destination="IYe-47-u5M" id="zUC-1P-EL4"/>
                         <outlet property="facebookButton" destination="r7t-dJ-PYP" id="gug-Ct-bPb"/>
@@ -373,6 +393,7 @@
                         <outlet property="urlLabel" destination="Vjp-c1-MVt" id="bsf-t5-Z2m"/>
                         <segue destination="2Pe-QV-6D8" kind="show" identifier="Show Web Page" id="09n-og-gb9"/>
                         <segue destination="ocP-Gf-WZW" kind="show" identifier="Show Map View" id="sMY-Xz-kPS"/>
+                        <segue destination="gJn-JM-zt6" kind="show" identifier="Best Photo Page" id="A6k-pP-Qgk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
@@ -383,6 +404,38 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2252" y="156"/>
+        </scene>
+        <!--Best Photo View Controller-->
+        <scene sceneID="p4J-Wn-DdG">
+            <objects>
+                <viewController id="gJn-JM-zt6" customClass="BestPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jVX-f2-aRm"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Vl-aW-nKn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dRy-fF-1c7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T1W-Gx-3oa">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T1W-Gx-3oa" firstAttribute="top" secondItem="jVX-f2-aRm" secondAttribute="bottom" id="0Jl-II-X6c"/>
+                            <constraint firstItem="T1W-Gx-3oa" firstAttribute="leading" secondItem="dRy-fF-1c7" secondAttribute="leading" id="4dk-3K-7oL"/>
+                            <constraint firstAttribute="trailing" secondItem="T1W-Gx-3oa" secondAttribute="trailing" id="Vnm-Q0-3M2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="T1W-Gx-3oa" secondAttribute="bottom" constant="-64" id="WxE-3k-YMW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bestPhotoImageView" destination="T1W-Gx-3oa" id="TqJ-z7-K3a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEp-HH-wRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2331" y="868"/>
         </scene>
         <!--Venue Map View Controller-->
         <scene sceneID="3cD-ks-Eba">
@@ -541,6 +594,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="09n-og-gb9"/>
-        <segue reference="1sf-cK-7Mb"/>
+        <segue reference="sMY-Xz-kPS"/>
     </inferredMetricsTieBreakers>
 </document>

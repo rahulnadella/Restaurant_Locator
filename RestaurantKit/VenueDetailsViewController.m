@@ -23,6 +23,7 @@
  */
 
 #import <Social/Social.h>
+#import "BestPhotoViewController.h"
 #import "VenueDetailsViewController.h"
 #import "VenueMapViewController.h"
 #import "WebPageViewController.h"
@@ -47,6 +48,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *tierLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currencyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bestPhotoLabel;
+@property (weak, nonatomic) IBOutlet UIButton *bestPhotoButton;
 
 @end
 
@@ -160,9 +163,14 @@
     /* Set the rating of the specific Venue */
     self.ratingLabel.text = self.rating ? [NSString stringWithFormat:@"Rating: %.01f", [self.rating floatValue]] : @"Current Rating: N/A";
     
+    /* Set the Price specification of the specific Venue */
     self.tierLabel.text = self.currentPrice ? [NSString stringWithFormat:@"Tier Level: %@", self.currentPrice.tier] : @"Tier Level: N/A";
     self.messageLabel.text = self.currentPrice ? [NSString stringWithFormat:@"Expense Level: %@", self.currentPrice.costLevel] : @"Expense Level: N/A";
     self.currencyLabel.text = self.currentPrice ? [NSString stringWithFormat:@"Currency: %@", self.currentPrice.currency] : @"Currency: N/A";
+    
+    /* Set the best Photo taken for the specific Venue */
+    self.bestPhotoLabel.text = @"Best Photo:";
+    [self.bestPhotoButton setTitle:@"Best Photo Taken" forState:UIControlStateNormal];
 }
 
 #pragma mark - Swipe Back
@@ -183,6 +191,16 @@
     if (self.urlOfVenue)
     {
         [self performSegueWithIdentifier:@"Show Web Page" sender:self];
+    }
+}
+
+#pragma mark - View Best Photo
+
+- (IBAction)viewBestPhoto:(id)sender
+{
+    if ([self.bestPhoto.visibility isEqualToString:@"public"])
+    {
+        [self performSegueWithIdentifier:@"Best Photo Page" sender:self];
     }
 }
 
@@ -263,6 +281,15 @@
             [vmvc setMenuType:self.mapType];
             /* Set View Controller Title */
             [vmvc setTitle:@"Restaurant Location"];
+        }
+    }
+    else if ([segue.identifier isEqualToString:@"Best Photo Page"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[BestPhotoViewController class]])
+        {
+            BestPhotoViewController *bpvc = segue.destinationViewController;
+            [bpvc setBestPhotoTitle:self.nameOfVenue];
+            [bpvc setBestPhoto:self.bestPhoto];
         }
     }
 }
