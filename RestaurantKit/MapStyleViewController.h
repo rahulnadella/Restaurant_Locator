@@ -25,6 +25,8 @@
 #import <UIKit/UIKit.h>
 #import "Hours.h"
 #import "Location.h"
+#import "Price.h"
+
 /*
  The MapStyleViewController is an object that contains the logic for displaying 
  a specific style of MapView. 
@@ -46,6 +48,7 @@
 @property (nonatomic, strong) NSString *verifiedStatus;
 @property (nonatomic, strong) Hours *hours;
 @property (nonatomic, strong) Location *currentLocation;
+@property (nonatomic, strong) Price *currentPrice;
 /*
  The showAlertSheet displays the an action sheet to allow the user to choose what MapType to display.
  

@@ -36,6 +36,7 @@
 		FC5855471ADC506700D4EB3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC5855441ADC506700D4EB3F /* Main.storyboard */; };
 		FC96BA0F1AEA92380003ECC3 /* Hours.m in Sources */ = {isa = PBXBuildFile; fileRef = FC96BA0E1AEA92380003ECC3 /* Hours.m */; };
 		FC96BA121AEA92AD0003ECC3 /* TimeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FC96BA111AEA92AD0003ECC3 /* TimeFrame.m */; };
+		FC96BA151AEABCEB0003ECC3 /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = FC96BA141AEABCEB0003ECC3 /* Price.m */; };
 		FCB350C41ACAFDA30068DB28 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB350C31ACAFDA30068DB28 /* Social.framework */; };
 		FCCEB3BA1AC88CE800634876 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3B61AC88CE800634876 /* CFNetwork.framework */; };
 		FCCEB3BC1AC88CE800634876 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3B81AC88CE800634876 /* Security.framework */; };
@@ -109,6 +110,8 @@
 		FC96BA0E1AEA92380003ECC3 /* Hours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hours.m; sourceTree = SOURCE_ROOT; };
 		FC96BA101AEA92AD0003ECC3 /* TimeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeFrame.h; sourceTree = SOURCE_ROOT; };
 		FC96BA111AEA92AD0003ECC3 /* TimeFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFrame.m; sourceTree = SOURCE_ROOT; };
+		FC96BA131AEABCEB0003ECC3 /* Price.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Price.h; sourceTree = SOURCE_ROOT; };
+		FC96BA141AEABCEB0003ECC3 /* Price.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Price.m; sourceTree = SOURCE_ROOT; };
 		FCB350C31ACAFDA30068DB28 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FCCEB2FC1AC84E8800634876 /* RestaurantKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3181AC84E8800634876 /* RestaurantKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,6 +278,8 @@
 				FC58552C1ADC4FC800D4EB3F /* Location.m */,
 				FC58552D1ADC4FC800D4EB3F /* Menu.h */,
 				FC58552E1ADC4FC800D4EB3F /* Menu.m */,
+				FC96BA131AEABCEB0003ECC3 /* Price.h */,
+				FC96BA141AEABCEB0003ECC3 /* Price.m */,
 				FC58552F1ADC4FC800D4EB3F /* Stats.h */,
 				FC5855301ADC4FC800D4EB3F /* Stats.m */,
 				FC96BA101AEA92AD0003ECC3 /* TimeFrame.h */,
@@ -455,6 +460,7 @@
 				FC5855241ADC4F9400D4EB3F /* WebPageViewController.m in Sources */,
 				FC5855341ADC4FC800D4EB3F /* Contact.m in Sources */,
 				FC5855091ADC4F2700D4EB3F /* RestaurantKitAppDelegate.m in Sources */,
+				FC96BA151AEABCEB0003ECC3 /* Price.m in Sources */,
 				FC5855231ADC4F9400D4EB3F /* VenueViewController.m in Sources */,
 				FC5855201ADC4F9400D4EB3F /* MapStyleViewController.m in Sources */,
 				FC58550F1ADC4F3E00D4EB3F /* main.m in Sources */,

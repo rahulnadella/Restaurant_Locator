@@ -198,6 +198,13 @@ static inline NSString* NSStringFromBOOL(BOOL aBool)
     NSArray *results = [data valueForKey:@"response"];
     NSDictionary *venue = [results valueForKey:@"venue"];
     
+    /* Current price level of the Venue */
+    NSDictionary *price = [venue valueForKey:@"price"];
+    self.currentPrice = [[Price alloc] init];
+    self.currentPrice.costLevel = [price valueForKey:@"message"];
+    self.currentPrice.currency = [price valueForKey:@"currency"];
+    self.currentPrice.tier = [price valueForKey:@"tier"];
+    
     /* Determine if the Venue has been verified or not */
     self.verified = [venue valueForKey:@"verified"];
     self.verifiedStatus = NSStringFromBOOL(self.verified);
