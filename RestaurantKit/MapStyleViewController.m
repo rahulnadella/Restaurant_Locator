@@ -187,8 +187,13 @@
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&localError];
     NSArray *results = [data valueForKey:@"response"];
     NSDictionary *venue = [results valueForKey:@"venue"];
+    
+    /* Obtain the rating for a specific Venue */
+    self.rating = [venue valueForKey:@"rating"];
+    self.ratingColor = [venue valueForKey:@"ratingColor"];
+    
+    /* Retrieve the Time the Venue is open for */
     NSDictionary *hours = [venue objectForKey:@"hours"];
-
     self.hours = [[Hours alloc] init];
     self.hours.isOpen = [hours valueForKey:@"isOpen"];
     self.hours.status = [hours valueForKey:@"status"];
