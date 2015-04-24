@@ -63,6 +63,8 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
+#pragma mark - UIColor Hex Value converter
+
 + (UIColor *)colorWithHexString:(NSString *)hexString
 {
     unsigned rgbValue = 0;

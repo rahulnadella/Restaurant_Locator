@@ -44,6 +44,11 @@ The Appearance object defines the various fonts (UIFont), color shading (NSShado
  */
 + (void)customizeNavigationBarColor;
 
+/*
+ Converts the hex value of a Color to a UIColor object
+ 
+ @version 1.0
+ */
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 
 @end
