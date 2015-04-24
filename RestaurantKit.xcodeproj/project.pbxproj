@@ -277,10 +277,10 @@
 				FC58552E1ADC4FC800D4EB3F /* Menu.m */,
 				FC58552F1ADC4FC800D4EB3F /* Stats.h */,
 				FC5855301ADC4FC800D4EB3F /* Stats.m */,
-				FC5855311ADC4FC800D4EB3F /* Venue.h */,
-				FC5855321ADC4FC800D4EB3F /* Venue.m */,
 				FC96BA101AEA92AD0003ECC3 /* TimeFrame.h */,
 				FC96BA111AEA92AD0003ECC3 /* TimeFrame.m */,
+				FC5855311ADC4FC800D4EB3F /* Venue.h */,
+				FC5855321ADC4FC800D4EB3F /* Venue.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
