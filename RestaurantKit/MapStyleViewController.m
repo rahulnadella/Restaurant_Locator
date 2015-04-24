@@ -67,11 +67,17 @@
     
     /* Add UIBarButtonItem MAP */
     UIImage *map = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *mapButton = [[UIBarButtonItem alloc] initWithImage:map
+                                                                  style:UIBarButtonItemStylePlain
+                                                                 target:self
+                                                                 action:nil];
     [buttons addObject:mapButton];
     
     /* Add UIBarButtonItem STATUS - Open or Closed */
-    UIBarButtonItem *statusButton = [[UIBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *statusButton = [[UIBarButtonItem alloc] initWithImage:nil
+                                                                     style:UIBarButtonItemStylePlain
+                                                                    target:self
+                                                                    action:nil];
     if (self.isOpen)
     {
         /* Open sign */
@@ -99,7 +105,10 @@
     /* Add UIBarButtonItem BACK */
     UIImage *back = [[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     /* Add UIImage to the UIBarButtonItem */
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:back style:UIBarButtonItemStylePlain target:self action:@selector(previousViewController)];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:back
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(previousViewController)];
     [leftButtons addObject:backButton];
     
     return leftButtons;
@@ -122,22 +131,30 @@
                                                                preferredStyle:UIAlertControllerStyleActionSheet];
     
     /* Create the Distance Ascending action */
-    UIAlertAction *standard = [UIAlertAction actionWithTitle:STANDARD style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+    UIAlertAction *standard = [UIAlertAction actionWithTitle:STANDARD
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction *action){
         [self setMapType:STANDARD];
         [self performSegueWithIdentifier:identifier sender:self];
     }];
     /* Create the Checkins Descending action */
-    UIAlertAction *hybrid = [UIAlertAction actionWithTitle:HYBRID style:UIAlertActionStyleDefault handler:^(UIAlertAction *alert){
+    UIAlertAction *hybrid = [UIAlertAction actionWithTitle:HYBRID
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction *alert){
         [self setMapType:HYBRID];
         [self performSegueWithIdentifier:identifier sender:self];
     }];
-    UIAlertAction *satellite = [UIAlertAction actionWithTitle:SATELLITE style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+    UIAlertAction *satellite = [UIAlertAction actionWithTitle:SATELLITE
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action){
         [self setMapType:SATELLITE];
         [self performSegueWithIdentifier:identifier sender:self];
     }];
     
     /* Create the Cancel Button */
-    UIAlertAction *cancel = [UIAlertAction actionWithTitle:CANCEL style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:CANCEL
+                                                     style:UIAlertActionStyleCancel
+                                                   handler:^(UIAlertAction *action){
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
@@ -155,7 +172,10 @@
 - (void)retrieveVenue
 {
     /* Generate the specific RESTful API call using the Foursquare API */
-    NSString *venueIdSearch = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@", FOURSQUARE_API, @"/", VENUE_ID_SEARCH, self.venueId, @"?", CLIENT_ID, @"=", RESTAURANT_KIT_IDENTIFIER, @"&", CLIENT_SECRET, @"=", RESTAURANT_KIT_SECRET, @"&", VERSION, @"=", VERSION_NUMBER];
+    NSString *venueIdSearch = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@%@",
+                               FOURSQUARE_API, @"/", VENUE_ID_SEARCH, self.venueId, @"?", CLIENT_ID, @"=",
+                               RESTAURANT_KIT_IDENTIFIER, @"&", CLIENT_SECRET, @"=", RESTAURANT_KIT_SECRET,
+                               @"&", VERSION, @"=", VERSION_NUMBER];
 
     /* Open the URL to obtain the JSON Data from Foursquare */
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:venueIdSearch]];
