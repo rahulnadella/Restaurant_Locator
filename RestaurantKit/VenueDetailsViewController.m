@@ -121,7 +121,7 @@
 - (void)initializeViewContent
 {
     /* Define the name of the View based on the specific Venue */
-    self.locationNameLabel.text = [NSString stringWithFormat:@"Contact Info (%@)", self.verifiedStatus];
+    self.locationNameLabel.text = self.verifiedStatus ? [NSString stringWithFormat:@"Contact Info (%@)", self.verifiedStatus] : @"Contact Info";
     
     /* Create the street address of the specific Venue */
     self.streetAddressLabel.text = self.currentLocation.crossStreet ? [NSString stringWithFormat:@"%@ (%@)", self.currentLocation.address, self.currentLocation.crossStreet] : [NSString stringWithFormat:@"%@", self.currentLocation.address] ;
