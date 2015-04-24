@@ -34,6 +34,8 @@
 		FC5855411ADC501000D4EB3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC5855401ADC501000D4EB3F /* Images.xcassets */; };
 		FC5855461ADC506700D4EB3F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC5855421ADC506700D4EB3F /* LaunchScreen.xib */; };
 		FC5855471ADC506700D4EB3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC5855441ADC506700D4EB3F /* Main.storyboard */; };
+		FC96BA0F1AEA92380003ECC3 /* Hours.m in Sources */ = {isa = PBXBuildFile; fileRef = FC96BA0E1AEA92380003ECC3 /* Hours.m */; };
+		FC96BA121AEA92AD0003ECC3 /* TimeFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FC96BA111AEA92AD0003ECC3 /* TimeFrame.m */; };
 		FCB350C41ACAFDA30068DB28 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB350C31ACAFDA30068DB28 /* Social.framework */; };
 		FCCEB3BA1AC88CE800634876 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3B61AC88CE800634876 /* CFNetwork.framework */; };
 		FCCEB3BC1AC88CE800634876 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCEB3B81AC88CE800634876 /* Security.framework */; };
@@ -103,6 +105,10 @@
 		FC5855401ADC501000D4EB3F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RestaurantKit/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		FC5855431ADC506700D4EB3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = RestaurantKit/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		FC5855451ADC506700D4EB3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RestaurantKit/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		FC96BA0D1AEA92380003ECC3 /* Hours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hours.h; sourceTree = SOURCE_ROOT; };
+		FC96BA0E1AEA92380003ECC3 /* Hours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hours.m; sourceTree = SOURCE_ROOT; };
+		FC96BA101AEA92AD0003ECC3 /* TimeFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeFrame.h; sourceTree = SOURCE_ROOT; };
+		FC96BA111AEA92AD0003ECC3 /* TimeFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFrame.m; sourceTree = SOURCE_ROOT; };
 		FCB350C31ACAFDA30068DB28 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FCCEB2FC1AC84E8800634876 /* RestaurantKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCEB3181AC84E8800634876 /* RestaurantKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +277,10 @@
 				FC5855301ADC4FC800D4EB3F /* Stats.m */,
 				FC5855311ADC4FC800D4EB3F /* Venue.h */,
 				FC5855321ADC4FC800D4EB3F /* Venue.m */,
+				FC96BA0D1AEA92380003ECC3 /* Hours.h */,
+				FC96BA0E1AEA92380003ECC3 /* Hours.m */,
+				FC96BA101AEA92AD0003ECC3 /* TimeFrame.h */,
+				FC96BA111AEA92AD0003ECC3 /* TimeFrame.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -455,8 +465,10 @@
 				FC5855381ADC4FC800D4EB3F /* Stats.m in Sources */,
 				FC58553F1ADC4FF500D4EB3F /* VenueCell.m in Sources */,
 				FC5855361ADC4FC800D4EB3F /* Location.m in Sources */,
+				FC96BA121AEA92AD0003ECC3 /* TimeFrame.m in Sources */,
 				FC5855331ADC4FC800D4EB3F /* Categories.m in Sources */,
 				FC58551F1ADC4F9400D4EB3F /* CategoryTableViewController.m in Sources */,
+				FC96BA0F1AEA92380003ECC3 /* Hours.m in Sources */,
 				FC5855211ADC4F9400D4EB3F /* VenueDetailsViewController.m in Sources */,
 				FC5855351ADC4FC800D4EB3F /* HereNow.m in Sources */,
 				FC5855101ADC4F3E00D4EB3F /* Preferences.m in Sources */,

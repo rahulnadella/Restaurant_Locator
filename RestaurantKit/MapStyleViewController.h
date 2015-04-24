@@ -23,6 +23,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "Hours.h"
 #import "Location.h"
 /*
  The MapStyleViewController is an object that contains the logic for displaying 
@@ -39,9 +40,8 @@
 @property (nonatomic, strong) NSString *venueId;
 @property (nonatomic, strong) NSString *mapType;
 @property (nonatomic, strong) NSString *nameOfVenue;
+@property (nonatomic, strong) Hours *hours;
 @property (nonatomic, strong) Location *currentLocation;
-/* Specific value(s) of the Venue retrieved via Social Framework */
-@property (nonatomic) BOOL isOpen;
 /*
  The showAlertSheet displays the an action sheet to allow the user to choose what MapType to display.
  

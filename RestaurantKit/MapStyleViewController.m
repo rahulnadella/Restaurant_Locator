@@ -78,7 +78,7 @@
                                                                      style:UIBarButtonItemStylePlain
                                                                     target:self
                                                                     action:nil];
-    if (self.isOpen)
+    if (self.hours.isOpen)
     {
         /* Open sign */
         UIImage *statusOpen = [[UIImage imageNamed:@"openSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -188,7 +188,11 @@
     NSArray *results = [data valueForKey:@"response"];
     NSDictionary *venue = [results valueForKey:@"venue"];
     NSDictionary *hours = [venue objectForKey:@"hours"];
-    self.isOpen = [hours valueForKey:@"isOpen"];
+
+    self.hours = [[Hours alloc] init];
+    self.hours.isOpen = [hours valueForKey:@"isOpen"];
+    self.hours.status = [hours valueForKey:@"status"];
+    self.hours.timeframes = [hours valueForKey:@"timeframes"];
 }
 
 @end
