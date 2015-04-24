@@ -205,7 +205,7 @@
     cell.venueCategoryImage.image = [UIImage imageWithData:imageData];
     
     /* Set the image based on the if there are any people at the Venue */
-    cell.statusImage.image = (venue.hereNow.count.intValue > 0) ? [UIImage imageNamed:@"openSign"] : [UIImage imageNamed:@"closedSign"];
+    cell.statusImage.image = (venue.hereNow.count.intValue > 0) ? [UIImage imageNamed:OPEN_SIGN] : [UIImage imageNamed:CLOSED_SIGN];
     
     /* Change the selection style color of the CategoryCell */
     UIView *bgColorView = [[UIView alloc] init];

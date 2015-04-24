@@ -88,13 +88,13 @@ static inline NSString* NSStringFromBOOL(BOOL aBool)
     if (self.hours.isOpen)
     {
         /* Open sign */
-        UIImage *statusOpen = [[UIImage imageNamed:@"openSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *statusOpen = [[UIImage imageNamed:OPEN_SIGN] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [statusButton setImage:statusOpen];
     }
     else
     {
         /* Closed Sign */
-        UIImage *statusClosed = [[UIImage imageNamed:@"closedSign"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *statusClosed = [[UIImage imageNamed:CLOSED_SIGN] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [statusButton setImage:statusClosed];
     }
     [buttons addObject:statusButton];
