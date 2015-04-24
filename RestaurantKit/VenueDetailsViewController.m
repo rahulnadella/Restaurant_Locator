@@ -44,6 +44,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *menuLabel;
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tierLabel;
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currencyLabel;
 
 @end
 
@@ -54,7 +57,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    
     
     if ([self isViewLoaded] && [self.view window] == nil)
     {
@@ -156,7 +158,11 @@
     [self.menuButton setTitle:self.menuOfUrlVenu forState:UIControlStateNormal];
     
     /* Set the rating of the specific Venue */
-    self.ratingLabel.text = self.rating ? [NSString stringWithFormat:@"Rating: %.01f", [self.rating floatValue]] : [NSString stringWithFormat:@"Current Rating: N/A"];
+    self.ratingLabel.text = self.rating ? [NSString stringWithFormat:@"Rating: %.01f", [self.rating floatValue]] : @"Current Rating: N/A";
+    
+    self.tierLabel.text = self.currentPrice ? [NSString stringWithFormat:@"Tier Level: %@", self.currentPrice.tier] : @"Tier Level: N/A";
+    self.messageLabel.text = self.currentPrice ? [NSString stringWithFormat:@"Expense Level: %@", self.currentPrice.costLevel] : @"Expense Level: N/A";
+    self.currencyLabel.text = self.currentPrice ? [NSString stringWithFormat:@"Currency: %@", self.currentPrice.currency] : @"Currency: N/A";
 }
 
 #pragma mark - Swipe Back
