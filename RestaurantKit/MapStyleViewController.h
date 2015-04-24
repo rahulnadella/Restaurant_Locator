@@ -25,6 +25,7 @@
 #import <UIKit/UIKit.h>
 #import "Hours.h"
 #import "Location.h"
+#import "Photo.h"
 #import "Price.h"
 
 /*
@@ -48,6 +49,7 @@
 @property (nonatomic, strong) NSString *verifiedStatus;
 @property (nonatomic, strong) Hours *hours;
 @property (nonatomic, strong) Location *currentLocation;
+@property (nonatomic, strong) Photo *bestPhoto;
 @property (nonatomic, strong) Price *currentPrice;
 /*
  The showAlertSheet displays the an action sheet to allow the user to choose what MapType to display.

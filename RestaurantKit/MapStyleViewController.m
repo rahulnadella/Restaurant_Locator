@@ -222,6 +222,16 @@ static inline NSString* NSStringFromBOOL(BOOL aBool)
     self.hours.isOpen = [hours valueForKey:@"isOpen"];
     self.hours.status = [hours valueForKey:@"status"];
     self.hours.timeframes = [hours valueForKey:@"timeframes"];
+    
+    /* Retrieve the best Photo from the specific Venue */
+    NSDictionary *bestPhoto = [venue objectForKey:@"bestPhoto"];
+    self.bestPhoto = [[Photo alloc] init];
+    self.bestPhoto.photoId = [bestPhoto valueForKey:@"id"];
+    self.bestPhoto.prefix = [bestPhoto valueForKey:@"prefix"];
+    self.bestPhoto.suffix = [bestPhoto valueForKey:@"suffix"];
+    self.bestPhoto.width = [bestPhoto valueForKey:@"width"];
+    self.bestPhoto.height = [bestPhoto valueForKey:@"height"];
+    self.bestPhoto.visibility = [bestPhoto valueForKey:@"visibility"];
 }
 
 @end
