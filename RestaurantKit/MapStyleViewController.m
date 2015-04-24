@@ -174,7 +174,7 @@ static inline NSString* NSStringFromBOOL(BOOL aBool)
     [self presentViewController:mapView animated:YES completion:nil];
 }
 
-# pragma mark - Retrieve Specific Venue
+# pragma mark - Retrieve and Process Venue data
 
 - (void)retrieveVenue
 {
@@ -189,6 +189,12 @@ static inline NSString* NSStringFromBOOL(BOOL aBool)
     /* Perform request and get JSON back as a NSData object */
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     
+    /* Process the JSON data for specific Venue */
+    [self processVenueRequest:response];
+}
+
+- (void)processVenueRequest:(NSData *)response
+{
     NSError *localError = nil;
     /* Parse the JSON data for the Specific Venue's item(s) */
     NSDictionary *data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&localError];
