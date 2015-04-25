@@ -342,6 +342,12 @@
                                     <action selector="viewBestPhoto:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="ObQ-Kh-kHB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJs-kZ-jMY">
+                                <rect key="frame" x="16" y="415.5" width="44" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkA-ap-nI2">
                                 <rect key="frame" x="16" y="354" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -354,8 +360,10 @@
                         <constraints>
                             <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="zPZ-Yi-lhZ" secondAttribute="bottom" constant="20" id="7tD-fD-iCC"/>
                             <constraint firstItem="zPZ-Yi-lhZ" firstAttribute="top" secondItem="lbf-dr-hYG" secondAttribute="bottom" constant="8" id="8iH-gf-SEJ"/>
+                            <constraint firstItem="sJs-kZ-jMY" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" id="HJR-Qj-RzV"/>
                             <constraint firstItem="lbf-dr-hYG" firstAttribute="top" secondItem="IYe-47-u5M" secondAttribute="bottom" constant="8" id="N2l-Hn-VgD"/>
                             <constraint firstItem="fnH-2v-Lz0" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" id="Qbe-02-mJd"/>
+                            <constraint firstItem="fnH-2v-Lz0" firstAttribute="top" secondItem="sJs-kZ-jMY" secondAttribute="bottom" constant="8" id="ar4-Z6-byw"/>
                             <constraint firstItem="je1-x3-qbQ" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" id="cJI-SZ-hla"/>
                             <constraint firstItem="IYe-47-u5M" firstAttribute="top" secondItem="je1-x3-qbQ" secondAttribute="bottom" constant="8" id="f8q-2G-wrm"/>
                             <constraint firstItem="IYe-47-u5M" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" id="gqH-qW-VXe"/>
@@ -383,6 +391,7 @@
                         <outlet property="messageLabel" destination="je1-x3-qbQ" id="LpU-MA-hEx"/>
                         <outlet property="phoneLabel" destination="66t-as-eZF" id="gCc-k7-YQE"/>
                         <outlet property="ratingLabel" destination="lbf-dr-hYG" id="6w0-yg-Dv8"/>
+                        <outlet property="statusLabel" destination="sJs-kZ-jMY" id="tXX-Oa-JW5"/>
                         <outlet property="streetAddressLabel" destination="EvW-Lh-ANn" id="VxU-jH-Vus"/>
                         <outlet property="tierLabel" destination="fnH-2v-Lz0" id="bSy-Ue-xkh"/>
                         <outlet property="tipsLeft" destination="pg2-Cj-jRU" id="CCE-RW-G2M"/>
@@ -593,7 +602,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1sf-cK-7Mb"/>
         <segue reference="09n-og-gb9"/>
+        <segue reference="sMY-Xz-kPS"/>
     </inferredMetricsTieBreakers>
 </document>

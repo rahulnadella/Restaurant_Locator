@@ -50,6 +50,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *currencyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bestPhotoLabel;
 @property (weak, nonatomic) IBOutlet UIButton *bestPhotoButton;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end
 
@@ -171,6 +172,13 @@
     /* Set the best Photo taken for the specific Venue */
     self.bestPhotoLabel.text = @"Best Photo:";
     [self.bestPhotoButton setTitle:@"Best Photo Taken" forState:UIControlStateNormal];
+    
+    /* Set the Operating Status for the specific Venue */
+    self.statusLabel.text = self.hours ? [NSString stringWithFormat:@"Operating Status: %@", self.hours.status] : @"Operating Status: N/A";
+    /* Underline the specific Status Label text */
+    NSMutableAttributedString *mat = [self.statusLabel.attributedText mutableCopy];
+    [mat addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, mat.length)];
+    self.statusLabel.attributedText = mat;
 }
 
 #pragma mark - Swipe Back
