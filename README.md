@@ -7,11 +7,8 @@ The Restaurant Locator is a sample iOS application that allows the user to locat
 
 #####Build
 >Master -> Only works on iOS 8.2 or greater <br/>
->Frameworks -> AFNetworking, ISO8601DateFormatterValueTransformer, RKValueTransformers, RestKit, SOCKit, and
+>Frameworks -> AFNetworking, ISO8601DateFormatterValueTransformer, RKValueTransformers, RestKit, SBJson, SOCKit, and
 TransitionKit (obtained via CocoaPods)
-
-#####Issues
->Master -> Open or Closed indicator is not working correctly (incorrect data request to Foursquare API)
 
 #####User Interface
 
