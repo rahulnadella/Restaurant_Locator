@@ -50,7 +50,11 @@ The Appearance object defines the various fonts (UIFont), color shading (NSShado
  @version 1.0
  */
 + (UIColor *)colorWithHexString:(NSString *)hexString;
-
+/*
+ The underlineLabel method underlines any NSAttributedString present in the UIView
+ 
+ @version 1.0
+ */
 + (NSMutableAttributedString *)underlineLabel:(NSAttributedString *)textLabel;
 
 @end
