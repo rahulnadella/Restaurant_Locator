@@ -23,6 +23,7 @@
  */
 
 #import <Social/Social.h>
+#import "Appearance.h"
 #import "BestPhotoViewController.h"
 #import "VenueDetailsViewController.h"
 #import "VenueMapViewController.h"
@@ -176,9 +177,7 @@
     /* Set the Operating Status for the specific Venue */
     self.statusLabel.text = self.hours ? [NSString stringWithFormat:@"Operating Status: %@", self.hours.status] : @"Operating Status: N/A";
     /* Underline the specific Status Label text */
-    NSMutableAttributedString *mat = [self.statusLabel.attributedText mutableCopy];
-    [mat addAttributes:@{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)} range:NSMakeRange (0, mat.length)];
-    self.statusLabel.attributedText = mat;
+    self.statusLabel.attributedText = [Appearance underlineLabel:self.statusLabel.attributedText];
 }
 
 #pragma mark - Swipe Back

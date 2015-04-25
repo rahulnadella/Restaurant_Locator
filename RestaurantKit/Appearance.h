@@ -51,4 +51,6 @@ The Appearance object defines the various fonts (UIFont), color shading (NSShado
  */
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 
++ (NSMutableAttributedString *)underlineLabel:(NSAttributedString *)textLabel;
+
 @end
