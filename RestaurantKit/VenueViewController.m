@@ -205,7 +205,8 @@
     cell.venueCategoryImage.image = [UIImage imageWithData:imageData];
     
     /* Set the image based on the if there are any people at the Venue */
-    cell.statusImage.image = (venue.hereNow.count.intValue > 0) ? [UIImage imageNamed:@"checked"] : [UIImage imageNamed:@"unchecked"];
+    cell.statusImage.image = (venue.hereNow.count.intValue > 0) ? [UIImage imageNamed:CHECKED] : [UIImage imageNamed:UNCHECKED];
+    
     /* Change the selection style color of the CategoryCell */
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [UIColor colorWithRed:(76.0/255.0) green:(161.0/255.0) blue:(255.0/255.0) alpha:1.0];
