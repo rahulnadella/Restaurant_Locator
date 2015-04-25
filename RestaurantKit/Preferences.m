@@ -67,7 +67,7 @@ NSString * const VENUE_ID = @"VENUE_ID";
 NSString * const VENUE_SEARCH = @"/v2/venues/search";
 NSString * const VENUE_ID_SEARCH = @"v2/venues/";
 NSString * const VERSION = @"v";
-NSString * const VERSION_NUMBER = @"20140609";
+NSString * const VERSION_NUMBER = @"20150401";
 NSString * const VENUE_DETAILS_VIEW_IDENTIFIER = @"Show Map View";
 NSString * const VENUE_MAP_VIEW_IDENTIFIER = @"Show Venue Map View";
 
